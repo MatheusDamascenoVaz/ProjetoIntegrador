@@ -1,6 +1,6 @@
 ﻿namespace ProjetoIntegrador
 {
-    partial class Form1
+    partial class LoginScreen
     {
         /// <summary>
         /// Variável de designer necessária.

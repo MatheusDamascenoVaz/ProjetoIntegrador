@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoIntegrador
+namespace ProjetoIntegrador.Screen
 {
-    public partial class Form1: Form
+    public partial class AddProduct: Form
     {
-        public Form1()
+        public AddProduct()
         {
             InitializeComponent();
         }
