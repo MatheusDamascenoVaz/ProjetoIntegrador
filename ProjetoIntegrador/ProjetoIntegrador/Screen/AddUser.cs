@@ -16,5 +16,10 @@ namespace ProjetoIntegrador.Screen
         {
             InitializeComponent();
         }
+
+        private void AddUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

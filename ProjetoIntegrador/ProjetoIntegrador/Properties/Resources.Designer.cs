@@ -59,25 +59,5 @@ namespace ProjetoIntegrador.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_tela_2025_03_26_213007 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de tela 2025-03-26 213007", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_tela_2025_03_26_2130071 {
-            get {
-                object obj = ResourceManager.GetObject("Captura de tela 2025-03-26 2130071", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

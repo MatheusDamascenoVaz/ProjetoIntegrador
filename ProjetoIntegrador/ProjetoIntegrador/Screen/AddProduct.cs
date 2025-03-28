@@ -21,5 +21,10 @@ namespace ProjetoIntegrador.Screen
         {
 
         }
+
+        private void AddProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

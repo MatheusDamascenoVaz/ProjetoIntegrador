@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Screen
 {
-    public partial class MainMenu: Form
+    public partial class MenuPrincipal: Form
     {
-        public MainMenu()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
