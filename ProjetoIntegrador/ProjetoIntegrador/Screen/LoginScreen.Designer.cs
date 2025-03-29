@@ -83,6 +83,7 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "LoginScreen";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

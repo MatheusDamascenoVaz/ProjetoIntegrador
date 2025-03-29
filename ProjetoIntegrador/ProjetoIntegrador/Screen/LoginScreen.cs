@@ -16,6 +16,8 @@ namespace ProjetoIntegrador
         public LoginScreen()
         {
             InitializeComponent();
+            this.FormClosing += ApplicationClose;
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace ProjetoIntegrador
             {
                 MessageBox.Show("Por gentileza preencha todos os campos para efetuar o login");
             }
-            if (txtUsuario.Text == "Admin" && txtSenha.Text == "1234")
+            if (txtUsuario.Text == "admin" && txtSenha.Text == "1234")
             {
                 this.Hide();
 
@@ -37,5 +39,14 @@ namespace ProjetoIntegrador
                 MessageBox.Show("Usuário ou senha incorretos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void ApplicationClose(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }

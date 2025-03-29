@@ -15,11 +15,12 @@ namespace ProjetoIntegrador.Screen
         public AddProduct()
         {
             InitializeComponent();
+            this.FormClosing += ApplicationClose;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void ApplicationClose(object sender, FormClosingEventArgs e)
         {
-
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
