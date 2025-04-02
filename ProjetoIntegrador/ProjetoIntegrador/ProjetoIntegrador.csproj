@@ -109,7 +109,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\Logar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-media.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PLANO DE FUNDO.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
