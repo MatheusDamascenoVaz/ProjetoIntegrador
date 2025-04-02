@@ -27,5 +27,15 @@ namespace ProjetoIntegrador.Screen
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Teste");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Teste");
+        }
     }
 }
