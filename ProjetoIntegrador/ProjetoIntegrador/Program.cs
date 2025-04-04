@@ -17,7 +17,16 @@ namespace ProjetoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddProduct ());
+            StartScreen startScreen = new StartScreen();
+            LoginScreen loginScreen = new LoginScreen();
+            
+            Application.Run(startScreen);
+
+            if (startScreen.IsDisposed)
+            {
+                Application.Run(loginScreen);
+            }
+
         }
     }
 }
