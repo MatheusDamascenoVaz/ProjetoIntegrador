@@ -1,5 +1,5 @@
-﻿using ConexaoMySQL.Models;
-using ConexaoMySQL.Services;
+﻿using ProjetoIntegrador.Models;
+using ProjetoIntegrador.Services;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexaoMySQL.Model
+namespace ProjetoIntegrador.Model
 {
     public class UsuarioRepositorio
     {

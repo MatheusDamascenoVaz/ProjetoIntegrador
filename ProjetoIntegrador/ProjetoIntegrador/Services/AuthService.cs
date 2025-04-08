@@ -1,11 +1,7 @@
 ﻿// Services/AuthService.cs
-using ProjetoIntegrador.Models;
-using ProjetoIntegrador.Services;
-using MySql.Data.MySqlClient;
 using System;
-using System.Security.Cryptography;
-using System.Text;
-using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Models;
 
 namespace ProjetoIntegrador.Services
 {
