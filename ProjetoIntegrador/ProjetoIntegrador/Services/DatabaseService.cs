@@ -3,7 +3,7 @@ using System;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
-namespace ConexaoMySQL.Services
+namespace ProjetoIntegrador.Services
 {
     public class DatabaseService : IDisposable
     {

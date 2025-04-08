@@ -1,7 +1,7 @@
 ﻿// Models/Usuario.cs
 using System;
 
-namespace ConexaoMySQL.Models
+namespace ProjetoIntegrador.Models
 {
     public class Usuario
     {

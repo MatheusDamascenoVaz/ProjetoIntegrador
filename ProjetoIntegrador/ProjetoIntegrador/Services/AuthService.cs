@@ -1,13 +1,13 @@
 ﻿// Services/AuthService.cs
-using ConexaoMySQL.Models;
-using ConexaoMySQL.Services;
+using ProjetoIntegrador.Models;
+using ProjetoIntegrador.Services;
 using MySql.Data.MySqlClient;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ConexaoMySQL.Services
+namespace ProjetoIntegrador.Services
 {
     public class AuthService
     {

@@ -1,11 +1,11 @@
 ﻿// Controllers/AuthController.cs
-using ConexaoMySQL.Model;
-using ConexaoMySQL.Models;
-using ConexaoMySQL.Services;
+using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Models;
+using ProjetoIntegrador.Services;
 using System;
 using System.Windows.Forms;
 
-namespace ConexaoMySQL.Controllers
+namespace ProjetoIntegrador.Controllers
 {
     public class AuthController
     {
