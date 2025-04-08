@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AuthControllers.cs" />
     <Compile Include="Screen\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,10 @@
     <Compile Include="Screen\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\Criptografia.cs" />
+    <Compile Include="Services\DatabaseService.cs" />
+    <Compile Include="Services\SessionUser.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,9 +140,6 @@
   <ItemGroup>
     <None Include="Resources\loading2.gif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
