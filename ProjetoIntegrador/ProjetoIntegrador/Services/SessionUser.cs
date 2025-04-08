@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexaoMySQL.Services
+namespace ProjetoIntegrador.Services
 {
     public static class SessionUser
     {
