@@ -134,6 +134,7 @@
     <Compile Include="Screen\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AppCloseWindow.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DatabaseService.cs" />
