@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Controllers;
+using ProjetoIntegrador.Models;
 using ProjetoIntegrador.Screen;
 using ProjetoIntegrador.Services;
 
@@ -14,32 +16,29 @@ namespace ProjetoIntegrador
 {
     public partial class LoginScreen: Form
     {
+       private AuthController authController;
         public LoginScreen()
         {
             InitializeComponent();
             this.FormClosing += AppCloseWindow.CloseApp;
+            DatabaseService databaseService = new DatabaseService();
+            authController = new AuthController(new AuthService(databaseService), new Model.UsuarioRepositorio(databaseService));
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtSenha.Text))
-            {
-                MessageBox.Show("Por gentileza preencha todos os campos para efetuar o login");
-            }
-            if (txtUsuario.Text == "admin" && txtSenha.Text == "1234")
-            {
-                this.Hide();
+            Usuario user = authController.Login(txtEmail.Text, txtSenha.Text);
 
-                MenuPrincipal menuPrincipal = new MenuPrincipal();
-                menuPrincipal.Show();
-
-            }
-            else
+            if (user == null)
             {
-                MessageBox.Show("Usuário ou senha incorretos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuário não encontrado");
+                return;
             }
-            }
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            this.Hide();
+        }
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
