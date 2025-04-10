@@ -63,6 +63,26 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EstoqueMasterBG {
+            get {
+                object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading2 {
+            get {
+                object obj = ResourceManager.GetObject("loading2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logar__2_ {
             get {
                 object obj = ResourceManager.GetObject("Logar (2)", resourceCulture);
@@ -76,6 +96,16 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap PLANO_DE_FUNDO {
             get {
                 object obj = ResourceManager.GetObject("PLANO DE FUNDO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PLANO_DE_FUNDO1 {
+            get {
+                object obj = ResourceManager.GetObject("PLANO DE FUNDO1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -48,6 +48,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.loading2;
             this.pictureBox1.Location = new System.Drawing.Point(537, 364);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
@@ -59,6 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProjetoIntegrador.Properties.Resources.EstoqueMasterBG;
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblStartScreen);
