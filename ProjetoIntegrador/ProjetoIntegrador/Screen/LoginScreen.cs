@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoIntegrador.Screen;
+using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador
 {
@@ -16,7 +17,7 @@ namespace ProjetoIntegrador
         public LoginScreen()
         {
             InitializeComponent();
-            this.FormClosing += ApplicationClose;
+            this.FormClosing += AppCloseWindow.CloseApp;
 
         }
 
@@ -44,9 +45,6 @@ namespace ProjetoIntegrador
         {
 
         }
-        private void ApplicationClose(object sender, FormClosingEventArgs e)
-        {
-            Application.ExitThread();
-        }
+      
     }
 }
