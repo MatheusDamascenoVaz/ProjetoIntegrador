@@ -104,7 +104,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.Captura_de_tela_2025_04_09_212517;
+           
             this.pictureBox1.Location = new System.Drawing.Point(0, -15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(145, 113);
@@ -114,7 +114,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ProjetoIntegrador.Properties.Resources.Captura_de_tela_2025_04_09_213003;
+           
             this.pictureBox2.Location = new System.Drawing.Point(250, -6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(302, 140);
