@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.comboRegras = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -159,11 +160,20 @@
             this.comboRegras.Size = new System.Drawing.Size(121, 21);
             this.comboRegras.TabIndex = 13;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(308, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 14;
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 461);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.comboRegras);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenhaConfirmacao);
@@ -202,5 +212,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.ComboBox comboRegras;
+        private System.Windows.Forms.Label label7;
     }
 }
