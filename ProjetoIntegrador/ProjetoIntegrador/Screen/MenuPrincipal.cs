@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador.Screen
 {
@@ -15,7 +16,7 @@ namespace ProjetoIntegrador.Screen
         public MenuPrincipal()
         {
             InitializeComponent();
-            this.FormClosing += ApplicationClose;
+            this.FormClosing += AppCloseWindow.CloseApp;
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -23,10 +24,6 @@ namespace ProjetoIntegrador.Screen
 
         }
 
-        private void ApplicationClose(object sender, FormClosingEventArgs e)
-        {
-            Application.ExitThread();
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -54,6 +51,16 @@ namespace ProjetoIntegrador.Screen
             this.Hide();
             AddProduct addProduct = new AddProduct();
             addProduct.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

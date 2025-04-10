@@ -134,6 +134,7 @@
     <Compile Include="Screen\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AppCloseWindow.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DatabaseService.cs" />
@@ -187,16 +188,6 @@
     <None Include="Resources\PLANO DE FUNDO.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\EstoqueMasterBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loading.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loading2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Produto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
