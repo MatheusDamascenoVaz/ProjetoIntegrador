@@ -63,7 +63,7 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EstoqueMasterBG {
+
             get {
                 object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
