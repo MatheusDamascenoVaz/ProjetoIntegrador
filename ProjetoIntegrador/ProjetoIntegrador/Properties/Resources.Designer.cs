@@ -63,9 +63,9 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_09_212517 {
+
             get {
-                object obj = ResourceManager.GetObject("Captura de tela 2025-04-09 212517", resourceCulture);
+                object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_09_213003 {
+        internal static System.Drawing.Bitmap loading2 {
             get {
-                object obj = ResourceManager.GetObject("Captura de tela 2025-04-09 213003", resourceCulture);
+                object obj = ResourceManager.GetObject("loading2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,16 +96,6 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap PLANO_DE_FUNDO {
             get {
                 object obj = ResourceManager.GetObject("PLANO DE FUNDO", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap social_media {
-            get {
-                object obj = ResourceManager.GetObject("social-media", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
