@@ -1,11 +1,8 @@
 ﻿using ProjetoIntegrador.Models;
 using ProjetoIntegrador.Services;
 using MySql.Data.MySqlClient;
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.Model
 {
@@ -23,17 +20,18 @@ namespace ProjetoIntegrador.Model
             try
             {
                 string query = @"INSERT INTO usuarios 
-                                (nome, email, senha_hash, data_cadastro, ativo) 
+                                (nomeUsuario, matricula, telefone, email, idRegra, senha_hash) 
                                 VALUES 
-                                (@nome, @email, @senha_hash, @data_cadastro, @ativo)";
+                                (@nome, @matricula, @telefone, @email, @idRegra, @senha_hash)";
 
                 var parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@nome", usuario.Nome),
+                    new MySqlParameter("@matricula", usuario.Matricula),
+                    new MySqlParameter("@telefone", usuario.Telefone),
                     new MySqlParameter("@email", usuario.Email),
                     new MySqlParameter("@senha_hash", Criptografia.HashPassword(password)),
-                    new MySqlParameter("@data_cadastro", DateTime.Now),
-                    new MySqlParameter("@ativo", true)
+                    new MySqlParameter("@idRegra", usuario.IdRegra),
                 };
 
                 int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);

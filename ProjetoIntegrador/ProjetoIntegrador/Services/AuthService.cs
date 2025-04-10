@@ -44,8 +44,8 @@ namespace ProjetoIntegrador.Services
                                 Nome = respostaBanco["nome"].ToString(),
                                 Email = respostaBanco["email"].ToString(),
                                 SenhaHash = respostaBanco["senha_hash"].ToString(),
-                                DataCadastro = Convert.ToDateTime(respostaBanco["data_cadastro"]),
-                                Ativo = Convert.ToBoolean(respostaBanco["ativo"])
+                                Telefone = respostaBanco["telefone"].ToString(),
+                                Matricula = Convert.ToInt32(respostaBanco["matricula"]),
                             };
                         }
                     }
