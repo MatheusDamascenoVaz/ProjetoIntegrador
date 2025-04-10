@@ -63,6 +63,26 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_09_212517 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-09 212517", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_09_213003 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-09 213003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logar__2_ {
             get {
                 object obj = ResourceManager.GetObject("Logar (2)", resourceCulture);
