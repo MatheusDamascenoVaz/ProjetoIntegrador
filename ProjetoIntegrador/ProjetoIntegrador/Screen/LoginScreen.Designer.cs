@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,12 +45,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtUsuario
+            // txtEmail
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(261, 141);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(252, 20);
-            this.txtUsuario.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(261, 141);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(252, 20);
+            this.txtEmail.TabIndex = 1;
             // 
             // txtSenha
             // 
@@ -80,7 +80,7 @@
             this.ClientSize = new System.Drawing.Size(784, 361);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnLogin);
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -94,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label1;
     }
