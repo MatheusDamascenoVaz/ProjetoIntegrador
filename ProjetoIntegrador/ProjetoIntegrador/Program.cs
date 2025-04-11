@@ -19,13 +19,12 @@ namespace ProjetoIntegrador
             Application.SetCompatibleTextRenderingDefault(false);
             StartScreen startScreen = new StartScreen();
             LoginScreen loginScreen = new LoginScreen();
-            
-            
+
             Application.Run(startScreen);
 
             if (startScreen.IsDisposed)
             {
-                Application.Run(loginScreen);
+                Application.Run(menuProduct);
             }
 
         }
