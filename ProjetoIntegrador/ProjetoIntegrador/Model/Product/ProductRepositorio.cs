@@ -22,19 +22,18 @@ namespace ProjetoIntegrador.Model.Product
             try
             {
                 string query = @"INSERT INTO produtos 
-                                (idProduto, nomeProduto, idCategoria, descricao, validade, codigoDeBarras, cor, quantidade, unidadedeMedida, preco) 
+                                (nomeProduto, idCategoria, descricao, validade, codigoDeBarras, cor, quantidade, unidadeMedida, preco) 
                                 VALUES 
-                                (@idProduto, @nomeProduto, @idCategoria, @descricao, @validade, @codigoDeBarras, @cor, @quantidade, @unidadedeMedida, @preco)";
+                                (@nomeProduto, @idCategoria, @descricao, @validade, @codigoDeBarras, @cor, @quantidade, @unidadeMedida, @preco)";
                 var parameters = new MySqlParameter[]
                 {
-                    new MySqlParameter("@idProduto", produto.IdProduto),
                     new MySqlParameter("@nomeProduto", produto.NomeProduto),
                     new MySqlParameter("@idCategoria", produto.idCategoria),
-                    new MySqlParameter("@descricaoProduto", produto.Descricao),
+                    new MySqlParameter("@descricao", produto.Descricao),
                     new MySqlParameter("@validade", produto.Validade),
                     new MySqlParameter("@quantidade", produto.Quantidade),
                     new MySqlParameter("@cor", produto.Cor),
-                    new MySqlParameter("@unidadeDeMedida", produto.UnidadeDeMedida),
+                    new MySqlParameter("@unidadeMedida", produto.UnidadeDeMedida),
                     new MySqlParameter("@preco", produto.Preco),
                     new MySqlParameter("@codigoDeBarras", produto.CodigoDeBarras)
                 };

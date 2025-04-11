@@ -19,14 +19,12 @@ namespace ProjetoIntegrador.Screen
     public partial class AddProduct: Form
 
     {
-        private AuthController authController;
+        private readonly ProdutoController _produtoController;
+
         public AddProduct()
         {
             InitializeComponent();
-            DatabaseService databaseService = new DatabaseService();
-           
-           
-
+            _produtoController = new ProdutoController(new ProductRepositorio(new DatabaseService()));
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
@@ -60,8 +58,19 @@ namespace ProjetoIntegrador.Screen
             produto.CodigoDeBarras = double.Parse(txtCodigoDeBarras.Text);
             produto.Cor = txtCor.Text;
 
-            
-            
+           
+             bool resultado = _produtoController.RegisterProduct(produto);
+
+            if (resultado)
+            {
+                MessageBox.Show("Produto inserido com sucesso");
+                return;
+            }
+            MessageBox.Show("Produto não inserido");
+
+
+
+
         }
-    }
+}
 }
