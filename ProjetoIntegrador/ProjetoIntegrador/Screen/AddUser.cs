@@ -54,6 +54,7 @@ namespace ProjetoIntegrador.Screen
             else { 
                 MessageBox.Show("Erro ao cadastrar usuário.");
             }
+
             
         }
         private void ApplicationClose(object sender, FormClosingEventArgs e)
@@ -67,8 +68,7 @@ namespace ProjetoIntegrador.Screen
             List<dynamic> comboRegrasItens = new List<dynamic> 
             {
 
-                new { NomeRegra = "", Valor = 0 },
-               new { NomeRegra = "Administrador", Valor = 1},
+                new { NomeRegra = "Administrador", Valor = 1},
                 new { NomeRegra = "Gerente", Valor = 2},
                 new { NomeRegra = "Estoquista", Valor = 3},
                 new { NomeRegra = "Auditor", Valor = 4},

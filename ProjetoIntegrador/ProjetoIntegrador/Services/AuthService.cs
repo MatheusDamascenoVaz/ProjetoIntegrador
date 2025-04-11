@@ -19,7 +19,7 @@ namespace ProjetoIntegrador.Services
             try
             {
                 // Primeiro busca o usuário pelo email
-                string query = "SELECT id, nome, email, senha_hash, data_cadastro, ativo FROM usuarios WHERE email = @emailDigitado";
+                string query = "SELECT * FROM usuarios WHERE email = @emailDigitado";
                 var parameters = new MySqlParameter[] 
                 {
 
@@ -40,8 +40,8 @@ namespace ProjetoIntegrador.Services
                         {
                             return new Usuario
                             {
-                                Id = Convert.ToInt32(respostaBanco["id"]),
-                                Nome = respostaBanco["nome"].ToString(),
+                                Id = Convert.ToInt32(respostaBanco["idUsuario"]),
+                                Nome = respostaBanco["nomeUsuario"].ToString(),
                                 Email = respostaBanco["email"].ToString(),
                                 SenhaHash = respostaBanco["senha_hash"].ToString(),
                                 Telefone = respostaBanco["telefone"].ToString(),
