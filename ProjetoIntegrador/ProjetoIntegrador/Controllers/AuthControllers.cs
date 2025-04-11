@@ -12,6 +12,8 @@ namespace ProjetoIntegrador.Controllers
         private readonly AuthService _authService;
         private readonly UsuarioRepositorio _usuarioRepositorio;
 
+       
+
         public AuthController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
         {
             _authService = authService;
@@ -26,6 +28,10 @@ namespace ProjetoIntegrador.Controllers
             }
 
             return _authService.Authenticate(email, password);
+
+
+
+
         }
 
         public bool Register(Usuario usuario, string password)
