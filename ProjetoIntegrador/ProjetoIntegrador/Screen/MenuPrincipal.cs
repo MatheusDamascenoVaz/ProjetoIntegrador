@@ -49,7 +49,7 @@ namespace ProjetoIntegrador.Screen
         private void btnMenuProducts_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddProduct addProduct = new AddProduct();
+            MenuProduct addProduct = new MenuProduct();
             addProduct.Show();
         }
 
