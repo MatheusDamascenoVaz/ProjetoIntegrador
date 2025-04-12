@@ -63,9 +63,89 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210247 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210247", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210254 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210254", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210301 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210630 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210630", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210654 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210654", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_211620 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 211620", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EstoqueMasterBG {
             get {
                 object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gifLogin {
+            get {
+                object obj = ResourceManager.GetObject("gifLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gifMenu {
+            get {
+                object obj = ResourceManager.GetObject("gifMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +176,16 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap PLANO_DE_FUNDO1 {
             get {
                 object obj = ResourceManager.GetObject("PLANO DE FUNDO1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_durability {
+            get {
+                object obj = ResourceManager.GetObject("product-durability", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

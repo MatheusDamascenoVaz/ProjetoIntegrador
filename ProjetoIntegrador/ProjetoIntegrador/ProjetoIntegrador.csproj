@@ -199,5 +199,32 @@
   <ItemGroup>
     <None Include="Resources\loading2.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gifLogin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 210247.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 210630.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 210654.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 210254.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 210301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-04-11 211620.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gifMenu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-durability.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
