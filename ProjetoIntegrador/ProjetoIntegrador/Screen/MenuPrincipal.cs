@@ -27,14 +27,7 @@ namespace ProjetoIntegrador.Screen
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult resultadoAcao = MessageBox.Show("Você realmente deseja fazer logout?", "Saindo da Aplicação", MessageBoxButtons.YesNo);
-            if (resultadoAcao == DialogResult.Yes)
-            {
-                LoginScreen loginScreen = new LoginScreen();
-                loginScreen.Show();
-                this.Hide();
-               
-            }
+            
             
         }
 
@@ -58,10 +51,6 @@ namespace ProjetoIntegrador.Screen
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -71,6 +60,19 @@ namespace ProjetoIntegrador.Screen
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void imgLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult resultadoAcao = MessageBox.Show("Você realmente deseja fazer logout?", "Saindo da Aplicação", MessageBoxButtons.YesNo);
+            if (resultadoAcao == DialogResult.Yes)
+            {
+                LoginScreen loginScreen = new LoginScreen();
+                loginScreen.Show();
+                this.Hide();
+
+            }
+    
         }
     }
 }
