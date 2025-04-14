@@ -151,6 +151,7 @@
             this.pnlUsuarios.Name = "pnlUsuarios";
             this.pnlUsuarios.Size = new System.Drawing.Size(550, 150);
             this.pnlUsuarios.TabIndex = 10;
+            this.pnlUsuarios.Click += new System.EventHandler(this.pnlUsuarios_Click);
             // 
             // pnlVendas
             // 
@@ -160,6 +161,7 @@
             this.pnlVendas.Name = "pnlVendas";
             this.pnlVendas.Size = new System.Drawing.Size(550, 150);
             this.pnlVendas.TabIndex = 11;
+            this.pnlVendas.Click += new System.EventHandler(this.pnlVendas_Click);
             // 
             // pnlProdutos
             // 
@@ -169,6 +171,7 @@
             this.pnlProdutos.Name = "pnlProdutos";
             this.pnlProdutos.Size = new System.Drawing.Size(550, 150);
             this.pnlProdutos.TabIndex = 12;
+            this.pnlProdutos.Click += new System.EventHandler(this.pnlProdutos_Click);
             // 
             // pnlRelatorios
             // 
@@ -178,6 +181,7 @@
             this.pnlRelatorios.Name = "pnlRelatorios";
             this.pnlRelatorios.Size = new System.Drawing.Size(550, 150);
             this.pnlRelatorios.TabIndex = 13;
+            this.pnlRelatorios.Click += new System.EventHandler(this.pnlRelatorios_Click);
             // 
             // MenuPrincipal
             // 

@@ -39,13 +39,7 @@ namespace ProjetoIntegrador.Screen
 
         }
 
-        private void btnMenuProducts_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MenuProduct addProduct = new MenuProduct();
-            addProduct.Show();
-        }
-
+       
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -73,6 +67,32 @@ namespace ProjetoIntegrador.Screen
 
             }
     
+        }
+
+        private void pnlUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddUser addUser = new AddUser();
+            addUser.Show();
+        }
+
+        private void pnlProdutos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuProduct addProduct = new MenuProduct();
+            addProduct.Show();
+        }
+        private void pnlVendas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddVenda addVenda = new AddVenda();
+            addVenda.Show();
+        }
+        private void pnlRelatorios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddRelatorio addRelatorio = new AddRelatorio();
+            addRelatorio.Show();
         }
     }
 }
