@@ -25,8 +25,8 @@ namespace ProjetoIntegrador
 
             if (startScreen.IsDisposed)
             {
-                Application.Run(menuPrincipal);
-             //   Application.Run(loginScreen);
+              //  Application.Run(menuPrincipal);
+                  Application.Run(loginScreen);
             }
 
         }

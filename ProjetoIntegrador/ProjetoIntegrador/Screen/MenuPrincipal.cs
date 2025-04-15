@@ -21,7 +21,7 @@ namespace ProjetoIntegrador.Screen
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-
+            lblUserLogado.Text = SessionUser.userLogado.Nome;
         }
 
 

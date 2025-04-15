@@ -38,7 +38,7 @@ namespace ProjetoIntegrador.Services
 
                         if (storedHash == inputHash)
                         {
-                            return new Usuario
+                          Usuario usuario =  new Usuario
                             {
                                 Id = Convert.ToInt32(respostaBanco["idUsuario"]),
                                 Nome = respostaBanco["nomeUsuario"].ToString(),
@@ -47,6 +47,9 @@ namespace ProjetoIntegrador.Services
                                 Telefone = respostaBanco["telefone"].ToString(),
                                 Matricula = Convert.ToInt32(respostaBanco["matricula"]),
                             };
+                            SessionUser.Login(usuario);
+
+                            return usuario;
                         }
                     }
                 }
