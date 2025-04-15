@@ -45,5 +45,40 @@ namespace ProjetoIntegrador.Model.Product
                 throw new Exception("Erro ao registrar produto: " + ex.Message);
             }
         }
+        
+        
+        public List<Produto> GetAllProducts()
+        {
+            List<Produto> listaProdutos = new List<Produto>();
+
+            
+
+            try
+            {
+                string query = @"SELECT * FROM produtos";
+                
+                
+                    
+                
+                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+
+                while (dataReader.Read()) { 
+                
+                    Produto produto = new Produto();
+                    produto.IdProduto = dataReader.GetInt32("idProdutos");
+
+
+
+
+                    listaProdutos.Add(produto);
+                
+                }
+                return listaProdutos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao registrar produto: " + ex.Message);
+            }
+        }
     }
 }

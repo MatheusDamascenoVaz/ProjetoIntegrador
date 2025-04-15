@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Model.Product;
 
 namespace ProjetoIntegrador.Screen
 {
@@ -25,6 +27,9 @@ namespace ProjetoIntegrador.Screen
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
+            List<Produto> reader =  Controllers.buscaProdutos();
+
+            dataGridView1.DataSource = reader;
 
         }
 
