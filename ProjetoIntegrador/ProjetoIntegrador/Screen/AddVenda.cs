@@ -22,5 +22,7 @@ namespace ProjetoIntegrador.Screen
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             menuPrincipal.Show();
         }
+
+        
     }
 }
