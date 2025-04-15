@@ -173,6 +173,9 @@
     <EmbeddedResource Include="Screen\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screen\AddVenda.resx">
+      <DependentUpon>AddVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuProduct.resx">
       <DependentUpon>MenuProduct.cs</DependentUpon>
     </EmbeddedResource>
