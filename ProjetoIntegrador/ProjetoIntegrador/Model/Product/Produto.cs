@@ -15,7 +15,7 @@ namespace ProjetoIntegrador.Model.Product
         public string NomeProduto { get; set; }
         public string Descricao { get; set; }
         public int idCategoria { get; set; }
-        public DateTime Validade { get; set; }
+        public DateTime? Validade { get; set; }
         public int Quantidade { get; set; }
         public string UnidadeDeMedida { get; set; }
         public double Preco { get; set; }
@@ -33,7 +33,7 @@ namespace ProjetoIntegrador.Model.Product
                 NomeProduto = dataReader["nomeProduto"].ToString(),
                 Descricao = dataReader["descricao"].ToString(),
                 idCategoria = dataReader.GetInt32("idCategoria"),
-                Validade = Convert.ToDateTime(dataReader["validade"].ToString()),
+                Validade = dataReader["validade"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(dataReader["validade"]),
                 Quantidade = dataReader.GetInt32("quantidade"),
                 UnidadeDeMedida = dataReader["unidadeMedida"].ToString(),
                 Preco = dataReader.GetDouble("preco"),

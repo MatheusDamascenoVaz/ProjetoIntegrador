@@ -51,23 +51,19 @@ namespace ProjetoIntegrador.Model.Product
         {
             List<Produto> listaProdutos = new List<Produto>();
 
-            
-
             try
             {
                 string query = @"SELECT * FROM produtos";
-                
-                
-                    
-                
-                MySqlDataReader resultData = _databaseService.ExecuteQuery(query);
+                                  
+                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
 
-                while (resultData.Read())
-                {
-                    Produto produto = Produto.ProdutoFromDataReader(resultData);                                                       
-                    listaProdutos.Add(produto);
+                while (dataReader.Read()) { 
                 
-                }
+                    Produto produto = new Produto();
+                    produto = Produto.ProdutoFromDataReader(dataReader);
+
+                    listaProdutos.Add(produto);
+                               }
                 return listaProdutos;
             }
             catch (Exception ex)
