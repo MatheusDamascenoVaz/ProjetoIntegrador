@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Models;
 
 namespace ProjetoIntegrador.Model.Product
 {
@@ -20,5 +22,36 @@ namespace ProjetoIntegrador.Model.Product
         public double CodigoDeBarras { get; set; }
         public string Cor { get; set; }
 
+
+
+        public static Produto ProdutoFromDataReader(MySqlDataReader dataReader) {
+
+            return new Produto
+            {
+
+                IdProduto = dataReader.GetInt32("idProdutos"),
+                NomeProduto = dataReader["nomeProduto"].ToString(),
+                Descricao = dataReader["descricao"].ToString(),
+                idCategoria = dataReader.GetInt32("idCategoria"),
+                Validade = Convert.ToDateTime(dataReader["validade"].ToString()),
+                Quantidade = dataReader.GetInt32("quantidade"),
+                UnidadeDeMedida = dataReader["unidadeMedida"].ToString(),
+                Preco = dataReader.GetDouble("preco"),
+                CodigoDeBarras = dataReader.GetDouble("codigoDeBarras"),
+                Cor = dataReader["cor"].ToString(),
+             };
+        
+
+             
+        
+        }
+
+       
+       
     }
+
+
+    
+
+
 }

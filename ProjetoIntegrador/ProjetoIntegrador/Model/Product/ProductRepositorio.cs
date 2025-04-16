@@ -60,16 +60,11 @@ namespace ProjetoIntegrador.Model.Product
                 
                     
                 
-                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+                MySqlDataReader resultData = _databaseService.ExecuteQuery(query);
 
-                while (dataReader.Read()) { 
-                
-                    Produto produto = new Produto();
-                    produto.IdProduto = dataReader.GetInt32("idProdutos");
-
-
-
-
+                while (resultData.Read())
+                {
+                    Produto produto = Produto.ProdutoFromDataReader(resultData);                                                       
                     listaProdutos.Add(produto);
                 
                 }
