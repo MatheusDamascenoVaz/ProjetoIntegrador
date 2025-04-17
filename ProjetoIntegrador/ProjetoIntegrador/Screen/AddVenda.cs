@@ -19,6 +19,12 @@ namespace ProjetoIntegrador.Screen
         public AddVenda()
         {
             InitializeComponent();
+            this.FormClosing += ApplicationClose;
+        }
+        private void ApplicationClose(object sender, FormClosingEventArgs e)
+        {
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
