@@ -22,5 +22,10 @@ namespace ProjetoIntegrador.Screen
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             menuPrincipal.Show();
         }
+
+        private void AddRelatorio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
