@@ -29,6 +29,18 @@ namespace ProjetoIntegrador.Model.Product
                 throw new Exception("Erro ao registrar produto: " + ex.Message);
             }
         }
+        
+        public List<Produto> GetAllProduct()
+        {
+            try
+            {
+                return _productRepositorio.GetAllProducts();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao registrar produto: " + ex.Message);
+            }
+        }
 
 
 

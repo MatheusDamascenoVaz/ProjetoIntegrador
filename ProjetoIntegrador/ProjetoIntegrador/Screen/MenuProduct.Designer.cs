@@ -33,9 +33,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -51,11 +58,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(25, 275);
+            this.button3.Location = new System.Drawing.Point(25, 265);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 75);
             this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
+            this.button3.Text = "Remover Produto";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -82,11 +89,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(175, 325);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1250, 650);
             this.panel2.TabIndex = 1;
             // 
+
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.Icone_tela_de_fundo;
@@ -96,6 +105,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1250, 650);
+            this.dataGridView1.TabIndex = 0;
+
             // 
             // MenuProduct
             // 
@@ -111,7 +130,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddProduct_Load);
             this.panel1.ResumeLayout(false);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+
             this.ResumeLayout(false);
 
         }
@@ -123,6 +147,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
+
         private System.Windows.Forms.PictureBox pictureBox1;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+
     }
 }

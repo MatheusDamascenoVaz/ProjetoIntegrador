@@ -45,5 +45,55 @@ namespace ProjetoIntegrador.Model.Product
                 throw new Exception("Erro ao registrar produto: " + ex.Message);
             }
         }
+        
+        
+        public List<Produto> GetAllProducts()
+        {
+            List<Produto> listaProdutos = new List<Produto>();
+
+            try
+            {
+                string query = @"SELECT * FROM produtos";
+                                  
+                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+
+                while (dataReader.Read()) { 
+                
+                    Produto produto = new Produto();
+                    produto = Produto.ProdutoFromDataReader(dataReader);
+
+                    listaProdutos.Add(produto);
+                               }
+                return listaProdutos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro buscar lista: " + ex.Message);
+            }
+        }public List<Produto> BuscarProdutoCodigoDeBarras()
+
+        {
+            List<Produto> listaProdutos = new List<Produto>();
+
+            try
+            {
+                string query = "SELECT NomeProduto, Preco FROM Produtos WHERE CodigoBarras = @CodigoBarras";
+
+                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+
+                while (dataReader.Read()) { 
+                
+                    Produto produto = new Produto();
+                    produto = Produto.ProdutoFromDataReader(dataReader);
+
+                    listaProdutos.Add(produto);
+                               }
+                return listaProdutos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar produto: " + ex.Message);
+            }
+        }
     }
 }

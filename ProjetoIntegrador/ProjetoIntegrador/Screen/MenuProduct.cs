@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Model.Product;
+using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador.Screen
+
 {
-    public partial class MenuProduct: Form
+    public partial class MenuProduct : Form
     {
+        private DatabaseService databaseService = new DatabaseService(); 
+        private ProdutoController produtoController;
+
         public MenuProduct()
         {
             InitializeComponent();
             this.FormClosing += ApplicationClose;
+            produtoController = new ProdutoController(new ProductRepositorio(databaseService));
         }
+
+
         private void ApplicationClose(object sender, FormClosingEventArgs e)
         {
             MenuPrincipal menuPrincipal = new MenuPrincipal();
@@ -25,7 +36,12 @@ namespace ProjetoIntegrador.Screen
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
+            List<Produto> listaProdutos = new List<Produto>();
+            listaProdutos = produtoController.GetAllProduct();
 
+
+            dataGridView1.DataSource = listaProdutos;
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
