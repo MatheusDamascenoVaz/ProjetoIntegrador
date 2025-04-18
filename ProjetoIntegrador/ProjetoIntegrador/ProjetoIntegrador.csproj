@@ -257,5 +257,8 @@
   <ItemGroup>
     <None Include="Resources\sair.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone tela de fundo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

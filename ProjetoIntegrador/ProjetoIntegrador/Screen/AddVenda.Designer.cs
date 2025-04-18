@@ -31,6 +31,10 @@
             this.numericQuantidade = new System.Windows.Forms.NumericUpDown();
             this.txtCodigoDeBarras = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewItens = new System.Windows.Forms.DataGridView();
@@ -38,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
-            this.SuspendLayout();
+
             // 
             // numericQuantidade
             // 
@@ -59,6 +63,21 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(66, 84);
             this.label1.Name = "label1";
+
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.Icone_tela_de_fundo;
+            this.pictureBox1.Location = new System.Drawing.Point(668, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(106, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "QUANTIDADE";
@@ -107,6 +126,7 @@
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Preço Total:";
+
             // 
             // AddVenda
             // 
@@ -114,18 +134,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
+            this.Controls.Add(this.pictureBox1);
+
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataGridViewItens);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
+
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigoDeBarras);
             this.Controls.Add(this.numericQuantidade);
             this.Name = "AddVenda";
             this.Text = "AddVenda";
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,10 +164,14 @@
         private System.Windows.Forms.NumericUpDown numericQuantidade;
         private System.Windows.Forms.TextBox txtCodigoDeBarras;
         private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewItens;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label3;
+
     }
 }

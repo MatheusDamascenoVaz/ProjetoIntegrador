@@ -43,6 +43,8 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.comboRegras = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -155,7 +157,7 @@
             // 
             this.comboRegras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRegras.FormattingEnabled = true;
-            this.comboRegras.Location = new System.Drawing.Point(299, 56);
+            this.comboRegras.Location = new System.Drawing.Point(292, 57);
             this.comboRegras.Name = "comboRegras";
             this.comboRegras.Size = new System.Drawing.Size(121, 21);
             this.comboRegras.TabIndex = 13;
@@ -168,11 +170,23 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.Icone_tela_de_fundo;
+            this.pictureBox1.Location = new System.Drawing.Point(419, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 461);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(518, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboRegras);
             this.Controls.Add(this.btnCadastrar);
@@ -191,6 +205,7 @@
             this.Name = "AddUser";
             this.Text = "AddUser";
             this.Load += new System.EventHandler(this.AddUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +228,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.ComboBox comboRegras;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

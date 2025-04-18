@@ -163,6 +163,16 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icone_tela_de_fundo {
+            get {
+                object obj = ResourceManager.GetObject("Icone tela de fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading2 {
             get {
                 object obj = ResourceManager.GetObject("loading2", resourceCulture);
