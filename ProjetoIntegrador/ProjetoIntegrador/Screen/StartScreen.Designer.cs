@@ -64,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblStartScreen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartScreen";
