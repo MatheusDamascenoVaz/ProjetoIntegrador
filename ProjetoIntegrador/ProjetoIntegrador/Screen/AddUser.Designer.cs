@@ -202,6 +202,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNomeUsuario);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.Name = "AddUser";
             this.Text = "AddUser";
             this.Load += new System.EventHandler(this.AddUser_Load);
