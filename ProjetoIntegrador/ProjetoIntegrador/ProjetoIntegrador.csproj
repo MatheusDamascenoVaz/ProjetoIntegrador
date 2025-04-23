@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AuthControllers.cs" />
+    <Compile Include="Model\Estetica\ArredondarPainel.cs" />
     <Compile Include="Model\Product\ItemVenda.cs" />
     <Compile Include="Model\Product\ProductRepositorio.cs" />
     <Compile Include="Model\Product\Produto.cs" />
@@ -245,6 +246,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\Relatorio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstoqueMasterMainIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGLoginScreen.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
