@@ -126,6 +126,12 @@
     <Compile Include="Screen\AddVenda.Designer.cs">
       <DependentUpon>AddVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\MenuProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\AddVenda.resx">
       <DependentUpon>AddVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuProduct.resx">
       <DependentUpon>MenuProduct.cs</DependentUpon>
@@ -252,6 +261,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BGLoginScreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstoqueMasterLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

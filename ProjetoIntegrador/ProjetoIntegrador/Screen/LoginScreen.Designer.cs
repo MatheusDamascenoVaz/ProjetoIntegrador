@@ -49,8 +49,10 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(120, 230);
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
+            this.btnLogin.Location = new System.Drawing.Point(120, 220);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(160, 40);
             this.btnLogin.TabIndex = 0;
@@ -81,6 +83,7 @@
             this.lblLoginEmail.AutoSize = true;
             this.lblLoginEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
             this.lblLoginEmail.Location = new System.Drawing.Point(1, 3);
             this.lblLoginEmail.Name = "lblLoginEmail";
             this.lblLoginEmail.Size = new System.Drawing.Size(35, 13);
@@ -92,6 +95,7 @@
             this.lbl.AutoSize = true;
             this.lbl.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
             this.lbl.Location = new System.Drawing.Point(1, 3);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(41, 13);
@@ -102,6 +106,8 @@
             // 
             this.lblRedefinirSenha.AutoSize = true;
             this.lblRedefinirSenha.BackColor = System.Drawing.Color.Transparent;
+            this.lblRedefinirSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRedefinirSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
             this.lblRedefinirSenha.Location = new System.Drawing.Point(53, 175);
             this.lblRedefinirSenha.Name = "lblRedefinirSenha";
             this.lblRedefinirSenha.Size = new System.Drawing.Size(108, 13);
@@ -125,10 +131,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.adicionar_usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(240, 30);
+            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.EstoqueMasterLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(230, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -137,6 +143,7 @@
             // 
             this.lblLoginMain.AutoSize = true;
             this.lblLoginMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
             this.lblLoginMain.Location = new System.Drawing.Point(114, 35);
             this.lblLoginMain.Name = "lblLoginMain";
             this.lblLoginMain.Size = new System.Drawing.Size(99, 31);
@@ -177,6 +184,7 @@
             this.Controls.Add(this.pnlLoginMain);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

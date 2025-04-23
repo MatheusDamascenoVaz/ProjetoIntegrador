@@ -34,10 +34,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUserLogado = new System.Windows.Forms.Label();
             this.imgLogout = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.imgRelatorio = new System.Windows.Forms.PictureBox();
+            this.imgProduto = new System.Windows.Forms.PictureBox();
+            this.imgUser = new System.Windows.Forms.PictureBox();
+            this.imgVenda = new System.Windows.Forms.PictureBox();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
             this.lblMainUsuarioDescricao = new System.Windows.Forms.Label();
             this.lblMainUsuario = new System.Windows.Forms.Label();
@@ -50,16 +50,18 @@
             this.pnlRelatorios = new System.Windows.Forms.Panel();
             this.lblMainRelatorioDescricao = new System.Windows.Forms.Label();
             this.lblMainRelatorio = new System.Windows.Forms.Label();
+            this.imgAjuda = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRelatorio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVenda)).BeginInit();
             this.pnlUsuarios.SuspendLayout();
             this.pnlVendas.SuspendLayout();
             this.pnlProdutos.SuspendLayout();
             this.pnlRelatorios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAjuda)).BeginInit();
             this.SuspendLayout();
             // 
             // printDialog1
@@ -71,6 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(108, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 33);
@@ -80,7 +83,7 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(106)))), ((int)(((byte)(160)))));
             this.panel1.Controls.Add(this.lblUserLogado);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.imgLogout);
@@ -95,6 +98,7 @@
             // 
             this.lblUserLogado.AutoSize = true;
             this.lblUserLogado.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserLogado.ForeColor = System.Drawing.Color.Black;
             this.lblUserLogado.Location = new System.Drawing.Point(399, 29);
             this.lblUserLogado.Name = "lblUserLogado";
             this.lblUserLogado.Size = new System.Drawing.Size(0, 33);
@@ -102,6 +106,7 @@
             // 
             // imgLogout
             // 
+            this.imgLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgLogout.Image = global::ProjetoIntegrador.Properties.Resources.sair;
             this.imgLogout.Location = new System.Drawing.Point(1300, 20);
             this.imgLogout.Name = "imgLogout";
@@ -111,56 +116,57 @@
             this.imgLogout.TabStop = false;
             this.imgLogout.Click += new System.EventHandler(this.imgLogout_Click);
             // 
-            // pictureBox1
+            // imgRelatorio
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.product_durability;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pnlRelatorios_Click);
+            this.imgRelatorio.BackColor = System.Drawing.Color.Transparent;
+            this.imgRelatorio.Image = global::ProjetoIntegrador.Properties.Resources.product_durability;
+            this.imgRelatorio.Location = new System.Drawing.Point(10, 10);
+            this.imgRelatorio.Name = "imgRelatorio";
+            this.imgRelatorio.Size = new System.Drawing.Size(130, 130);
+            this.imgRelatorio.TabIndex = 9;
+            this.imgRelatorio.TabStop = false;
+            this.imgRelatorio.Click += new System.EventHandler(this.pnlRelatorios_Click);
             // 
-            // pictureBox2
+            // imgProduto
             // 
-            this.pictureBox2.Image = global::ProjetoIntegrador.Properties.Resources.produtos;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pnlProdutos_Click);
+            this.imgProduto.Image = global::ProjetoIntegrador.Properties.Resources.produtos;
+            this.imgProduto.Location = new System.Drawing.Point(10, 10);
+            this.imgProduto.Name = "imgProduto";
+            this.imgProduto.Size = new System.Drawing.Size(130, 130);
+            this.imgProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgProduto.TabIndex = 3;
+            this.imgProduto.TabStop = false;
+            this.imgProduto.Click += new System.EventHandler(this.pnlProdutos_Click);
             // 
-            // pictureBox4
+            // imgUser
             // 
-            this.pictureBox4.Image = global::ProjetoIntegrador.Properties.Resources.adicionar_usuario;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pnlUsuarios_Click);
+            this.imgUser.Image = global::ProjetoIntegrador.Properties.Resources.adicionar_usuario;
+            this.imgUser.Location = new System.Drawing.Point(10, 10);
+            this.imgUser.Name = "imgUser";
+            this.imgUser.Size = new System.Drawing.Size(130, 130);
+            this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUser.TabIndex = 5;
+            this.imgUser.TabStop = false;
+            this.imgUser.Click += new System.EventHandler(this.pnlUsuarios_Click);
             // 
-            // pictureBox3
+            // imgVenda
             // 
-            this.pictureBox3.Image = global::ProjetoIntegrador.Properties.Resources.vendas;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pnlVendas_Click);
+            this.imgVenda.Image = global::ProjetoIntegrador.Properties.Resources.vendas;
+            this.imgVenda.Location = new System.Drawing.Point(10, 10);
+            this.imgVenda.Name = "imgVenda";
+            this.imgVenda.Size = new System.Drawing.Size(130, 130);
+            this.imgVenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgVenda.TabIndex = 4;
+            this.imgVenda.TabStop = false;
+            this.imgVenda.Click += new System.EventHandler(this.pnlVendas_Click);
             // 
             // pnlUsuarios
             // 
             this.pnlUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlUsuarios.Controls.Add(this.lblMainUsuarioDescricao);
             this.pnlUsuarios.Controls.Add(this.lblMainUsuario);
-            this.pnlUsuarios.Controls.Add(this.pictureBox4);
+            this.pnlUsuarios.Controls.Add(this.imgUser);
+            this.pnlUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlUsuarios.Location = new System.Drawing.Point(100, 200);
             this.pnlUsuarios.Name = "pnlUsuarios";
             this.pnlUsuarios.Size = new System.Drawing.Size(550, 150);
@@ -193,7 +199,8 @@
             this.pnlVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlVendas.Controls.Add(this.lblMainVendaDescricao);
             this.pnlVendas.Controls.Add(this.lblMainVendas);
-            this.pnlVendas.Controls.Add(this.pictureBox3);
+            this.pnlVendas.Controls.Add(this.imgVenda);
+            this.pnlVendas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlVendas.Location = new System.Drawing.Point(750, 200);
             this.pnlVendas.Name = "pnlVendas";
             this.pnlVendas.Size = new System.Drawing.Size(550, 150);
@@ -226,7 +233,8 @@
             this.pnlProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlProdutos.Controls.Add(this.lblMainProdutoDescricao);
             this.pnlProdutos.Controls.Add(this.lblMainProduto);
-            this.pnlProdutos.Controls.Add(this.pictureBox2);
+            this.pnlProdutos.Controls.Add(this.imgProduto);
+            this.pnlProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlProdutos.Location = new System.Drawing.Point(100, 450);
             this.pnlProdutos.Name = "pnlProdutos";
             this.pnlProdutos.Size = new System.Drawing.Size(550, 150);
@@ -259,7 +267,8 @@
             this.pnlRelatorios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRelatorios.Controls.Add(this.lblMainRelatorioDescricao);
             this.pnlRelatorios.Controls.Add(this.lblMainRelatorio);
-            this.pnlRelatorios.Controls.Add(this.pictureBox1);
+            this.pnlRelatorios.Controls.Add(this.imgRelatorio);
+            this.pnlRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlRelatorios.Location = new System.Drawing.Point(750, 450);
             this.pnlRelatorios.Name = "pnlRelatorios";
             this.pnlRelatorios.Size = new System.Drawing.Size(550, 150);
@@ -287,6 +296,16 @@
             this.lblMainRelatorio.Text = "Gerar Relatório";
             this.lblMainRelatorio.Click += new System.EventHandler(this.pnlRelatorios_Click);
             // 
+            // imgAjuda
+            // 
+            this.imgAjuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgAjuda.Image = global::ProjetoIntegrador.Properties.Resources.ajuda;
+            this.imgAjuda.Location = new System.Drawing.Point(1300, 116);
+            this.imgAjuda.Name = "imgAjuda";
+            this.imgAjuda.Size = new System.Drawing.Size(60, 60);
+            this.imgAjuda.TabIndex = 14;
+            this.imgAjuda.TabStop = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +313,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1384, 711);
+            this.Controls.Add(this.imgAjuda);
             this.Controls.Add(this.pnlVendas);
             this.Controls.Add(this.pnlUsuarios);
             this.Controls.Add(this.pnlRelatorios);
@@ -309,10 +329,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRelatorio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVenda)).EndInit();
             this.pnlUsuarios.ResumeLayout(false);
             this.pnlUsuarios.PerformLayout();
             this.pnlVendas.ResumeLayout(false);
@@ -321,20 +341,21 @@
             this.pnlProdutos.PerformLayout();
             this.pnlRelatorios.ResumeLayout(false);
             this.pnlRelatorios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAjuda)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox imgProduto;
+        private System.Windows.Forms.PictureBox imgVenda;
         private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox imgUser;
         private System.Windows.Forms.PictureBox imgLogout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblUserLogado;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgRelatorio;
         private System.Windows.Forms.Panel pnlUsuarios;
         private System.Windows.Forms.Panel pnlVendas;
         private System.Windows.Forms.Panel pnlProdutos;
@@ -347,5 +368,6 @@
         private System.Windows.Forms.Label lblMainVendaDescricao;
         private System.Windows.Forms.Label lblMainProdutoDescricao;
         private System.Windows.Forms.Label lblMainRelatorioDescricao;
+        private System.Windows.Forms.PictureBox imgAjuda;
     }
 }
