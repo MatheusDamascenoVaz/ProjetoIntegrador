@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,17 +39,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
-            this.pnlVendas = new System.Windows.Forms.Panel();
-            this.pnlProdutos = new System.Windows.Forms.Panel();
-            this.pnlRelatorios = new System.Windows.Forms.Panel();
-            this.lblMainUsuario = new System.Windows.Forms.Label();
-            this.lblMainVendas = new System.Windows.Forms.Label();
-            this.lblMainProduto = new System.Windows.Forms.Label();
-            this.lblMainRelatorio = new System.Windows.Forms.Label();
             this.lblMainUsuarioDescricao = new System.Windows.Forms.Label();
+            this.lblMainUsuario = new System.Windows.Forms.Label();
+            this.pnlVendas = new System.Windows.Forms.Panel();
             this.lblMainVendaDescricao = new System.Windows.Forms.Label();
+            this.lblMainVendas = new System.Windows.Forms.Label();
+            this.pnlProdutos = new System.Windows.Forms.Panel();
             this.lblMainProdutoDescricao = new System.Windows.Forms.Label();
+            this.lblMainProduto = new System.Windows.Forms.Label();
+            this.pnlRelatorios = new System.Windows.Forms.Panel();
             this.lblMainRelatorioDescricao = new System.Windows.Forms.Label();
+            this.lblMainRelatorio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,6 +167,27 @@
             this.pnlUsuarios.TabIndex = 10;
             this.pnlUsuarios.Click += new System.EventHandler(this.pnlUsuarios_Click);
             // 
+            // lblMainUsuarioDescricao
+            // 
+            this.lblMainUsuarioDescricao.AutoSize = true;
+            this.lblMainUsuarioDescricao.Location = new System.Drawing.Point(170, 50);
+            this.lblMainUsuarioDescricao.Name = "lblMainUsuarioDescricao";
+            this.lblMainUsuarioDescricao.Size = new System.Drawing.Size(349, 13);
+            this.lblMainUsuarioDescricao.TabIndex = 7;
+            this.lblMainUsuarioDescricao.Text = "•\tAdiciona, gerencia e remove a entrada de novos usuários da aplicação";
+            this.lblMainUsuarioDescricao.Click += new System.EventHandler(this.pnlUsuarios_Click);
+            // 
+            // lblMainUsuario
+            // 
+            this.lblMainUsuario.AutoSize = true;
+            this.lblMainUsuario.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainUsuario.Location = new System.Drawing.Point(170, 15);
+            this.lblMainUsuario.Name = "lblMainUsuario";
+            this.lblMainUsuario.Size = new System.Drawing.Size(189, 24);
+            this.lblMainUsuario.TabIndex = 6;
+            this.lblMainUsuario.Text = "Adicionar Usuário";
+            this.lblMainUsuario.Click += new System.EventHandler(this.pnlUsuarios_Click);
+            // 
             // pnlVendas
             // 
             this.pnlVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -177,6 +199,27 @@
             this.pnlVendas.Size = new System.Drawing.Size(550, 150);
             this.pnlVendas.TabIndex = 11;
             this.pnlVendas.Click += new System.EventHandler(this.pnlVendas_Click);
+            // 
+            // lblMainVendaDescricao
+            // 
+            this.lblMainVendaDescricao.AutoSize = true;
+            this.lblMainVendaDescricao.Location = new System.Drawing.Point(170, 50);
+            this.lblMainVendaDescricao.Name = "lblMainVendaDescricao";
+            this.lblMainVendaDescricao.Size = new System.Drawing.Size(325, 13);
+            this.lblMainVendaDescricao.TabIndex = 8;
+            this.lblMainVendaDescricao.Text = "•\tTerminal para a inserção das vendas e emissão de comprovantes ";
+            this.lblMainVendaDescricao.Click += new System.EventHandler(this.pnlVendas_Click);
+            // 
+            // lblMainVendas
+            // 
+            this.lblMainVendas.AutoSize = true;
+            this.lblMainVendas.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainVendas.Location = new System.Drawing.Point(170, 15);
+            this.lblMainVendas.Name = "lblMainVendas";
+            this.lblMainVendas.Size = new System.Drawing.Size(174, 24);
+            this.lblMainVendas.TabIndex = 5;
+            this.lblMainVendas.Text = "Adicionar Venda";
+            this.lblMainVendas.Click += new System.EventHandler(this.pnlVendas_Click);
             // 
             // pnlProdutos
             // 
@@ -190,39 +233,15 @@
             this.pnlProdutos.TabIndex = 12;
             this.pnlProdutos.Click += new System.EventHandler(this.pnlProdutos_Click);
             // 
-            // pnlRelatorios
+            // lblMainProdutoDescricao
             // 
-            this.pnlRelatorios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlRelatorios.Controls.Add(this.lblMainRelatorioDescricao);
-            this.pnlRelatorios.Controls.Add(this.lblMainRelatorio);
-            this.pnlRelatorios.Controls.Add(this.pictureBox1);
-            this.pnlRelatorios.Location = new System.Drawing.Point(750, 450);
-            this.pnlRelatorios.Name = "pnlRelatorios";
-            this.pnlRelatorios.Size = new System.Drawing.Size(550, 150);
-            this.pnlRelatorios.TabIndex = 13;
-            this.pnlRelatorios.Click += new System.EventHandler(this.pnlRelatorios_Click);
-            // 
-            // lblMainUsuario
-            // 
-            this.lblMainUsuario.AutoSize = true;
-            this.lblMainUsuario.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainUsuario.Location = new System.Drawing.Point(170, 15);
-            this.lblMainUsuario.Name = "lblMainUsuario";
-            this.lblMainUsuario.Size = new System.Drawing.Size(189, 24);
-            this.lblMainUsuario.TabIndex = 6;
-            this.lblMainUsuario.Text = "Adicionar Usuário";
-            this.lblMainUsuario.Click += new System.EventHandler(this.pnlUsuarios_Click);
-            // 
-            // lblMainVendas
-            // 
-            this.lblMainVendas.AutoSize = true;
-            this.lblMainVendas.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainVendas.Location = new System.Drawing.Point(170, 15);
-            this.lblMainVendas.Name = "lblMainVendas";
-            this.lblMainVendas.Size = new System.Drawing.Size(174, 24);
-            this.lblMainVendas.TabIndex = 5;
-            this.lblMainVendas.Text = "Adicionar Venda";
-            this.lblMainVendas.Click += new System.EventHandler(this.pnlVendas_Click);
+            this.lblMainProdutoDescricao.AutoSize = true;
+            this.lblMainProdutoDescricao.Location = new System.Drawing.Point(170, 50);
+            this.lblMainProdutoDescricao.Name = "lblMainProdutoDescricao";
+            this.lblMainProdutoDescricao.Size = new System.Drawing.Size(315, 13);
+            this.lblMainProdutoDescricao.TabIndex = 8;
+            this.lblMainProdutoDescricao.Text = "•\tPainel para adição, edição e remoção de produtos da aplicação";
+            this.lblMainProdutoDescricao.Click += new System.EventHandler(this.pnlProdutos_Click);
             // 
             // lblMainProduto
             // 
@@ -235,46 +254,17 @@
             this.lblMainProduto.Text = "Adicionar Produto";
             this.lblMainProduto.Click += new System.EventHandler(this.pnlProdutos_Click);
             // 
-            // lblMainRelatorio
+            // pnlRelatorios
             // 
-            this.lblMainRelatorio.AutoSize = true;
-            this.lblMainRelatorio.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainRelatorio.Location = new System.Drawing.Point(170, 15);
-            this.lblMainRelatorio.Name = "lblMainRelatorio";
-            this.lblMainRelatorio.Size = new System.Drawing.Size(162, 24);
-            this.lblMainRelatorio.TabIndex = 10;
-            this.lblMainRelatorio.Text = "Gerar Relatório";
-            this.lblMainRelatorio.Click += new System.EventHandler(this.pnlRelatorios_Click);
-            // 
-            // lblMainUsuarioDescricao
-            // 
-            this.lblMainUsuarioDescricao.AutoSize = true;
-            this.lblMainUsuarioDescricao.Location = new System.Drawing.Point(170, 50);
-            this.lblMainUsuarioDescricao.Name = "lblMainUsuarioDescricao";
-            this.lblMainUsuarioDescricao.Size = new System.Drawing.Size(349, 13);
-            this.lblMainUsuarioDescricao.TabIndex = 7;
-            this.lblMainUsuarioDescricao.Text = "•\tAdiciona, gerencia e remove a entrada de novos usuários da aplicação";
-            this.lblMainUsuarioDescricao.Click += new System.EventHandler(this.pnlUsuarios_Click);
-            // 
-            // lblMainVendaDescricao
-            // 
-            this.lblMainVendaDescricao.AutoSize = true;
-            this.lblMainVendaDescricao.Location = new System.Drawing.Point(170, 50);
-            this.lblMainVendaDescricao.Name = "lblMainVendaDescricao";
-            this.lblMainVendaDescricao.Size = new System.Drawing.Size(325, 13);
-            this.lblMainVendaDescricao.TabIndex = 8;
-            this.lblMainVendaDescricao.Text = "•\tTerminal para a inserção das vendas e emissão de comprovantes ";
-            this.lblMainVendaDescricao.Click += new System.EventHandler(this.pnlVendas_Click);
-            // 
-            // lblMainProdutoDescricao
-            // 
-            this.lblMainProdutoDescricao.AutoSize = true;
-            this.lblMainProdutoDescricao.Location = new System.Drawing.Point(170, 50);
-            this.lblMainProdutoDescricao.Name = "lblMainProdutoDescricao";
-            this.lblMainProdutoDescricao.Size = new System.Drawing.Size(315, 13);
-            this.lblMainProdutoDescricao.TabIndex = 8;
-            this.lblMainProdutoDescricao.Text = "•\tPainel para adição, edição e remoção de produtos da aplicação";
-            this.lblMainProdutoDescricao.Click += new System.EventHandler(this.pnlProdutos_Click);
+            this.pnlRelatorios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRelatorios.Controls.Add(this.lblMainRelatorioDescricao);
+            this.pnlRelatorios.Controls.Add(this.lblMainRelatorio);
+            this.pnlRelatorios.Controls.Add(this.pictureBox1);
+            this.pnlRelatorios.Location = new System.Drawing.Point(750, 450);
+            this.pnlRelatorios.Name = "pnlRelatorios";
+            this.pnlRelatorios.Size = new System.Drawing.Size(550, 150);
+            this.pnlRelatorios.TabIndex = 13;
+            this.pnlRelatorios.Click += new System.EventHandler(this.pnlRelatorios_Click);
             // 
             // lblMainRelatorioDescricao
             // 
@@ -285,6 +275,17 @@
             this.lblMainRelatorioDescricao.TabIndex = 11;
             this.lblMainRelatorioDescricao.Text = "•\tCriação de relatórios customizados";
             this.lblMainRelatorioDescricao.Click += new System.EventHandler(this.pnlRelatorios_Click);
+            // 
+            // lblMainRelatorio
+            // 
+            this.lblMainRelatorio.AutoSize = true;
+            this.lblMainRelatorio.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainRelatorio.Location = new System.Drawing.Point(170, 15);
+            this.lblMainRelatorio.Name = "lblMainRelatorio";
+            this.lblMainRelatorio.Size = new System.Drawing.Size(162, 24);
+            this.lblMainRelatorio.TabIndex = 10;
+            this.lblMainRelatorio.Text = "Gerar Relatório";
+            this.lblMainRelatorio.Click += new System.EventHandler(this.pnlRelatorios_Click);
             // 
             // MenuPrincipal
             // 
@@ -300,6 +301,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";

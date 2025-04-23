@@ -106,6 +106,7 @@
     <Compile Include="Model\Product\ProdutoController.cs" />
     <Compile Include="Model\Usuario\Usuario.cs" />
     <Compile Include="Model\Usuario\UsuarioRepositorio.cs" />
+    <Compile Include="Model\Venda\ItemVenda.cs" />
     <Compile Include="Screen\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,24 +223,6 @@
     <None Include="Resources\gifLogin.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210247.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210630.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210654.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210254.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210301.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 211620.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\gifMenu.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +242,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icone tela de fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Relatorio\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
