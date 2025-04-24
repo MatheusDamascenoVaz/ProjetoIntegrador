@@ -73,6 +73,26 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ajuda {
+            get {
+                object obj = ResourceManager.GetObject("ajuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BGLoginScreen {
+            get {
+                object obj = ResourceManager.GetObject("BGLoginScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2025_04_11_210247 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2025-04-11 210247", resourceCulture);
@@ -136,6 +156,26 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap EstoqueMasterBG {
             get {
                 object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EstoqueMasterLogo {
+            get {
+                object obj = ResourceManager.GetObject("EstoqueMasterLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EstoqueMasterMainIco {
+            get {
+                object obj = ResourceManager.GetObject("EstoqueMasterMainIco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

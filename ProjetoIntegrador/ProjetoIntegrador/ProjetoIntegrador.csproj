@@ -100,12 +100,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AuthControllers.cs" />
+    <Compile Include="Model\Estetica\ArredondarPainel.cs" />
     <Compile Include="Model\Product\ItemVenda.cs" />
     <Compile Include="Model\Product\ProductRepositorio.cs" />
     <Compile Include="Model\Product\Produto.cs" />
     <Compile Include="Model\Product\ProdutoController.cs" />
     <Compile Include="Model\Usuario\Usuario.cs" />
     <Compile Include="Model\Usuario\UsuarioRepositorio.cs" />
+    <Compile Include="Model\Venda\ItemVenda.cs" />
     <Compile Include="Screen\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +125,12 @@
     </Compile>
     <Compile Include="Screen\AddVenda.Designer.cs">
       <DependentUpon>AddVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
     </Compile>
     <Compile Include="Screen\MenuProduct.cs">
       <SubType>Form</SubType>
@@ -180,6 +188,9 @@
     <EmbeddedResource Include="Screen\AddVenda.resx">
       <DependentUpon>AddVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuProduct.resx">
       <DependentUpon>MenuProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,24 +233,6 @@
     <None Include="Resources\gifLogin.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210247.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210630.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210654.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210254.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 210301.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Captura de tela 2025-04-11 211620.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\gifMenu.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +252,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icone tela de fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Relatorio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstoqueMasterMainIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGLoginScreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstoqueMasterLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

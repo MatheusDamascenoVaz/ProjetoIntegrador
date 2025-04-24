@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoIntegrador.Controllers;
+using ProjetoIntegrador.Model.Estetica;
 using ProjetoIntegrador.Models;
 using ProjetoIntegrador.Screen;
 using ProjetoIntegrador.Services;
@@ -23,6 +24,7 @@ namespace ProjetoIntegrador
             this.FormClosing += AppCloseWindow.CloseApp;
             DatabaseService databaseService = new DatabaseService();
             authController = new AuthController(new AuthService(databaseService), new Model.UsuarioRepositorio(databaseService));
+            ArredondarPainel.Arredondar(pnlLoginMain, 30);
 
         }
 
@@ -48,6 +50,11 @@ namespace ProjetoIntegrador
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblRedefinirSenha_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Entre em contato com o Administrador do sistema", "Função bloqueada",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
