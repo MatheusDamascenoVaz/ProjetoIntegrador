@@ -8,7 +8,7 @@ using ProjetoIntegrador.Models;
 
 namespace ProjetoIntegrador.Model.Product
 {
-    class Produto
+    public class Produto
     {
 
         public int IdProduto { get; set; }

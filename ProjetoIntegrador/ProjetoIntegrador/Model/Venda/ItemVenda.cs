@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.Model.Product;
 using ProjetoIntegrador.Services;
@@ -11,9 +12,8 @@ public class GerenciadorVendas
     private string conexaoBanco;
     DatabaseService _databaseService;
 
-    public GerenciadorVendas(string stringConexao)
+    public GerenciadorVendas()
     {
-        conexaoBanco = stringConexao;
         _databaseService = new DatabaseService();
     }
 
@@ -77,7 +77,7 @@ public class GerenciadorVendas
         }
     }
     
-    private Produto ProdutoPorCodigoBarras(string barCode)
+    public Produto ProdutoPorCodigoBarras(string barCode)
     {
         
        
@@ -94,11 +94,18 @@ public class GerenciadorVendas
 
 
 
-            if (produtoBuscado != null) { 
-            
-                Produto produto = Produto.ProdutoFromDataReader(produtoBuscado);
-                return produto;
-                            
+            while (produtoBuscado.Read()) {
+
+                if (produtoBuscado != null)
+                {
+
+                    MessageBox.Show(produtoBuscado["nomeProduto"].ToString());
+
+                    Produto produto = Produto.ProdutoFromDataReader(produtoBuscado);
+                    return produto;
+
+                }
+
             }
                
             Produto produto1 = new Produto();

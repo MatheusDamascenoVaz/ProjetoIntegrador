@@ -14,12 +14,16 @@ namespace ProjetoIntegrador.Screen
     public partial class AddVenda : Form
     {
         private List<Produto> produtos; 
-        private List<ItemVenda> itensVenda = new List<ItemVenda>(); 
+        //private List<ItemVenda> itensVenda = new List<ItemVenda>();
+        private List<ItemVenda> itensVenda = new List<ItemVenda>();
+        private GerenciadorVendas _gerenciadorVendas;
 
         public AddVenda()
         {
             InitializeComponent();
             this.FormClosing += ApplicationClose;
+            _gerenciadorVendas = new GerenciadorVendas();
+
         }
         private void ApplicationClose(object sender, FormClosingEventArgs e)
         {
@@ -29,8 +33,10 @@ namespace ProjetoIntegrador.Screen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             string codigoBarras = txtCodigoDeBarras.Text;
+            
+
+
             int quantidade = (int)numericQuantidade.Value;
 
             if (string.IsNullOrEmpty(codigoBarras))
@@ -45,25 +51,28 @@ namespace ProjetoIntegrador.Screen
                 return;
             }
 
-            Produto produto = produtos.FirstOrDefault(p => p.CodigoDeBarras == codigoBarrasDouble);
+            //Produto produto = produtos.FirstOrDefault(p => p.CodigoDeBarras == codigoBarrasDouble);
 
-            if (produto == null)
+            Produto produtoEncontrado = _gerenciadorVendas.ProdutoPorCodigoBarras(codigoBarras);
+
+            if (produtoEncontrado == null)
             {
                 MessageBox.Show("Produto não encontrado!");
                 return;
             }
 
-            if (quantidade > produto.Quantidade)
+            if (quantidade > produtoEncontrado.Quantidade)
             {
                 MessageBox.Show("Quantidade indisponível em estoque.");
                 return;
             }
-            itensVenda.Add(new ItemVenda
-            {
-                NomeProduto = produto.NomeProduto,
-                Preco = (decimal)produto.Preco,
-                Quantidade = quantidade
-            });
+
+            ItemVenda itemVenda = new ItemVenda();
+
+            
+           
+            itensVenda.Add(itemVenda.itemFromProduto(produtoEncontrado, quantidade));
+            
 
             dataGridViewItens.DataSource = null;
             dataGridViewItens.DataSource = itensVenda;
@@ -74,7 +83,7 @@ namespace ProjetoIntegrador.Screen
 
         private void CalcularTotal()
         {
-            decimal total = itensVenda.Sum(item => item.Preco * item.Quantidade);
+            decimal total = (decimal)itensVenda.Sum(item => item.Preco * item.QuantidadeVendida);
             lblTotal.Text = $"Total: {total:C}"; 
         }
 
