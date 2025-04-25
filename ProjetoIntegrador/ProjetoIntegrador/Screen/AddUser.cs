@@ -24,7 +24,7 @@ namespace ProjetoIntegrador.Screen
             AuthService authService = new AuthService(databaseService);
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio(databaseService);
             authController = new AuthController(authService, usuarioRepositorio);
-            this.FormClosing += ApplicationClose;
+            
 
         }
 
@@ -57,11 +57,7 @@ namespace ProjetoIntegrador.Screen
 
             
         }
-        private void ApplicationClose(object sender, FormClosingEventArgs e)
-        {
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
-            menuPrincipal.Show();
-        }
+        
 
         private void AddUser_Load(object sender, EventArgs e)
         {

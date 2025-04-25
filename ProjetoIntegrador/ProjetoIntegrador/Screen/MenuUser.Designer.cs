@@ -36,15 +36,15 @@
             this.btnAlterarUsuario = new System.Windows.Forms.Button();
             this.btnAddUsuario = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pnlDataGridProduto = new System.Windows.Forms.Panel();
+            this.pnlDataGridUsuario = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pnlDataGridProduto.SuspendLayout();
+            this.pnlDataGridUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscarUsuario
             // 
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(327, 136);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(335, 156);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(800, 20);
             this.txtBuscarUsuario.TabIndex = 22;
@@ -53,7 +53,7 @@
             // 
             this.lblBuscarUsuario.AutoSize = true;
             this.lblBuscarUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarUsuario.Location = new System.Drawing.Point(141, 137);
+            this.lblBuscarUsuario.Location = new System.Drawing.Point(141, 157);
             this.lblBuscarUsuario.Name = "lblBuscarUsuario";
             this.lblBuscarUsuario.Size = new System.Drawing.Size(182, 16);
             this.lblBuscarUsuario.TabIndex = 21;
@@ -61,7 +61,7 @@
             // 
             // btnBuscarUsuario
             // 
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(1192, 120);
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(1200, 140);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
             this.btnBuscarUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnBuscarUsuario.TabIndex = 20;
@@ -70,7 +70,7 @@
             // 
             // btnAttDataGridUsuario
             // 
-            this.btnAttDataGridUsuario.Location = new System.Drawing.Point(642, 30);
+            this.btnAttDataGridUsuario.Location = new System.Drawing.Point(650, 50);
             this.btnAttDataGridUsuario.Name = "btnAttDataGridUsuario";
             this.btnAttDataGridUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnAttDataGridUsuario.TabIndex = 19;
@@ -79,7 +79,7 @@
             // 
             // btnRemoverUsuario
             // 
-            this.btnRemoverUsuario.Location = new System.Drawing.Point(442, 30);
+            this.btnRemoverUsuario.Location = new System.Drawing.Point(450, 50);
             this.btnRemoverUsuario.Name = "btnRemoverUsuario";
             this.btnRemoverUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnRemoverUsuario.TabIndex = 18;
@@ -88,7 +88,7 @@
             // 
             // btnAlterarUsuario
             // 
-            this.btnAlterarUsuario.Location = new System.Drawing.Point(242, 30);
+            this.btnAlterarUsuario.Location = new System.Drawing.Point(250, 50);
             this.btnAlterarUsuario.Name = "btnAlterarUsuario";
             this.btnAlterarUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnAlterarUsuario.TabIndex = 17;
@@ -98,7 +98,7 @@
             // 
             // btnAddUsuario
             // 
-            this.btnAddUsuario.Location = new System.Drawing.Point(42, 30);
+            this.btnAddUsuario.Location = new System.Drawing.Point(50, 50);
             this.btnAddUsuario.Name = "btnAddUsuario";
             this.btnAddUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnAddUsuario.TabIndex = 16;
@@ -115,13 +115,13 @@
             this.button3.Text = "Remover Produto";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // pnlDataGridProduto
+            // pnlDataGridUsuario
             // 
-            this.pnlDataGridProduto.Controls.Add(this.dataGridView1);
-            this.pnlDataGridProduto.Location = new System.Drawing.Point(42, 180);
-            this.pnlDataGridProduto.Name = "pnlDataGridProduto";
-            this.pnlDataGridProduto.Size = new System.Drawing.Size(1300, 600);
-            this.pnlDataGridProduto.TabIndex = 14;
+            this.pnlDataGridUsuario.Controls.Add(this.dataGridView1);
+            this.pnlDataGridUsuario.Location = new System.Drawing.Point(50, 200);
+            this.pnlDataGridUsuario.Name = "pnlDataGridUsuario";
+            this.pnlDataGridUsuario.Size = new System.Drawing.Size(1300, 600);
+            this.pnlDataGridUsuario.TabIndex = 14;
             // 
             // dataGridView1
             // 
@@ -146,10 +146,11 @@
             this.Controls.Add(this.btnAlterarUsuario);
             this.Controls.Add(this.btnAddUsuario);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.pnlDataGridProduto);
+            this.Controls.Add(this.pnlDataGridUsuario);
             this.Name = "MenuUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuUser";
-            this.pnlDataGridProduto.ResumeLayout(false);
+            this.pnlDataGridUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,7 +167,7 @@
         private System.Windows.Forms.Button btnAlterarUsuario;
         private System.Windows.Forms.Button btnAddUsuario;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel pnlDataGridProduto;
+        private System.Windows.Forms.Panel pnlDataGridUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
