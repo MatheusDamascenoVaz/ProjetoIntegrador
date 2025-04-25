@@ -59,5 +59,50 @@ namespace ProjetoIntegrador.Screen
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
         }
+
+        private void btnAddProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBuscarProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttDataGridProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoverProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterarProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlDataGridProduto_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

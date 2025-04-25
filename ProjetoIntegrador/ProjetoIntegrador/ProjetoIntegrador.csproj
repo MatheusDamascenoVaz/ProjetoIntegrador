@@ -158,6 +158,12 @@
     <Compile Include="Screen\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen\MenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\MenuUser.Designer.cs">
+      <DependentUpon>MenuUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\MenuUser.resx">
+      <DependentUpon>MenuUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
