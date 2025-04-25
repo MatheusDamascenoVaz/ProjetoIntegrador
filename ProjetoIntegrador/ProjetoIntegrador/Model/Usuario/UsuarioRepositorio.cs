@@ -3,6 +3,8 @@ using ProjetoIntegrador.Services;
 using MySql.Data.MySqlClient;
 
 using System;
+using ProjetoIntegrador.Model.Product;
+using System.Collections.Generic;
 
 namespace ProjetoIntegrador.Model
 {
@@ -42,5 +44,32 @@ namespace ProjetoIntegrador.Model
                 throw new Exception("Erro ao registrar usuário: " + ex.Message);
             }
         }
+
+        public List<Usuario> GetAllUsers()
+        {
+            List<Usuario> listaUsuario = new List<Usuario>();
+
+            try
+            {
+                string query = @"SELECT * FROM usuarios";
+
+                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+
+                while (dataReader.Read())
+                {
+
+                    Usuario usuario = new Usuario();
+                    usuario = Produto.ProdutoFromDataReader(dataReader);
+
+                    listaProdutos.Add(produto);
+                }
+                return listaProdutos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro buscar lista: " + ex.Message);
+            }
+        }
+
     }
 }

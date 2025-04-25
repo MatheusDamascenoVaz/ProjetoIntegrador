@@ -1,5 +1,6 @@
 ﻿// Models/Usuario.cs
 using System;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegrador.Models
 {
@@ -12,6 +13,28 @@ namespace ProjetoIntegrador.Models
         public int IdRegra { get; set; }
         public string Telefone { get; set; }
         public string SenhaHash { get; set; }
+
+
+
+        //public static Usuario UserFromDataReader(MySqlDataReader reader) {
+
+        //    return new Usuario { 
+            
+        //         Id = reader.GetInt32("idUsuario"),
+        //         Nome = reader["nomeUsuario"].ToString(),
+        //         Matricula = reader.GetInt32["matricula]"],
+
+            
+            
+        //    };
+
+        }
+
+
+
         
     }
+
+   
+
 }

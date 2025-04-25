@@ -106,7 +106,6 @@
     <Compile Include="Model\Product\Produto.cs" />
     <Compile Include="Model\Product\ProdutoController.cs" />
     <Compile Include="Model\Usuario\Usuario.cs" />
-    <Compile Include="Model\Usuario\UsuarioController.cs" />
     <Compile Include="Model\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Venda\ItemVenda.cs" />
     <Compile Include="Screen\AddProduct.cs">

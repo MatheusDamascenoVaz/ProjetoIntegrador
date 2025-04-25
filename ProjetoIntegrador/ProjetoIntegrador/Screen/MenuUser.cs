@@ -14,7 +14,7 @@ namespace ProjetoIntegrador.Screen
     public partial class MenuUser: Form
     {
         private DatabaseService databaseService = new DatabaseService();
-        private UserCon
+        
         public MenuUser()
         {
             InitializeComponent();
