@@ -94,6 +94,7 @@
             this.btnAlterarUsuario.TabIndex = 17;
             this.btnAlterarUsuario.Text = "Alterar Usuário";
             this.btnAlterarUsuario.UseVisualStyleBackColor = true;
+            this.btnAlterarUsuario.Click += new System.EventHandler(this.btnAlterarUsuario_Click);
             // 
             // btnAddUsuario
             // 
@@ -103,6 +104,7 @@
             this.btnAddUsuario.TabIndex = 16;
             this.btnAddUsuario.Text = "Adicionar Usuário";
             this.btnAddUsuario.UseVisualStyleBackColor = true;
+            this.btnAddUsuario.Click += new System.EventHandler(this.btnAddUsuario_Click);
             // 
             // button3
             // 

@@ -15,6 +15,25 @@ namespace ProjetoIntegrador.Screen
         public MenuUser()
         {
             InitializeComponent();
+            this.FormClosing += ApplicationClose;
+        }
+        private void ApplicationClose(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+        }
+
+        private void btnAlterarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddUsuario_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = new AddUser();
+            addUser.ShowDialog();
         }
     }
 }
+
