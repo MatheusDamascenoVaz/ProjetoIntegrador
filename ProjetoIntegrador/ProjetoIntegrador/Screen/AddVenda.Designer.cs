@@ -38,6 +38,7 @@
             this.dataGridViewItens = new System.Windows.Forms.DataGridView();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
@@ -100,13 +101,13 @@
             this.dataGridViewItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItens.Location = new System.Drawing.Point(69, 184);
             this.dataGridViewItens.Name = "dataGridViewItens";
-            this.dataGridViewItens.Size = new System.Drawing.Size(410, 150);
+            this.dataGridViewItens.Size = new System.Drawing.Size(593, 150);
             this.dataGridViewItens.TabIndex = 5;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(607, 369);
+            this.lblTotal.Location = new System.Drawing.Point(597, 337);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(65, 13);
             this.lblTotal.TabIndex = 6;
@@ -115,11 +116,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(524, 369);
+            this.label3.Location = new System.Drawing.Point(495, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Preço Total:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(609, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 46);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Finalizar Venda";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddVenda
             // 
@@ -127,6 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTotal);
@@ -159,6 +171,6 @@
         private System.Windows.Forms.DataGridView dataGridViewItens;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label3;
-
+        private System.Windows.Forms.Button button2;
     }
 }

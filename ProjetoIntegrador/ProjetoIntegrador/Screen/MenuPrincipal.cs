@@ -72,8 +72,8 @@ namespace ProjetoIntegrador.Screen
         private void pnlUsuarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddUser addUser = new AddUser();
-            addUser.Show();
+           MenuUser menuUser = new MenuUser();
+            menuUser.Show();
         }
 
         private void pnlProdutos_Click(object sender, EventArgs e)
