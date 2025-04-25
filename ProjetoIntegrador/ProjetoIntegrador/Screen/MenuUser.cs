@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace ProjetoIntegrador.Screen
 {
     public partial class MenuUser: Form
     {
+        private DatabaseService databaseService = new DatabaseService();
+        private UserCon
         public MenuUser()
         {
             InitializeComponent();

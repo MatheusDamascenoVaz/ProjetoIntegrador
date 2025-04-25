@@ -305,6 +305,7 @@
             this.imgAjuda.Size = new System.Drawing.Size(60, 60);
             this.imgAjuda.TabIndex = 14;
             this.imgAjuda.TabStop = false;
+            this.imgAjuda.Click += new System.EventHandler(this.imgAjuda_Click);
             // 
             // MenuPrincipal
             // 

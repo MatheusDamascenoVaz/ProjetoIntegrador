@@ -94,5 +94,11 @@ namespace ProjetoIntegrador.Screen
             AddRelatorio addRelatorio = new AddRelatorio();
             addRelatorio.Show();
         }
+
+        private void imgAjuda_Click(object sender, EventArgs e)
+        {
+            Ajuda ajuda = new Ajuda();
+            ajuda.ShowDialog();
+        }
     }
 }
