@@ -59,11 +59,11 @@ namespace ProjetoIntegrador.Model
                 {
 
                     Usuario usuario = new Usuario();
-                    usuario = Produto.ProdutoFromDataReader(dataReader);
+                    usuario = Usuario.UserFromDataReader(dataReader);
 
-                    listaProdutos.Add(produto);
+                    listaUsuario.Add(usuario);
                 }
-                return listaProdutos;
+                return listaUsuario;
             }
             catch (Exception ex)
             {
