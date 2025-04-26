@@ -48,6 +48,7 @@
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(800, 20);
             this.txtBuscarUsuario.TabIndex = 22;
+            this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
             // 
             // lblBuscarUsuario
             // 
@@ -67,6 +68,7 @@
             this.btnBuscarUsuario.TabIndex = 20;
             this.btnBuscarUsuario.Text = "Buscar";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // btnAttDataGridUsuario
             // 
@@ -131,6 +133,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1300, 600);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MenuUser
             // 
@@ -150,6 +153,7 @@
             this.Name = "MenuUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuUser";
+            this.Load += new System.EventHandler(this.MenuUser_Load);
             this.pnlDataGridUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
