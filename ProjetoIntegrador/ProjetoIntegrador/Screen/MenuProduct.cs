@@ -17,8 +17,9 @@ namespace ProjetoIntegrador.Screen
 {
     public partial class MenuProduct : Form
     {
-        private DatabaseService databaseService = new DatabaseService(); 
+        private DatabaseService databaseService = new DatabaseService();
         private ProdutoController produtoController;
+        private List<Produto> listProdutos;
 
         public MenuProduct()
         {
@@ -36,33 +37,18 @@ namespace ProjetoIntegrador.Screen
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            List<Produto> listaProdutos = new List<Produto>();
-            listaProdutos = produtoController.GetAllProduct();
+            listProdutos = produtoController.GetAllProduct();
+            dataGridView1.DataSource = listProdutos;
 
-
-            dataGridView1.DataSource = listaProdutos;
-            
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Teste");
-        }
+       
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Teste");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AddProduct addProduct = new AddProduct();
-            addProduct.ShowDialog();
-        }
 
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-
+            AddProduct addProduct = new AddProduct();
+            addProduct.ShowDialog();
         }
 
         private void lblBuscarProduto_Click(object sender, EventArgs e)
@@ -103,6 +89,23 @@ namespace ProjetoIntegrador.Screen
         private void pnlDataGridProduto_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void txtBuscarProtuto_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBuscarProduto.Text))
+            {
+                dataGridView1.DataSource = listProdutos; // Volta à lista original
+            }
+            else
+            {
+                // Filtra todos os usuários cujo nome contém o texto digitado
+                var usuariosFiltrados = listProdutos
+                    .Where(produto => produto.NomeProduto.Contains(txtBuscarProduto.Text) || produto.CodigoDeBarras.ToString().Contains(txtBuscarProduto.Text))
+                    .ToList();
+
+                dataGridView1.DataSource = usuariosFiltrados;
+            }
+            dataGridView1.ClearSelection();
         }
     }
 }
