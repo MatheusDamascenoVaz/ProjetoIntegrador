@@ -27,11 +27,17 @@ namespace ProjetoIntegrador.Screen
         }
         private void ApplicationClose(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
+            
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             menuPrincipal.Show();
         }
 
+        private void MenuUser_Load(object sender, EventArgs e)
+        {
+
+            listUsuarios = usuarioRepositorio.GetAllUsers();
+            dataGridView1.DataSource = listUsuarios;
+        }
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {
 
@@ -48,12 +54,6 @@ namespace ProjetoIntegrador.Screen
 
         }
 
-        private void MenuUser_Load(object sender, EventArgs e)
-        {
-
-            listUsuarios = usuarioRepositorio.GetAllUsers();
-            dataGridView1.DataSource = listUsuarios;
-        }
 
         private void btnBuscarUsuario_Click(object sender, EventArgs e)
         {
