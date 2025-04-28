@@ -38,7 +38,7 @@ namespace ProjetoIntegrador.Screen
         private void AddProduct_Load(object sender, EventArgs e)
         {
             listProdutos = produtoController.GetAllProduct();
-            dataGridView1.DataSource = listProdutos;
+            dataGridView2.DataSource = listProdutos;
 
         }
 
@@ -94,7 +94,7 @@ namespace ProjetoIntegrador.Screen
         {
             if (string.IsNullOrEmpty(txtBuscarProduto.Text))
             {
-                dataGridView1.DataSource = listProdutos; // Volta à lista original
+                dataGridView2.DataSource = listProdutos; // Volta à lista original
             }
             else
             {
@@ -103,9 +103,9 @@ namespace ProjetoIntegrador.Screen
                     .Where(produto => produto.NomeProduto.Contains(txtBuscarProduto.Text) || produto.CodigoDeBarras.ToString().Contains(txtBuscarProduto.Text))
                     .ToList();
 
-                dataGridView1.DataSource = usuariosFiltrados;
+                dataGridView2.DataSource = usuariosFiltrados;
             }
-            dataGridView1.ClearSelection();
+            dataGridView2.ClearSelection();
         }
     }
 }

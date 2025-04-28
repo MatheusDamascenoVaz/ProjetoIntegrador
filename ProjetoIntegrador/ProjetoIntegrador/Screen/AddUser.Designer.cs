@@ -144,6 +144,7 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Location = new System.Drawing.Point(150, 542);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(200, 50);
@@ -154,6 +155,7 @@
             // 
             // comboRegras
             // 
+            this.comboRegras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboRegras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRegras.FormattingEnabled = true;
             this.comboRegras.Location = new System.Drawing.Point(170, 430);
@@ -192,8 +194,11 @@
             this.Controls.Add(this.txtNomeUsuario);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddUser";
-            this.Text = "AddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicionar usuário";
             this.Load += new System.EventHandler(this.AddUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
