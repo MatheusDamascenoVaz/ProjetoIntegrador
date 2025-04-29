@@ -169,7 +169,8 @@ namespace ProjetoIntegrador.Screen
 
         private void btnAlterarProduto_Click(object sender, EventArgs e)
         {
-
+        ModifyProduct modifyProduct = new ModifyProduct();
+        modifyProduct.ShowDialog();
         }
 
         private void txtBuscarProduto_TextChanged(object sender, EventArgs e)

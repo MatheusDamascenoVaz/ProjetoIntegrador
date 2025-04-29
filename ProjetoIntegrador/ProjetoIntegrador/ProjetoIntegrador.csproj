@@ -167,6 +167,18 @@
     <Compile Include="Screen\MenuUser.Designer.cs">
       <DependentUpon>MenuUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen\ModifyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\ModifyProduct.Designer.cs">
+      <DependentUpon>ModifyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\ModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\ModifyUser.Designer.cs">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuUser.resx">
       <DependentUpon>MenuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\ModifyProduct.resx">
+      <DependentUpon>ModifyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\ModifyUser.resx">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
