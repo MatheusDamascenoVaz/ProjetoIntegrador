@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuUser));
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.lblBuscarUsuario = new System.Windows.Forms.Label();
-            this.btnAttDataGridUsuario = new System.Windows.Forms.Button();
-            this.btnRemoverUsuario = new System.Windows.Forms.Button();
-            this.btnAddUsuario = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlDataGridUsuario = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAttDataGridUsuario = new System.Windows.Forms.Button();
+            this.btnRemoverUsuario = new System.Windows.Forms.Button();
             this.btnAlterarUsuario = new System.Windows.Forms.Button();
+            this.btnAddUsuario = new System.Windows.Forms.Button();
             this.pnlDataGridUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,38 +59,6 @@
             this.lblBuscarUsuario.Size = new System.Drawing.Size(182, 16);
             this.lblBuscarUsuario.TabIndex = 21;
             this.lblBuscarUsuario.Text = "Nome de Usuário ou Matrícula";
-            // 
-            // btnAttDataGridUsuario
-            // 
-            this.btnAttDataGridUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAttDataGridUsuario.Location = new System.Drawing.Point(650, 50);
-            this.btnAttDataGridUsuario.Name = "btnAttDataGridUsuario";
-            this.btnAttDataGridUsuario.Size = new System.Drawing.Size(150, 50);
-            this.btnAttDataGridUsuario.TabIndex = 19;
-            this.btnAttDataGridUsuario.Text = "Atualizar Dados";
-            this.btnAttDataGridUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnRemoverUsuario
-            // 
-            this.btnRemoverUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoverUsuario.Location = new System.Drawing.Point(450, 50);
-            this.btnRemoverUsuario.Name = "btnRemoverUsuario";
-            this.btnRemoverUsuario.Size = new System.Drawing.Size(150, 50);
-            this.btnRemoverUsuario.TabIndex = 18;
-            this.btnRemoverUsuario.Text = "Remover Usuário";
-            this.btnRemoverUsuario.UseVisualStyleBackColor = true;
-            // 
-            // btnAddUsuario
-            // 
-            this.btnAddUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddUsuario.Location = new System.Drawing.Point(50, 50);
-            this.btnAddUsuario.Name = "btnAddUsuario";
-            this.btnAddUsuario.Size = new System.Drawing.Size(150, 50);
-            this.btnAddUsuario.TabIndex = 16;
-            this.btnAddUsuario.Text = "Adicionar Usuário";
-            this.btnAddUsuario.UseVisualStyleBackColor = true;
-            this.btnAddUsuario.Click += new System.EventHandler(this.btnAddUsuario_Click);
             // 
             // button3
             // 
@@ -119,16 +87,59 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // btnAttDataGridUsuario
+            // 
+            this.btnAttDataGridUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAttDataGridUsuario.Image = global::ProjetoIntegrador.Properties.Resources.refresh;
+            this.btnAttDataGridUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttDataGridUsuario.Location = new System.Drawing.Point(650, 50);
+            this.btnAttDataGridUsuario.Name = "btnAttDataGridUsuario";
+            this.btnAttDataGridUsuario.Size = new System.Drawing.Size(150, 50);
+            this.btnAttDataGridUsuario.TabIndex = 19;
+            this.btnAttDataGridUsuario.Text = "Atualizar Dados";
+            this.btnAttDataGridUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAttDataGridUsuario.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoverUsuario
+            // 
+            this.btnRemoverUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverUsuario.Image = global::ProjetoIntegrador.Properties.Resources.x;
+            this.btnRemoverUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoverUsuario.Location = new System.Drawing.Point(450, 50);
+            this.btnRemoverUsuario.Name = "btnRemoverUsuario";
+            this.btnRemoverUsuario.Size = new System.Drawing.Size(150, 50);
+            this.btnRemoverUsuario.TabIndex = 18;
+            this.btnRemoverUsuario.Text = "Remover Usuário";
+            this.btnRemoverUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemoverUsuario.UseVisualStyleBackColor = true;
+            // 
             // btnAlterarUsuario
             // 
             this.btnAlterarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarUsuario.Image = global::ProjetoIntegrador.Properties.Resources.botao_editar1;
+            this.btnAlterarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarUsuario.Location = new System.Drawing.Point(250, 50);
             this.btnAlterarUsuario.Name = "btnAlterarUsuario";
             this.btnAlterarUsuario.Size = new System.Drawing.Size(150, 50);
             this.btnAlterarUsuario.TabIndex = 17;
             this.btnAlterarUsuario.Text = "Alterar Usuário";
+            this.btnAlterarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterarUsuario.UseVisualStyleBackColor = true;
             this.btnAlterarUsuario.Click += new System.EventHandler(this.btnAlterarUsuario_Click);
+            // 
+            // btnAddUsuario
+            // 
+            this.btnAddUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUsuario.Image = global::ProjetoIntegrador.Properties.Resources.adicionar_usuariobtn32;
+            this.btnAddUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddUsuario.Location = new System.Drawing.Point(50, 50);
+            this.btnAddUsuario.Name = "btnAddUsuario";
+            this.btnAddUsuario.Size = new System.Drawing.Size(150, 50);
+            this.btnAddUsuario.TabIndex = 16;
+            this.btnAddUsuario.Text = "Adicionar Usuário";
+            this.btnAddUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddUsuario.UseVisualStyleBackColor = true;
+            this.btnAddUsuario.Click += new System.EventHandler(this.btnAddUsuario_Click);
             // 
             // MenuUser
             // 
@@ -163,10 +174,10 @@
         private System.Windows.Forms.Label lblBuscarUsuario;
         private System.Windows.Forms.Button btnAttDataGridUsuario;
         private System.Windows.Forms.Button btnRemoverUsuario;
-        private System.Windows.Forms.Button btnAlterarUsuario;
         private System.Windows.Forms.Button btnAddUsuario;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel pnlDataGridUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAlterarUsuario;
     }
 }

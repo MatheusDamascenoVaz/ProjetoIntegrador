@@ -184,11 +184,13 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = global::ProjetoIntegrador.Properties.Resources.salve_;
             this.button1.Location = new System.Drawing.Point(150, 575);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 19;
-            this.button1.Text = "CADASTRAR";
+            this.button1.Text = "          SALVAR";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

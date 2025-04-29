@@ -15,7 +15,7 @@ namespace ProjetoIntegrador.Screen
 {
     public partial class AddVenda : Form
     {
-        private List<Produto> produtos; 
+        private List<Produto> produtos;
         private VendaController _vendaController;
         //private List<ItemVenda> itensVenda = new List<ItemVenda>();
         private List<ItemVenda> itensVenda = new List<ItemVenda>();
@@ -41,7 +41,7 @@ namespace ProjetoIntegrador.Screen
         private void button1_Click(object sender, EventArgs e)
         {
             string codigoBarras = txtCodigoDeBarras.Text;
-            
+
 
 
             int quantidade = (int)numericQuantidade.Value;
@@ -76,14 +76,14 @@ namespace ProjetoIntegrador.Screen
 
             ItemVenda itemVenda = new ItemVenda();
 
-            
-           
+
+
             itensVenda.Add(itemVenda.itemFromProduto(produtoEncontrado, quantidade));
-            
+
 
             dataGridViewItens.DataSource = null;
             dataGridViewItens.DataSource = itensVenda;
-                       
+
             CalcularTotal();
             LimparCampos();
         }
@@ -91,7 +91,7 @@ namespace ProjetoIntegrador.Screen
         private void CalcularTotal()
         {
             decimal total = (decimal)itensVenda.Sum(item => item.Preco * item.QuantidadeVendida);
-            lblTotal.Text = $"Total: {total:C}"; 
+            lblTotal.Text = $"Total: {total:C}";
         }
 
         private void LimparCampos()
@@ -106,15 +106,80 @@ namespace ProjetoIntegrador.Screen
             {
                 _vendaController.RegistrarVenda(itensVenda);
             }
-            else {
+            else
+            {
 
                 MessageBox.Show("Sua lista de produtos está vazia");
-            
+
             }
         }
 
         private void numericQuantidade_ValueChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void AddVenda_Load(object sender, EventArgs e)
+        {
+            FormatDataGridView();
+        }
+        private void FormatDataGridView()
+        {
+            // Formatação básica do grid
+            DataGridFormatter.FormatGrid(
+                grid: dataGridViewItens,
+                alternaCoresLinhas: true,
+                headerBackgroundColor: Color.SteelBlue,
+                headerForeColor: Color.White,
+                font: new Font("Segoe UI", 9),
+                allowUserToResizeRows: false,
+                autoSizeColumnsMode: DataGridViewAutoSizeColumnsMode.Fill,
+                readOnly: true,
+                selectionMode: DataGridViewSelectionMode.FullRowSelect
+            );
+
+            // Formatação das colunas específicas
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "IdProduto",
+                headerText: "Id de Produto",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "NomeProduto",
+                headerText: "Nome do Produto"
+
+            );
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "Preco",
+                headerText: "Preço R$",
+                textAlign: DataGridViewContentAlignment.MiddleCenter,
+                format: "N2"
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "Quantidade",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "QuantidadeVendida",
+                headerText: "Quantidade Vendida",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridViewItens,
+                columnName: "PrecoTotal",
+                headerText: "Preço Total R$",
+                textAlign: DataGridViewContentAlignment.MiddleCenter,
+                format: "N2"
+            );
 
         }
     }

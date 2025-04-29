@@ -37,6 +37,47 @@ namespace ProjetoIntegrador.Screen
 
             listUsuarios = usuarioRepositorio.GetAllUsers();
             dataGridView1.DataSource = listUsuarios;
+            FormatDataGridView();
+        }
+
+        private void FormatDataGridView()
+        {
+            // Formatação básica do grid
+            DataGridFormatter.FormatGrid(
+                grid: dataGridView1,
+                alternaCoresLinhas: true,
+                headerBackgroundColor: Color.SteelBlue,
+                headerForeColor: Color.White,
+                font: new Font("Segoe UI", 9),
+                allowUserToResizeRows: false,
+                autoSizeColumnsMode: DataGridViewAutoSizeColumnsMode.Fill,
+                readOnly: true,
+                selectionMode: DataGridViewSelectionMode.FullRowSelect
+            );
+
+            // Formatação das colunas específicas
+            DataGridFormatter.FormatColumn(
+                grid: dataGridView1,
+                columnName: "Id",
+                headerText: "Id de Usuário",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridView1,
+                columnName: "Matricula",
+                headerText: "Matrícula",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+            DataGridFormatter.FormatColumn(
+                grid: dataGridView1,
+                columnName: "IdRegra",
+                headerText: "Nível de Permissão",
+                textAlign: DataGridViewContentAlignment.MiddleCenter
+            );
+
+
         }
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {

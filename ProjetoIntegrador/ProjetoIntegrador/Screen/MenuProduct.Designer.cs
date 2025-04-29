@@ -32,12 +32,12 @@
             this.pnlDataGridProduto = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnAddProduto = new System.Windows.Forms.Button();
             this.btnAlterarProduto = new System.Windows.Forms.Button();
             this.btnRemoverProduto = new System.Windows.Forms.Button();
             this.btnAttDataGridProduto = new System.Windows.Forms.Button();
             this.lblBuscarProduto = new System.Windows.Forms.Label();
             this.txtBuscarProduto = new System.Windows.Forms.TextBox();
+            this.btnAddProduto = new System.Windows.Forms.Button();
             this.pnlDataGridProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -70,47 +70,45 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnAddProduto
-            // 
-            this.btnAddProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddProduto.Location = new System.Drawing.Point(50, 50);
-            this.btnAddProduto.Name = "btnAddProduto";
-            this.btnAddProduto.Size = new System.Drawing.Size(150, 50);
-            this.btnAddProduto.TabIndex = 7;
-            this.btnAddProduto.Text = "Adicionar Produto";
-            this.btnAddProduto.UseVisualStyleBackColor = true;
-            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
-            // 
             // btnAlterarProduto
             // 
             this.btnAlterarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarProduto.Image = global::ProjetoIntegrador.Properties.Resources.botao_editar1;
+            this.btnAlterarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarProduto.Location = new System.Drawing.Point(250, 50);
             this.btnAlterarProduto.Name = "btnAlterarProduto";
             this.btnAlterarProduto.Size = new System.Drawing.Size(150, 50);
             this.btnAlterarProduto.TabIndex = 8;
             this.btnAlterarProduto.Text = "Alterar Produto";
+            this.btnAlterarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterarProduto.UseVisualStyleBackColor = true;
             this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarProduto_Click);
             // 
             // btnRemoverProduto
             // 
             this.btnRemoverProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverProduto.Image = global::ProjetoIntegrador.Properties.Resources.x;
+            this.btnRemoverProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemoverProduto.Location = new System.Drawing.Point(450, 50);
             this.btnRemoverProduto.Name = "btnRemoverProduto";
             this.btnRemoverProduto.Size = new System.Drawing.Size(150, 50);
             this.btnRemoverProduto.TabIndex = 9;
             this.btnRemoverProduto.Text = "Remover Produto";
+            this.btnRemoverProduto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemoverProduto.UseVisualStyleBackColor = true;
             this.btnRemoverProduto.Click += new System.EventHandler(this.btnRemoverProduto_Click);
             // 
             // btnAttDataGridProduto
             // 
             this.btnAttDataGridProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAttDataGridProduto.Image = global::ProjetoIntegrador.Properties.Resources.refresh;
+            this.btnAttDataGridProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttDataGridProduto.Location = new System.Drawing.Point(650, 50);
             this.btnAttDataGridProduto.Name = "btnAttDataGridProduto";
             this.btnAttDataGridProduto.Size = new System.Drawing.Size(150, 50);
             this.btnAttDataGridProduto.TabIndex = 10;
             this.btnAttDataGridProduto.Text = "Atualizar Dados";
+            this.btnAttDataGridProduto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttDataGridProduto.UseVisualStyleBackColor = true;
             this.btnAttDataGridProduto.Click += new System.EventHandler(this.btnAttDataGridProduto_Click);
             // 
@@ -132,6 +130,20 @@
             this.txtBuscarProduto.Size = new System.Drawing.Size(1015, 20);
             this.txtBuscarProduto.TabIndex = 13;
             this.txtBuscarProduto.TextChanged += new System.EventHandler(this.txtBuscarProduto_TextChanged);
+            // 
+            // btnAddProduto
+            // 
+            this.btnAddProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddProduto.Image = global::ProjetoIntegrador.Properties.Resources.adicionar_produtobtn;
+            this.btnAddProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProduto.Location = new System.Drawing.Point(50, 50);
+            this.btnAddProduto.Name = "btnAddProduto";
+            this.btnAddProduto.Size = new System.Drawing.Size(150, 50);
+            this.btnAddProduto.TabIndex = 7;
+            this.btnAddProduto.Text = "Adicionar Produto";
+            this.btnAddProduto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddProduto.UseVisualStyleBackColor = true;
+            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // MenuProduct
             // 
