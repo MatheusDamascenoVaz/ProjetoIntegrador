@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AuthControllers.cs" />
     <Compile Include="Model\Estetica\ArredondarPainel.cs" />
+    <Compile Include="Model\Estetica\DataGridFormatter.cs" />
     <Compile Include="Model\Product\ItemVenda.cs" />
     <Compile Include="Model\Product\ProductRepositorio.cs" />
     <Compile Include="Model\Product\Produto.cs" />
@@ -281,6 +282,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\botao-editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuariobtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuariobtn32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-produtobtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salve-.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

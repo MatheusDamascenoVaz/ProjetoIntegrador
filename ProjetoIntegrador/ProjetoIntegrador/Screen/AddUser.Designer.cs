@@ -41,9 +41,9 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtSenhaConfirmacao = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.comboRegras = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -142,17 +142,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Confirme a senha do usuário";
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Location = new System.Drawing.Point(150, 542);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(200, 50);
-            this.btnCadastrar.TabIndex = 13;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // comboRegras
             // 
             this.comboRegras.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -171,6 +160,20 @@
             this.label7.Size = new System.Drawing.Size(99, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Nível de Permissão";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Image = global::ProjetoIntegrador.Properties.Resources.salve_;
+            this.btnCadastrar.Location = new System.Drawing.Point(150, 542);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(200, 50);
+            this.btnCadastrar.TabIndex = 13;
+            this.btnCadastrar.Text = "          SALVAR";
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrar.UseMnemonic = false;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // AddUser
             // 
