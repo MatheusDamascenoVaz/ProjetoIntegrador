@@ -117,7 +117,7 @@
             // 
             // pnlLoginMain
             // 
-            this.pnlLoginMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(106)))), ((int)(((byte)(160)))));
+            this.pnlLoginMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(225)))), ((int)(((byte)(240)))));
             this.pnlLoginMain.Controls.Add(this.pictureBox1);
             this.pnlLoginMain.Controls.Add(this.lblLoginMain);
             this.pnlLoginMain.Controls.Add(this.pnlLoginSenha);
@@ -177,8 +177,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::ProjetoIntegrador.Properties.Resources.BGLoginScreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 441);
             this.Controls.Add(this.pnlLoginMain);
