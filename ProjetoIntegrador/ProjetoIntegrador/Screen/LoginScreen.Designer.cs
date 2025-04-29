@@ -40,10 +40,12 @@
             this.lblLoginMain = new System.Windows.Forms.Label();
             this.pnlLoginSenha = new System.Windows.Forms.Panel();
             this.pnlLoginEmail = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlLoginMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLoginSenha.SuspendLayout();
             this.pnlLoginEmail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -117,16 +119,16 @@
             // 
             // pnlLoginMain
             // 
-            this.pnlLoginMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(225)))), ((int)(((byte)(240)))));
+            this.pnlLoginMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.pnlLoginMain.Controls.Add(this.pictureBox1);
             this.pnlLoginMain.Controls.Add(this.lblLoginMain);
             this.pnlLoginMain.Controls.Add(this.pnlLoginSenha);
             this.pnlLoginMain.Controls.Add(this.pnlLoginEmail);
             this.pnlLoginMain.Controls.Add(this.lblRedefinirSenha);
             this.pnlLoginMain.Controls.Add(this.btnLogin);
-            this.pnlLoginMain.Location = new System.Drawing.Point(227, 70);
+            this.pnlLoginMain.Location = new System.Drawing.Point(411, 62);
             this.pnlLoginMain.Name = "pnlLoginMain";
-            this.pnlLoginMain.Size = new System.Drawing.Size(400, 300);
+            this.pnlLoginMain.Size = new System.Drawing.Size(400, 329);
             this.pnlLoginMain.TabIndex = 8;
             // 
             // pictureBox1
@@ -172,6 +174,16 @@
             this.pnlLoginEmail.Size = new System.Drawing.Size(300, 20);
             this.pnlLoginEmail.TabIndex = 8;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(61, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(611, 444);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // LoginScreen
             // 
             this.AcceptButton = this.btnLogin;
@@ -181,6 +193,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 441);
             this.Controls.Add(this.pnlLoginMain);
+            this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -195,6 +208,7 @@
             this.pnlLoginSenha.PerformLayout();
             this.pnlLoginEmail.ResumeLayout(false);
             this.pnlLoginEmail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +226,7 @@
         private System.Windows.Forms.Panel pnlLoginSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblLoginMain;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
