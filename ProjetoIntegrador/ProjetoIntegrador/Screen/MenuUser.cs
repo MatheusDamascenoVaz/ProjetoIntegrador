@@ -81,7 +81,8 @@ namespace ProjetoIntegrador.Screen
         }
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {
-
+            ModifyUser modifyUser = new ModifyUser();
+            modifyUser.ShowDialog();
         }
 
         private void btnAddUsuario_Click(object sender, EventArgs e)
