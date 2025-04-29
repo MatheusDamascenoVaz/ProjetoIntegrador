@@ -7,14 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Model.Product;
+using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador.Screen
 {
     public partial class ModifyProduct: Form
     {
+        private readonly ProdutoController _produtoController;
+
         public ModifyProduct()
         {
             InitializeComponent();
+            _produtoController = new ProdutoController(new ProductRepositorio(new DatabaseService()));
+        }
+
+        private void ModifyProduct_Load(object sender, EventArgs e)
+        {
+            List<dynamic> comboModifyCategoriaProdutos = new List<dynamic>
+               {
+
+                   new { NomeRegra = "Perecíveis", Valor = 1 },
+                   new { NomeRegra = "Não Perecíveis", Valor = 2 },
+               };
+
+            comboModifyCategoria.DataSource = comboModifyCategoriaProdutos;
+            comboModifyCategoria.DisplayMember = "NomeRegra";
+            comboModifyCategoria.ValueMember = "Valor";
+
+            // Fix: Correct the variable name to avoid conflict and ensure proper assignment
+            List<dynamic> unidadeDeMedidaOptions = new List<dynamic>
+               {
+
+                   new { NomeRegra = "Unidade", Valor = 1 },
+                   new { NomeRegra = "Litro", Valor = 2 },
+                   new { NomeRegra = "Quilo", Valor = 3 },
+                   new { NomeRegra = "Metro", Valor = 4 },
+               };
+
+            comboModifyUnidadeDeMedida.DataSource = unidadeDeMedidaOptions;
+            comboModifyUnidadeDeMedida.DisplayMember = "NomeRegra";
+            comboModifyUnidadeDeMedida.ValueMember = "Valor";
         }
     }
 }
