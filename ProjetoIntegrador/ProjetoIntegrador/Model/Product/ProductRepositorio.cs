@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegrador.Model.Product
 {
-    class ProductRepositorio
+    public class ProductRepositorio
     {
         DatabaseService _databaseService;
 
@@ -95,5 +95,24 @@ namespace ProjetoIntegrador.Model.Product
                 throw new Exception("Erro ao buscar produto: " + ex.Message);
             }
         }
+
+        public bool AtualizaEstoque(ItemVenda item, int novoEstoque)
+        {
+            try
+            {
+                string query = $"UPDATE produtos SET quantidade = {novoEstoque} WHERE idProdutos = {item.IdProduto}";
+                
+                int affectedRows = _databaseService.ExecuteNonQuery(query);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            
+        }
+
+
     }
 }

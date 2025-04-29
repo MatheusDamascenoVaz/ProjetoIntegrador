@@ -78,7 +78,20 @@ namespace ProjetoIntegrador.Screen
 
         private void txtBuscarProduto_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtBuscarProduto.Text))
+            {
+                dataGridView2.DataSource = listProdutos; // Volta à lista original
+            }
+            else
+            {
+                // Filtra todos os usuários cujo nome contém o texto digitado
+                var produtosFiltrados = listProdutos
+                    .Where(produto => produto.NomeProduto.Contains(txtBuscarProduto.Text) || produto.CodigoDeBarras.ToString().Contains(txtBuscarProduto.Text))
+                    .ToList();
 
+                dataGridView2.DataSource = produtosFiltrados;
+            }
+            dataGridView2.ClearSelection();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -90,22 +103,6 @@ namespace ProjetoIntegrador.Screen
         {
 
         }
-        private void txtBuscarProtuto_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtBuscarProduto.Text))
-            {
-                dataGridView2.DataSource = listProdutos; // Volta à lista original
-            }
-            else
-            {
-                // Filtra todos os usuários cujo nome contém o texto digitado
-                var usuariosFiltrados = listProdutos
-                    .Where(produto => produto.NomeProduto.Contains(txtBuscarProduto.Text) || produto.CodigoDeBarras.ToString().Contains(txtBuscarProduto.Text))
-                    .ToList();
-
-                dataGridView2.DataSource = usuariosFiltrados;
-            }
-            dataGridView2.ClearSelection();
-        }
+       
     }
 }

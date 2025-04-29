@@ -9,6 +9,7 @@ namespace ProjetoIntegrador.Model.Product
     public class ItemVenda
     {
 
+        public int IdProduto { get; set; }
         public string NomeProduto { get; set; }
         public decimal Preco { get; set; }
         public int Quantidade { get; set; }
@@ -23,6 +24,8 @@ namespace ProjetoIntegrador.Model.Product
 
             return new ItemVenda
             {
+
+                IdProduto = produto.IdProduto,
                 NomeProduto = produto.NomeProduto,
                 Preco = Convert.ToDecimal(produto.Preco),
                 Quantidade = produto.Quantidade,

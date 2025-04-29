@@ -8,21 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoIntegrador.Model.Product;
+using ProjetoIntegrador.Model.Venda;
+using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador.Screen
 {
     public partial class AddVenda : Form
     {
         private List<Produto> produtos; 
+        private VendaController _vendaController;
         //private List<ItemVenda> itensVenda = new List<ItemVenda>();
         private List<ItemVenda> itensVenda = new List<ItemVenda>();
         private GerenciadorVendas _gerenciadorVendas;
+
 
         public AddVenda()
         {
             InitializeComponent();
             this.FormClosing += ApplicationClose;
             _gerenciadorVendas = new GerenciadorVendas();
+            DatabaseService dataBaseService = new DatabaseService();
+            _vendaController = new VendaController(new VendaRepositorio(dataBaseService), new ProductRepositorio(dataBaseService));
+
 
         }
         private void ApplicationClose(object sender, FormClosingEventArgs e)
@@ -94,6 +101,19 @@ namespace ProjetoIntegrador.Screen
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            if (itensVenda.Any())
+            {
+                _vendaController.RegistrarVenda(itensVenda);
+            }
+            else {
+
+                MessageBox.Show("Sua lista de produtos está vazia");
+            
+            }
+        }
+
+        private void numericQuantidade_ValueChanged(object sender, EventArgs e)
         {
 
         }

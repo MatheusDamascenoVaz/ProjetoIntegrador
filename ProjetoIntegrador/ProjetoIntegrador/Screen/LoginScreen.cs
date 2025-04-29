@@ -30,6 +30,12 @@ namespace ProjetoIntegrador
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSenha.Text))
+            {
+                MessageBox.Show("Os dados de login devem ser preenchidos");
+                return;
+            }
+
             Usuario user = authController.Login(txtEmail.Text, txtSenha.Text);
 
             if (user == null)
