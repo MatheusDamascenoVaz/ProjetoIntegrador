@@ -108,6 +108,8 @@
     <Compile Include="Model\Usuario\Usuario.cs" />
     <Compile Include="Model\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Venda\ItemVenda.cs" />
+    <Compile Include="Model\Venda\VendaController.cs" />
+    <Compile Include="Model\Venda\VendaRepositorio.cs" />
     <Compile Include="Screen\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ajuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-editar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

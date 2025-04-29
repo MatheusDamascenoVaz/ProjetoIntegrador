@@ -183,6 +183,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(150, 575);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 50);
@@ -201,6 +202,7 @@
             // 
             // DateValidade
             // 
+            this.DateValidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DateValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateValidade.Location = new System.Drawing.Point(170, 225);
             this.DateValidade.Name = "DateValidade";
@@ -209,6 +211,7 @@
             // 
             // comboUnidadeDeMedida
             // 
+            this.comboUnidadeDeMedida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboUnidadeDeMedida.FormattingEnabled = true;
             this.comboUnidadeDeMedida.Location = new System.Drawing.Point(291, 444);
             this.comboUnidadeDeMedida.Name = "comboUnidadeDeMedida";
@@ -242,8 +245,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddProduct";
-            this.Text = "AddProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicionar Produto";
             this.Load += new System.EventHandler(this.AddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

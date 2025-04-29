@@ -22,16 +22,8 @@ namespace ProjetoIntegrador.Controllers
 
         public Usuario Login(string email, string password)
         {
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-            {
-                throw new ArgumentException("Email e senha são obrigatórios");
-            }
-
-            return _authService.Authenticate(email, password);
-
-
-
-
+         
+           return _authService.Authenticate(email, password);
         }
 
         public bool Register(Usuario usuario, string password)

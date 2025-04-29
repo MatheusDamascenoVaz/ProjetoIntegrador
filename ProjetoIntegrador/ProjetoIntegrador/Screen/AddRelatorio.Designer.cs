@@ -142,8 +142,9 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddRelatorio";
-            this.Text = "AddRelatorio";
+            this.Text = "Extrair Relatório";
             this.Load += new System.EventHandler(this.AddRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

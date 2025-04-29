@@ -30,36 +30,35 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProduct));
             this.pnlDataGridProduto = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.btnAddProduto = new System.Windows.Forms.Button();
             this.btnAlterarProduto = new System.Windows.Forms.Button();
             this.btnRemoverProduto = new System.Windows.Forms.Button();
             this.btnAttDataGridProduto = new System.Windows.Forms.Button();
-            this.btnBuscarProduto = new System.Windows.Forms.Button();
             this.lblBuscarProduto = new System.Windows.Forms.Label();
             this.txtBuscarProduto = new System.Windows.Forms.TextBox();
             this.pnlDataGridProduto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDataGridProduto
             // 
-            this.pnlDataGridProduto.Controls.Add(this.dataGridView1);
+            this.pnlDataGridProduto.Controls.Add(this.dataGridView2);
             this.pnlDataGridProduto.Location = new System.Drawing.Point(50, 200);
             this.pnlDataGridProduto.Name = "pnlDataGridProduto";
             this.pnlDataGridProduto.Size = new System.Drawing.Size(1300, 600);
             this.pnlDataGridProduto.TabIndex = 1;
             this.pnlDataGridProduto.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDataGridProduto_Paint);
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1300, 600);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1300, 600);
+            this.dataGridView2.TabIndex = 0;
             // 
             // button3
             // 
@@ -73,6 +72,7 @@
             // 
             // btnAddProduto
             // 
+            this.btnAddProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProduto.Location = new System.Drawing.Point(50, 50);
             this.btnAddProduto.Name = "btnAddProduto";
             this.btnAddProduto.Size = new System.Drawing.Size(150, 50);
@@ -83,6 +83,7 @@
             // 
             // btnAlterarProduto
             // 
+            this.btnAlterarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterarProduto.Location = new System.Drawing.Point(250, 50);
             this.btnAlterarProduto.Name = "btnAlterarProduto";
             this.btnAlterarProduto.Size = new System.Drawing.Size(150, 50);
@@ -93,6 +94,7 @@
             // 
             // btnRemoverProduto
             // 
+            this.btnRemoverProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoverProduto.Location = new System.Drawing.Point(450, 50);
             this.btnRemoverProduto.Name = "btnRemoverProduto";
             this.btnRemoverProduto.Size = new System.Drawing.Size(150, 50);
@@ -103,6 +105,7 @@
             // 
             // btnAttDataGridProduto
             // 
+            this.btnAttDataGridProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAttDataGridProduto.Location = new System.Drawing.Point(650, 50);
             this.btnAttDataGridProduto.Name = "btnAttDataGridProduto";
             this.btnAttDataGridProduto.Size = new System.Drawing.Size(150, 50);
@@ -110,16 +113,6 @@
             this.btnAttDataGridProduto.Text = "Atualizar Dados";
             this.btnAttDataGridProduto.UseVisualStyleBackColor = true;
             this.btnAttDataGridProduto.Click += new System.EventHandler(this.btnAttDataGridProduto_Click);
-            // 
-            // btnBuscarProduto
-            // 
-            this.btnBuscarProduto.Location = new System.Drawing.Point(1200, 140);
-            this.btnBuscarProduto.Name = "btnBuscarProduto";
-            this.btnBuscarProduto.Size = new System.Drawing.Size(150, 50);
-            this.btnBuscarProduto.TabIndex = 11;
-            this.btnBuscarProduto.Text = "Buscar";
-            this.btnBuscarProduto.UseVisualStyleBackColor = true;
-            this.btnBuscarProduto.Click += new System.EventHandler(this.btnBuscarProduto_Click);
             // 
             // lblBuscarProduto
             // 
@@ -136,7 +129,7 @@
             // 
             this.txtBuscarProduto.Location = new System.Drawing.Point(335, 156);
             this.txtBuscarProduto.Name = "txtBuscarProduto";
-            this.txtBuscarProduto.Size = new System.Drawing.Size(800, 20);
+            this.txtBuscarProduto.Size = new System.Drawing.Size(1015, 20);
             this.txtBuscarProduto.TabIndex = 13;
             this.txtBuscarProduto.TextChanged += new System.EventHandler(this.txtBuscarProduto_TextChanged);
             // 
@@ -148,7 +141,6 @@
             this.ClientSize = new System.Drawing.Size(1384, 811);
             this.Controls.Add(this.txtBuscarProduto);
             this.Controls.Add(this.lblBuscarProduto);
-            this.Controls.Add(this.btnBuscarProduto);
             this.Controls.Add(this.btnAttDataGridProduto);
             this.Controls.Add(this.btnRemoverProduto);
             this.Controls.Add(this.btnAlterarProduto);
@@ -156,12 +148,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pnlDataGridProduto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MenuProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Produtos";
+            this.Text = "Gestão de  Produtos";
             this.Load += new System.EventHandler(this.AddProduct_Load);
             this.pnlDataGridProduto.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,13 +163,12 @@
         #endregion
         private System.Windows.Forms.Panel pnlDataGridProduto;
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAddProduto;
         private System.Windows.Forms.Button btnAlterarProduto;
         private System.Windows.Forms.Button btnRemoverProduto;
         private System.Windows.Forms.Button btnAttDataGridProduto;
-        private System.Windows.Forms.Button btnBuscarProduto;
         private System.Windows.Forms.Label lblBuscarProduto;
         private System.Windows.Forms.TextBox txtBuscarProduto;
     }
