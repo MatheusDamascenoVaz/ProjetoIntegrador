@@ -69,6 +69,8 @@ namespace ProjetoIntegrador.Screen
         private void btnSaveModifyProduto_Click(object sender, EventArgs e)
         {
             //Montar o objeto aqui (Produto) com os dados dos textBox
+            Produto produto = new Produto();
+
             // chamar o controller
         }
     }
