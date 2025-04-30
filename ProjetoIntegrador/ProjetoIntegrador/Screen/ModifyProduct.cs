@@ -26,18 +26,22 @@ namespace ProjetoIntegrador.Screen
 
         }
 
-        private void ModifyProduct_Load(object sender, EventArgs e)
-        {
+        private void SetProductData() {
             txtModifyNomeProduto.Text = _produto.NomeProduto;
             txtModifyDescricao.Text = _produto.Descricao;
-            //comboModifyCategoria.SelectedIndex = _produto.idCategoria;
+            comboModifyCategoria.SelectedItem = _produto.idCategoria;
             ModifyDateValidade.Text = _produto.Validade.ToString();
             txtModifyQuantidade.Text = _produto.Quantidade.ToString();
             comboModifyUnidadeDeMedida.SelectedItem = _produto.UnidadeDeMedida.ToString();
             txtModifyPreco.Text = _produto.Preco.ToString();
             txtModifyCodigoDeBarras.Text = _produto.CodigoDeBarras.ToString();
             txtModifyCor.Text = _produto.Cor;
+        }
 
+
+        private void ModifyProduct_Load(object sender, EventArgs e)
+        {
+            SetProductData();
 
             List<dynamic> comboModifyCategoriaProdutos = new List<dynamic>
                {
@@ -49,22 +53,28 @@ namespace ProjetoIntegrador.Screen
             comboModifyCategoria.DataSource = comboModifyCategoriaProdutos;
             comboModifyCategoria.DisplayMember = "NomeRegra";
             comboModifyCategoria.ValueMember = "Valor";
+            comboModifyCategoria.SelectedValue = _produto.idCategoria;
 
             // Fix: Correct the variable name to avoid conflict and ensure proper assignment
             List<dynamic> unidadeDeMedidaOptions = new List<dynamic>
                {
 
-                   new { NomeRegra = "Un", Valor = 1 },
-                   new { NomeRegra = "L", Valor = 2 },
-                   new { NomeRegra = "ml", Valor = 3 },
-                   new { NomeRegra = "Kg", Valor = 4 },
-                   new { NomeRegra = "g", Valor =  5 },
+                   new { UnidadeMedida = "Un", Valor = "un" },
+                   new { UnidadeMedida = "L", Valor = "L" },
+                   new { UnidadeMedida = "ml", Valor = "ml" },
+                   new { UnidadeMedida = "Kg", Valor = "kg" },
+                   new { UnidadeMedida = "g", Valor =  "g" },
 
                };
 
+            MessageBox.Show(_produto.UnidadeDeMedida.ToString());
+
             comboModifyUnidadeDeMedida.DataSource = unidadeDeMedidaOptions;
-            comboModifyUnidadeDeMedida.DisplayMember = "NomeRegra";
+            comboModifyUnidadeDeMedida.DisplayMember = "UnidadeMedida";
             comboModifyUnidadeDeMedida.ValueMember = "Valor";
+            comboModifyUnidadeDeMedida.SelectedValue = _produto.UnidadeDeMedida;
+
+            
         }
 
         private void btnSaveModifyProduto_Click(object sender, EventArgs e)
@@ -106,19 +116,21 @@ namespace ProjetoIntegrador.Screen
                               validade : _produto.Validade
                 };
 
-                // Chamar o controller para atualizar
-                bool sucesso = _produtoRepositorio.AtualizarProduto(produtoAtualizado);
+                MessageBox.Show(produtoAtualizado.ToString());
 
-                if (sucesso)
-                {
-                    MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Falha ao atualizar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                // Chamar o controller para atualizar
+                //bool sucesso = _produtoRepositorio.AtualizarProduto(produtoAtualizado);
+
+                //if (sucesso)
+                //{
+                //    MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    this.DialogResult = DialogResult.OK;
+                //    this.Close();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Falha ao atualizar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
             catch (Exception ex)
             {
