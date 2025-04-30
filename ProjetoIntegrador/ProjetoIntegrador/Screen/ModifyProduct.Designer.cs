@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboUnidadeDeMedida = new System.Windows.Forms.ComboBox();
+            this.comboModifyUnidadeDeMedida = new System.Windows.Forms.ComboBox();
             this.ModifyDateValidade = new System.Windows.Forms.DateTimePicker();
             this.comboModifyCategoria = new System.Windows.Forms.ComboBox();
             this.btnSaveModifyProduto = new System.Windows.Forms.Button();
             this.txtModifyPreco = new System.Windows.Forms.TextBox();
-            this.txtUnidadeDeMedida = new System.Windows.Forms.TextBox();
             this.txtModifyQuantidade = new System.Windows.Forms.TextBox();
             this.txtModifyCor = new System.Windows.Forms.TextBox();
             this.txtModifyCodigoDeBarras = new System.Windows.Forms.TextBox();
@@ -50,14 +49,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboUnidadeDeMedida
+            // comboModifyUnidadeDeMedida
             // 
-            this.comboUnidadeDeMedida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboUnidadeDeMedida.FormattingEnabled = true;
-            this.comboUnidadeDeMedida.Location = new System.Drawing.Point(291, 444);
-            this.comboUnidadeDeMedida.Name = "comboUnidadeDeMedida";
-            this.comboUnidadeDeMedida.Size = new System.Drawing.Size(102, 21);
-            this.comboUnidadeDeMedida.TabIndex = 40;
+            this.comboModifyUnidadeDeMedida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboModifyUnidadeDeMedida.FormattingEnabled = true;
+            this.comboModifyUnidadeDeMedida.Location = new System.Drawing.Point(170, 444);
+            this.comboModifyUnidadeDeMedida.Name = "comboModifyUnidadeDeMedida";
+            this.comboModifyUnidadeDeMedida.Size = new System.Drawing.Size(223, 21);
+            this.comboModifyUnidadeDeMedida.TabIndex = 40;
             // 
             // ModifyDateValidade
             // 
@@ -87,6 +86,7 @@
             this.btnSaveModifyProduto.Text = "          SALVAR";
             this.btnSaveModifyProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveModifyProduto.UseVisualStyleBackColor = true;
+            this.btnSaveModifyProduto.Click += new System.EventHandler(this.btnSaveModifyProduto_Click);
             // 
             // txtModifyPreco
             // 
@@ -94,13 +94,6 @@
             this.txtModifyPreco.Name = "txtModifyPreco";
             this.txtModifyPreco.Size = new System.Drawing.Size(223, 20);
             this.txtModifyPreco.TabIndex = 38;
-            // 
-            // txtUnidadeDeMedida
-            // 
-            this.txtUnidadeDeMedida.Location = new System.Drawing.Point(170, 445);
-            this.txtUnidadeDeMedida.Name = "txtUnidadeDeMedida";
-            this.txtUnidadeDeMedida.Size = new System.Drawing.Size(103, 20);
-            this.txtUnidadeDeMedida.TabIndex = 36;
             // 
             // txtModifyQuantidade
             // 
@@ -223,12 +216,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 661);
-            this.Controls.Add(this.comboUnidadeDeMedida);
+            this.Controls.Add(this.comboModifyUnidadeDeMedida);
             this.Controls.Add(this.ModifyDateValidade);
             this.Controls.Add(this.comboModifyCategoria);
             this.Controls.Add(this.btnSaveModifyProduto);
             this.Controls.Add(this.txtModifyPreco);
-            this.Controls.Add(this.txtUnidadeDeMedida);
             this.Controls.Add(this.txtModifyQuantidade);
             this.Controls.Add(this.txtModifyCor);
             this.Controls.Add(this.txtModifyCodigoDeBarras);
@@ -245,6 +237,7 @@
             this.Controls.Add(this.label2);
             this.Name = "ModifyProduct";
             this.Text = "ModifyProduct";
+            this.Load += new System.EventHandler(this.ModifyProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,12 +245,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboUnidadeDeMedida;
+        private System.Windows.Forms.ComboBox comboModifyUnidadeDeMedida;
         private System.Windows.Forms.DateTimePicker ModifyDateValidade;
         private System.Windows.Forms.ComboBox comboModifyCategoria;
         private System.Windows.Forms.Button btnSaveModifyProduto;
         private System.Windows.Forms.TextBox txtModifyPreco;
-        private System.Windows.Forms.TextBox txtUnidadeDeMedida;
         private System.Windows.Forms.TextBox txtModifyQuantidade;
         private System.Windows.Forms.TextBox txtModifyCor;
         private System.Windows.Forms.TextBox txtModifyCodigoDeBarras;

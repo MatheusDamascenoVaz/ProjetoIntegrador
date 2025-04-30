@@ -111,6 +111,33 @@ namespace ProjetoIntegrador.Model.Product
             }
 
             
+        } 
+        
+        
+        public bool AtualizarProduto(Produto produto)
+        {
+            try
+            {
+                string query = @"UPDATE produtos 
+                    SET NomeProduto = @NomeProduto,
+                        Descricao = @Descricao,
+                        idCategoria = @idCategoria,
+                        Validade = @Validade,
+                        Quantidade = @Quantidade,
+                        UnidadeDeMedida = @UnidadeDeMedida,
+                        Preco = @Preco,
+                        CodigoDeBarras = @CodigoDeBarras,
+                        Cor = @Cor";
+                
+                int affectedRows = _databaseService.ExecuteNonQuery(query);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            
         }
 
 

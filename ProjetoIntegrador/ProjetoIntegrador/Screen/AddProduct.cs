@@ -30,7 +30,7 @@ namespace ProjetoIntegrador.Screen
         {
             List<dynamic> comboCategoriaProdutos = new List<dynamic>
                {
-                   new { NomeRegra = "", Valor = 0 },
+                  
                    new { NomeRegra = "Perecíveis", Valor = 1 },
                    new { NomeRegra = "Não Perecíveis", Valor = 2 },
                };
@@ -42,7 +42,7 @@ namespace ProjetoIntegrador.Screen
             // Fix: Correct the variable name to avoid conflict and ensure proper assignment
             List<dynamic> unidadeDeMedidaOptions = new List<dynamic>
                {
-                   new { NomeRegra = "", Valor = 0 },
+                   
                    new { NomeRegra = "Unidade", Valor = 1 },
                    new { NomeRegra = "Litro", Valor = 2 },
                    new { NomeRegra = "Quilo", Valor = 3 },

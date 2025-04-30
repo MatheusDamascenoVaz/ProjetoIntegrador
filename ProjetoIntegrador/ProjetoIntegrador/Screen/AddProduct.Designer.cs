@@ -43,7 +43,6 @@
             this.txtCodigoDeBarras = new System.Windows.Forms.TextBox();
             this.txtCor = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.txtUnidadeDeMedida = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboCategoria = new System.Windows.Forms.ComboBox();
@@ -167,13 +166,6 @@
             this.txtQuantidade.Size = new System.Drawing.Size(223, 20);
             this.txtQuantidade.TabIndex = 14;
             // 
-            // txtUnidadeDeMedida
-            // 
-            this.txtUnidadeDeMedida.Location = new System.Drawing.Point(170, 445);
-            this.txtUnidadeDeMedida.Name = "txtUnidadeDeMedida";
-            this.txtUnidadeDeMedida.Size = new System.Drawing.Size(103, 20);
-            this.txtUnidadeDeMedida.TabIndex = 16;
-            // 
             // txtPreco
             // 
             this.txtPreco.Location = new System.Drawing.Point(170, 500);
@@ -215,9 +207,9 @@
             // 
             this.comboUnidadeDeMedida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboUnidadeDeMedida.FormattingEnabled = true;
-            this.comboUnidadeDeMedida.Location = new System.Drawing.Point(291, 444);
+            this.comboUnidadeDeMedida.Location = new System.Drawing.Point(170, 444);
             this.comboUnidadeDeMedida.Name = "comboUnidadeDeMedida";
-            this.comboUnidadeDeMedida.Size = new System.Drawing.Size(102, 21);
+            this.comboUnidadeDeMedida.Size = new System.Drawing.Size(223, 21);
             this.comboUnidadeDeMedida.TabIndex = 20;
             // 
             // AddProduct
@@ -231,7 +223,6 @@
             this.Controls.Add(this.comboCategoria);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.txtUnidadeDeMedida);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.txtCor);
             this.Controls.Add(this.txtCodigoDeBarras);
@@ -275,7 +266,6 @@
         private System.Windows.Forms.TextBox txtCodigoDeBarras;
         private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.TextBox txtUnidadeDeMedida;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboUnidadeDeMedida;
