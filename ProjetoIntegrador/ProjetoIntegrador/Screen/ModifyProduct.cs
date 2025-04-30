@@ -15,6 +15,7 @@ namespace ProjetoIntegrador.Screen
     public partial class ModifyProduct: Form
     {
         private readonly ProdutoController _produtoController;
+        private readonly ProductRepositorio _produtoRepositorio;
         private Produto _produto;
 
         public ModifyProduct(Produto produto)
@@ -32,7 +33,7 @@ namespace ProjetoIntegrador.Screen
             //comboModifyCategoria.SelectedIndex = _produto.idCategoria;
             ModifyDateValidade.Text = _produto.Validade.ToString();
             txtModifyQuantidade.Text = _produto.Quantidade.ToString();
-            //comboModifyUnidadeDeMedida.SelectedItem = _produto.UnidadeDeMedida.ToString();
+            comboModifyUnidadeDeMedida.SelectedItem = _produto.UnidadeDeMedida.ToString();
             txtModifyPreco.Text = _produto.Preco.ToString();
             txtModifyCodigoDeBarras.Text = _produto.CodigoDeBarras.ToString();
             txtModifyCor.Text = _produto.Cor;
@@ -69,9 +70,63 @@ namespace ProjetoIntegrador.Screen
         private void btnSaveModifyProduto_Click(object sender, EventArgs e)
         {
             //Montar o objeto aqui (Produto) com os dados dos textBox
-            Produto produto = new Produto();
+            try
+            {
+                // Montar o objeto Produto com os dados atualizados
+                Produto produtoAtualizado = new Produto
+                {
+                    // Mantém o ID original para atualização
+                    IdProduto = _produto.IdProduto,
 
-            // chamar o controller
+                    // Strings diretas (com trim para remover espaços extras)
+                    NomeProduto = txtModifyNomeProduto.Text.Trim(),
+                    Descricao = txtModifyDescricao.Text.Trim(),
+                    Cor = txtModifyCor.Text.Trim(),
+                    CodigoDeBarras = double.Parse(txtModifyCodigoDeBarras.Text),
+
+                    // Combobox de Categoria (usando ValueMember)
+                    idCategoria = comboModifyCategoria.SelectedValue != null ?
+                                 Convert.ToInt32(comboModifyCategoria.SelectedValue) :
+                                 _produto.idCategoria,
+
+                    // Combobox de Unidade de Medida (usando o valor selecionado)
+                    UnidadeDeMedida = comboModifyUnidadeDeMedida.SelectedValue != null ?
+                                    comboModifyUnidadeDeMedida.SelectedValue.ToString() :
+                                    _produto.UnidadeDeMedida,
+
+                    // Conversões numéricas seguras
+                    Quantidade = int.TryParse(txtModifyQuantidade.Text, out int qtd) ? qtd : _produto.Quantidade,
+
+                    Preco = decimal.TryParse(txtModifyPreco.Text, out decimal precoDecimal)
+    ? (double)precoDecimal
+    : (double)_produto.Preco,
+
+                    // Conversão segura de data
+                    Validade = DateTime.TryParse(ModifyDateValidade.Text, out DateTime validade) ?
+                              validade : _produto.Validade
+                };
+
+                // Chamar o controller para atualizar
+                bool sucesso = _produtoRepositorio.AtualizarProduto(produtoAtualizado);
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao atualizar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao atualizar produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        
     }
-}
+    }
+
