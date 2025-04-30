@@ -29,13 +29,14 @@ namespace ProjetoIntegrador.Screen
         {
             txtModifyNomeProduto.Text = _produto.NomeProduto;
             txtModifyDescricao.Text = _produto.Descricao;
-            txtModifyPreco.Text = _produto.Preco;
+            //comboModifyCategoria.SelectedIndex = _produto.idCategoria;
+            ModifyDateValidade.Text = _produto.Validade.ToString();
+            txtModifyQuantidade.Text = _produto.Quantidade.ToString();
+            //comboModifyUnidadeDeMedida.SelectedItem = _produto.UnidadeDeMedida.ToString();
+            txtModifyPreco.Text = _produto.Preco.ToString();
+            txtModifyCodigoDeBarras.Text = _produto.CodigoDeBarras.ToString();
             txtModifyCor.Text = _produto.Cor;
-            
-            comboModifyUnidadeDeMedida =
 
-            comboModifyCategoria.SelectedIndex = _
-            txtModifyCodigoDeBarras.Text = _produto.CodigoDeBarras
 
             List<dynamic> comboModifyCategoriaProdutos = new List<dynamic>
                {
@@ -52,10 +53,12 @@ namespace ProjetoIntegrador.Screen
             List<dynamic> unidadeDeMedidaOptions = new List<dynamic>
                {
 
-                   new { NomeRegra = "Unidade", Valor = 1 },
-                   new { NomeRegra = "Litro", Valor = 2 },
-                   new { NomeRegra = "Quilo", Valor = 3 },
-                   new { NomeRegra = "Metro", Valor = 4 },
+                   new { NomeRegra = "Un", Valor = 1 },
+                   new { NomeRegra = "L", Valor = 2 },
+                   new { NomeRegra = "ml", Valor = 3 },
+                   new { NomeRegra = "Kg", Valor = 4 },
+                   new { NomeRegra = "g", Valor =  5 },
+
                };
 
             comboModifyUnidadeDeMedida.DataSource = unidadeDeMedidaOptions;

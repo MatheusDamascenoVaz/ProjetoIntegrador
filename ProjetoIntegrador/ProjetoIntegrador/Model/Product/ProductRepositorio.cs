@@ -118,7 +118,16 @@ namespace ProjetoIntegrador.Model.Product
         {
             try
             {
-                string query = $"UPDATE produtos SET quantidade = {novoEstoque} WHERE idProdutos = {item.IdProduto}";
+                string query = @"UPDATE produtos 
+                    SET NomeProduto = @NomeProduto,
+                        Descricao = @Descricao,
+                        idCategoria = @idCategoria,
+                        Validade = @Validade,
+                        Quantidade = @Quantidade,
+                        UnidadeDeMedida = @UnidadeDeMedida,
+                        Preco = @Preco,
+                        CodigoDeBarras = @CodigoDeBarras,
+                        Cor = @Cor";
                 
                 int affectedRows = _databaseService.ExecuteNonQuery(query);
                 return affectedRows > 0;
