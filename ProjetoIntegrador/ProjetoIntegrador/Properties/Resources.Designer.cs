@@ -203,6 +203,16 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_04_28_203346 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-04-28 203346", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EstoqueMasterBG {
             get {
                 object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
