@@ -46,8 +46,12 @@ namespace ProjetoIntegrador.Model.Product
         
         }
 
-       
-       
+        
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
 
