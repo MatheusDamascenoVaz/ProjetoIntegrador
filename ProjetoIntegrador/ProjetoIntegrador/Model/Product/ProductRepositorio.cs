@@ -111,6 +111,24 @@ namespace ProjetoIntegrador.Model.Product
             }
 
             
+        } 
+        
+        
+        public bool AtualizarProduto(Produto produto)
+        {
+            try
+            {
+                string query = $"UPDATE produtos SET quantidade = {novoEstoque} WHERE idProdutos = {item.IdProduto}";
+                
+                int affectedRows = _databaseService.ExecuteNonQuery(query);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            
         }
 
 

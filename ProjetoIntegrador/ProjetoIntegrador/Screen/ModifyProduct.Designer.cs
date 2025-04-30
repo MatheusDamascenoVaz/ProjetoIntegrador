@@ -86,6 +86,7 @@
             this.btnSaveModifyProduto.Text = "          SALVAR";
             this.btnSaveModifyProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveModifyProduto.UseVisualStyleBackColor = true;
+            this.btnSaveModifyProduto.Click += new System.EventHandler(this.btnSaveModifyProduto_Click);
             // 
             // txtModifyPreco
             // 
