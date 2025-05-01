@@ -164,6 +164,14 @@ namespace ProjetoIntegrador.Screen
 
         private void btnRemoverProduto_Click(object sender, EventArgs e)
         {
+           bool resultDelete = produtoController.UpdateStatusProduto(listProdutos[dataGridView2.CurrentCell.RowIndex]);
+
+            if (resultDelete)
+            {
+                listProdutos.Remove(listProdutos[dataGridView2.CurrentCell.RowIndex]);
+                dataGridView2.DataSource = null;
+                dataGridView2.DataSource = listProdutos;
+            }
 
         }
 

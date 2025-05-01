@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjetoIntegrador.Services;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Model.Product
 {
@@ -50,12 +51,12 @@ namespace ProjetoIntegrador.Model.Product
         public List<Produto> GetAllProducts()
         {
             List<Produto> listaProdutos = new List<Produto>();
-
+            MySqlDataReader dataReader = null;
             try
             {
-                string query = @"SELECT * FROM produtos";
+                string query = @"SELECT * FROM produtos WHERE status = 1";
                                   
-                MySqlDataReader dataReader = _databaseService.ExecuteQuery(query);
+                dataReader = _databaseService.ExecuteQuery(query);
 
                 while (dataReader.Read()) { 
                 
@@ -70,7 +71,13 @@ namespace ProjetoIntegrador.Model.Product
             {
                 throw new Exception("Erro buscar lista: " + ex.Message);
             }
-        }public List<Produto> BuscarProdutoCodigoDeBarras()
+            finally
+            {
+                dataReader?.Close();  // Fecha explicitamente o DataReader
+                dataReader?.Dispose(); // Libera os recursos
+            }
+        }
+        public List<Produto> BuscarProdutoCodigoDeBarras()
 
         {
             List<Produto> listaProdutos = new List<Produto>();
@@ -116,28 +123,60 @@ namespace ProjetoIntegrador.Model.Product
         
         public bool AtualizarProduto(Produto produto)
         {
+            
+                try
+                {
+                    string query = @"UPDATE produtos SET  
+                                nomeProduto = @nomeProduto, idCategoria = @idCategoria, descricao = @descricao, 
+                                validade = @validade, codigoDeBarras = @codigoDeBarras, cor = @cor, quantidade = @quantidade, unidadeMedida = @unidadeMedida, preco = @preco
+                                WHERE idProdutos = @idProduto";
+
+
+                    var parameters = new MySqlParameter[]
+                    {
+                    new MySqlParameter("@idProduto", produto.IdProduto),
+                    new MySqlParameter("@nomeProduto", produto.NomeProduto),
+                    new MySqlParameter("@idCategoria", produto.idCategoria),
+                    new MySqlParameter("@descricao", produto.Descricao),
+                    new MySqlParameter("@validade", produto.Validade),
+                    new MySqlParameter("@quantidade", produto.Quantidade),
+                    new MySqlParameter("@cor", produto.Cor),
+                    new MySqlParameter("@unidadeMedida", produto.UnidadeDeMedida),
+                    new MySqlParameter("@preco", produto.Preco),
+                    new MySqlParameter("@codigoDeBarras", produto.CodigoDeBarras)
+                    };
+                    int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                    return affectedRows > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao registrar produto: " + ex.Message);
+                }
+
+
+            }
+
+
+        public bool UpdateStatusProduto(Produto produto)
+        {
+
             try
             {
-                string query = @"UPDATE produtos 
-                    SET NomeProduto = @NomeProduto,
-                        Descricao = @Descricao,
-                        idCategoria = @idCategoria,
-                        Validade = @Validade,
-                        Quantidade = @Quantidade,
-                        UnidadeDeMedida = @UnidadeDeMedida,
-                        Preco = @Preco,
-                        CodigoDeBarras = @CodigoDeBarras,
-                        Cor = @Cor";
-                
+                string query = $"UPDATE produtos SET status = 0 WHERE idProdutos = {produto.IdProduto}";
+
+                MessageBox.Show(query);
+
+               
+
                 int affectedRows = _databaseService.ExecuteNonQuery(query);
                 return affectedRows > 0;
             }
             catch (Exception ex)
             {
-                return false;
+                throw new Exception("Erro ao deletar produto: " + ex.Message);
             }
 
-            
+
         }
 
 
