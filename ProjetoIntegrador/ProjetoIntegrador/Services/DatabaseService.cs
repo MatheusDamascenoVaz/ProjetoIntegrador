@@ -48,20 +48,27 @@ namespace ProjetoIntegrador.Services
                 }
 
                 return command.ExecuteReader();
+
             }
             catch (Exception ex)
             {
-                CloseConnection();
+
                 throw new Exception("Erro ao executar consulta: " + ex.Message);
             }
+            finally {
+
+
+            }
+            
         }
 
         public int ExecuteNonQuery(string commandText, MySqlParameter[] parameters = null)
         {
+            var command = new MySqlCommand(commandText, _connection);
             try
             {
                 OpenConnection();
-                var command = new MySqlCommand(commandText, _connection);
+                
 
                 if (parameters != null)
                 {
@@ -76,6 +83,8 @@ namespace ProjetoIntegrador.Services
             }
             finally
             {
+                command?.Parameters?.Clear(); // Limpa os parâmetros para reutilização
+                command?.Dispose(); // Libera recursos do comando
                 CloseConnection();
             }
         }

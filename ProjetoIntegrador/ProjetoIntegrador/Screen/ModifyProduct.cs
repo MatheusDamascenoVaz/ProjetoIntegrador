@@ -15,7 +15,8 @@ namespace ProjetoIntegrador.Screen
     public partial class ModifyProduct: Form
     {
         private readonly ProdutoController _produtoController;
-        private readonly ProductRepositorio _produtoRepositorio;
+       
+        private DatabaseService _dabaseService;
         private Produto _produto;
 
         public ModifyProduct(Produto produto)
@@ -23,6 +24,7 @@ namespace ProjetoIntegrador.Screen
             InitializeComponent();
             _produtoController = new ProdutoController(new ProductRepositorio(new DatabaseService()));
             _produto = produto;
+            
 
         }
 
@@ -67,7 +69,7 @@ namespace ProjetoIntegrador.Screen
 
                };
 
-            MessageBox.Show(_produto.UnidadeDeMedida.ToString());
+            
 
             comboModifyUnidadeDeMedida.DataSource = unidadeDeMedidaOptions;
             comboModifyUnidadeDeMedida.DisplayMember = "UnidadeMedida";
@@ -119,18 +121,18 @@ namespace ProjetoIntegrador.Screen
                 MessageBox.Show(produtoAtualizado.ToString());
 
                 // Chamar o controller para atualizar
-                //bool sucesso = _produtoRepositorio.AtualizarProduto(produtoAtualizado);
+                bool sucesso = _produtoController.AtualizarProduto(produtoAtualizado);
 
-                //if (sucesso)
-                //{
-                //    MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    this.DialogResult = DialogResult.OK;
-                //    this.Close();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Falha ao atualizar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
+                if (sucesso)
+                {
+                    MessageBox.Show("Produto atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao atualizar o produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
