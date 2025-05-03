@@ -81,7 +81,7 @@ namespace ProjetoIntegrador.Screen
         }
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {
-            ModifyUser modifyUser = new ModifyUser();
+            ModifyUser modifyUser = new ModifyUser(listUsuarios[dataGridView1.CurrentCell.RowIndex]);
             modifyUser.ShowDialog();
         }
 
