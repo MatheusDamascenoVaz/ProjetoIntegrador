@@ -77,7 +77,7 @@ namespace ProjetoIntegrador.Model
                 dataReader?.Dispose(); // Libera os recursos
             }
         }
-        public bool AtualizaUsuario(Usuario usuario)
+        public bool AtualizarUsuario(Usuario usuario)
         {
             try
             {

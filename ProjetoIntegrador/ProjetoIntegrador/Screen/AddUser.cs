@@ -17,7 +17,7 @@ namespace ProjetoIntegrador.Screen
     public partial class AddUser: Form
     {
         private AuthController authController;
-        //private Usuario _usuario;
+        
         public AddUser()
         {
             InitializeComponent();
@@ -25,12 +25,7 @@ namespace ProjetoIntegrador.Screen
             AuthService authService = new AuthService(databaseService);
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio(databaseService);
             authController = new AuthController(authService, usuarioRepositorio);
-
-          //  if (usuario != null) { 
-          //      _usuario = usuario;
-          //  }
-            
-
+           
         }
 
         
