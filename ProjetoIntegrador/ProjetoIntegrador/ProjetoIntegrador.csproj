@@ -325,5 +325,11 @@
   <ItemGroup>
     <None Include="Resources\Captura de tela 2025-04-28 203346.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrinho-de-compras32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Model.Product;
 using ProjetoIntegrador.Models;
 using ProjetoIntegrador.Services;
 using System;
@@ -81,7 +82,7 @@ namespace ProjetoIntegrador.Screen
         }
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {
-            ModifyUser modifyUser = new ModifyUser();
+            ModifyUser modifyUser = new ModifyUser(listUsuarios[dataGridView1.CurrentCell.RowIndex]);
             modifyUser.ShowDialog();
         }
 
@@ -130,6 +131,23 @@ namespace ProjetoIntegrador.Screen
                 dataGridView1.DataSource = usuariosFiltrados;
             }
             dataGridView1.ClearSelection();
+        }
+
+        private void btnRemoverUsuario_Click(object sender, EventArgs e)
+        {
+            bool resultDelete = usuarioRepositorio.UpdateStatusUsuario(listUsuarios[dataGridView1.CurrentCell.RowIndex]);
+
+            if (resultDelete)
+            {
+                listUsuarios.Remove(listUsuarios[dataGridView1.CurrentCell.RowIndex]);
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = listUsuarios;
+            }
+        }
+
+        private void btnAttDataGridUsuario_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

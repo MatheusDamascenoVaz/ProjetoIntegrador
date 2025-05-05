@@ -91,7 +91,7 @@ namespace ProjetoIntegrador.Screen
         private void CalcularTotal()
         {
             decimal total = (decimal)itensVenda.Sum(item => item.Preco * item.QuantidadeVendida);
-            lblTotal.Text = $"Total: {total:C}";
+            txtTotalVendas.Text = $" {total:C}";
         }
 
         private void LimparCampos()
@@ -180,6 +180,11 @@ namespace ProjetoIntegrador.Screen
                 textAlign: DataGridViewContentAlignment.MiddleCenter,
                 format: "N2"
             );
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

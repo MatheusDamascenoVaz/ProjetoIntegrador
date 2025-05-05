@@ -76,6 +76,7 @@
             this.btnModifyCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModifyCadastrar.UseMnemonic = false;
             this.btnModifyCadastrar.UseVisualStyleBackColor = true;
+            this.btnModifyCadastrar.Click += new System.EventHandler(this.btnSaveModifyUsuario_Click);
             // 
             // txtModifySenhaConfirmacao
             // 
