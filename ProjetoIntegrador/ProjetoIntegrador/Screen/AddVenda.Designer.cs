@@ -44,7 +44,7 @@
             // 
             // numericQuantidade
             // 
-            this.numericQuantidade.Location = new System.Drawing.Point(69, 107);
+            this.numericQuantidade.Location = new System.Drawing.Point(869, 84);
             this.numericQuantidade.Name = "numericQuantidade";
             this.numericQuantidade.Size = new System.Drawing.Size(120, 20);
             this.numericQuantidade.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // txtCodigoDeBarras
             // 
-            this.txtCodigoDeBarras.Location = new System.Drawing.Point(230, 107);
+            this.txtCodigoDeBarras.Location = new System.Drawing.Point(69, 84);
             this.txtCodigoDeBarras.Name = "txtCodigoDeBarras";
             this.txtCodigoDeBarras.Size = new System.Drawing.Size(249, 20);
             this.txtCodigoDeBarras.TabIndex = 1;
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 84);
+            this.label1.Location = new System.Drawing.Point(866, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 84);
+            this.label2.Location = new System.Drawing.Point(66, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(527, 93);
+            this.button1.Location = new System.Drawing.Point(1078, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 47);
             this.button1.TabIndex = 4;
@@ -90,13 +90,13 @@
             this.dataGridViewItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItens.Location = new System.Drawing.Point(69, 184);
             this.dataGridViewItens.Name = "dataGridViewItens";
-            this.dataGridViewItens.Size = new System.Drawing.Size(795, 150);
+            this.dataGridViewItens.Size = new System.Drawing.Size(795, 393);
             this.dataGridViewItens.TabIndex = 5;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(597, 337);
+            this.lblTotal.Location = new System.Drawing.Point(1118, 149);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(65, 13);
             this.lblTotal.TabIndex = 6;
@@ -105,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(495, 337);
+            this.label3.Location = new System.Drawing.Point(1118, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(733, 363);
+            this.button2.Location = new System.Drawing.Point(1107, 531);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 46);
             this.button2.TabIndex = 8;
@@ -126,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1384, 811);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTotal);
