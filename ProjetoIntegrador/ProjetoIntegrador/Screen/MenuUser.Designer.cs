@@ -99,6 +99,7 @@
             this.btnAttDataGridUsuario.Text = "Atualizar Dados";
             this.btnAttDataGridUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttDataGridUsuario.UseVisualStyleBackColor = true;
+            this.btnAttDataGridUsuario.Click += new System.EventHandler(this.btnAttDataGridUsuario_Click);
             // 
             // btnRemoverUsuario
             // 
@@ -112,6 +113,7 @@
             this.btnRemoverUsuario.Text = "Remover Usuário";
             this.btnRemoverUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemoverUsuario.UseVisualStyleBackColor = true;
+            this.btnRemoverUsuario.Click += new System.EventHandler(this.btnRemoverUsuario_Click);
             // 
             // btnAlterarUsuario
             // 

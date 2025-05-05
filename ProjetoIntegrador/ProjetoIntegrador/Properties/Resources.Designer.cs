@@ -213,6 +213,16 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carrinho_de_compras32px {
+            get {
+                object obj = ResourceManager.GetObject("carrinho-de-compras32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EstoqueMasterBG {
             get {
                 object obj = ResourceManager.GetObject("EstoqueMasterBG", resourceCulture);
@@ -276,6 +286,16 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap loading2 {
             get {
                 object obj = ResourceManager.GetObject("loading2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mais32px {
+            get {
+                object obj = ResourceManager.GetObject("mais32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
