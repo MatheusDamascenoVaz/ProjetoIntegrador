@@ -83,16 +83,6 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap adicionar_usuariobtn {
-            get {
-                object obj = ResourceManager.GetObject("adicionar-usuariobtn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap adicionar_usuariobtn32 {
             get {
                 object obj = ResourceManager.GetObject("adicionar-usuariobtn32", resourceCulture);
@@ -116,16 +106,6 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap BGLoginScreen {
             get {
                 object obj = ResourceManager.GetObject("BGLoginScreen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap botao_editar {
-            get {
-                object obj = ResourceManager.GetObject("botao-editar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,46 +223,6 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EstoqueMasterMainIco {
-            get {
-                object obj = ResourceManager.GetObject("EstoqueMasterMainIco", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gifLogin {
-            get {
-                object obj = ResourceManager.GetObject("gifLogin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gifMenu {
-            get {
-                object obj = ResourceManager.GetObject("gifMenu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icone_tela_de_fundo {
-            get {
-                object obj = ResourceManager.GetObject("Icone tela de fundo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap loading2 {
             get {
                 object obj = ResourceManager.GetObject("loading2", resourceCulture);
@@ -296,26 +236,6 @@ namespace ProjetoIntegrador.Properties {
         internal static System.Drawing.Bitmap mais32px {
             get {
                 object obj = ResourceManager.GetObject("mais32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PLANO_DE_FUNDO {
-            get {
-                object obj = ResourceManager.GetObject("PLANO DE FUNDO", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PLANO_DE_FUNDO1 {
-            get {
-                object obj = ResourceManager.GetObject("PLANO DE FUNDO1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
