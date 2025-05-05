@@ -49,6 +49,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button1.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
+            button1.Location = new System.Drawing.Point(967, 305);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(175, 75);
+            button1.TabIndex = 4;
+            button1.Text = "ADICIONAR ITEM";
+            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // numericQuantidade
             // 
             this.numericQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,7 +88,7 @@
             this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "QUANTIDADE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -162,19 +175,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
-            // 
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
-            button1.Location = new System.Drawing.Point(967, 305);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(175, 75);
-            button1.TabIndex = 4;
-            button1.Text = "ADICIONAR ITEM";
-            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblX
             // 
             this.lblX.AutoSize = true;
@@ -221,6 +221,7 @@
             this.Name = "AddVenda";
             this.Text = "Adicionar Venda";
             this.Load += new System.EventHandler(this.AddVenda_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).EndInit();
             this.ResumeLayout(false);

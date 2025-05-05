@@ -147,16 +147,6 @@ namespace ProjetoIntegrador.Screen
             addProduct.ShowDialog();
         }
 
-        private void lblBuscarProduto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscarProduto_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAttDataGridProduto_Click(object sender, EventArgs e)
         {
 
@@ -199,16 +189,6 @@ namespace ProjetoIntegrador.Screen
             }
             dataGridView2.ClearSelection();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlDataGridProduto_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-       
+     
     }
 }

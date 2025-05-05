@@ -24,38 +24,6 @@ namespace ProjetoIntegrador.Screen
             lblUserLogado.Text = SessionUser.userLogado.Nome;
         }
 
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void btnMenuUsers_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AddUser addUser = new AddUser();
-            addUser.Show();
-
-        }
-
-       
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void imgLogout_Click(object sender, EventArgs e)
         {
             DialogResult resultadoAcao = MessageBox.Show("Você realmente deseja fazer logout?", "Saindo da Aplicação", MessageBoxButtons.YesNo);

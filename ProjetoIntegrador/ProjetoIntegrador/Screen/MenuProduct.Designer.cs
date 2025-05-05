@@ -49,7 +49,7 @@
             this.pnlDataGridProduto.Name = "pnlDataGridProduto";
             this.pnlDataGridProduto.Size = new System.Drawing.Size(1300, 600);
             this.pnlDataGridProduto.TabIndex = 1;
-            this.pnlDataGridProduto.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDataGridProduto_Paint);
+            
             // 
             // dataGridView2
             // 
@@ -68,7 +68,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Remover Produto";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            
             // 
             // btnAlterarProduto
             // 
@@ -121,7 +121,7 @@
             this.lblBuscarProduto.Size = new System.Drawing.Size(230, 16);
             this.lblBuscarProduto.TabIndex = 12;
             this.lblBuscarProduto.Text = "Nome do Produto ou Código de Barras";
-            this.lblBuscarProduto.Click += new System.EventHandler(this.lblBuscarProduto_Click);
+            
             // 
             // txtBuscarProduto
             // 

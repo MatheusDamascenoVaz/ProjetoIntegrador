@@ -111,6 +111,11 @@
     <Compile Include="Model\Venda\ItemVenda.cs" />
     <Compile Include="Model\Venda\VendaController.cs" />
     <Compile Include="Model\Venda\VendaRepositorio.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Screen\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,14 +197,9 @@
     <Compile Include="Services\SessionUser.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Screen\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,19 +251,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PLANO DE FUNDO.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\EstoqueMasterBG.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loading2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gifLogin.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gifMenu.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\product-durability.png" />
@@ -281,13 +272,7 @@
     <None Include="Resources\sair.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icone tela de fundo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Model\Relatorio\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\EstoqueMasterMainIco.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BGLoginScreen.gif" />
@@ -297,12 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ajuda.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\botao-editar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adicionar-usuariobtn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\adicionar-usuariobtn32.png" />

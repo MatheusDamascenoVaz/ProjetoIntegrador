@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyProduct));
             this.comboModifyUnidadeDeMedida = new System.Windows.Forms.ComboBox();
             this.ModifyDateValidade = new System.Windows.Forms.DateTimePicker();
             this.comboModifyCategoria = new System.Windows.Forms.ComboBox();
@@ -83,7 +84,7 @@
             this.btnSaveModifyProduto.Name = "btnSaveModifyProduto";
             this.btnSaveModifyProduto.Size = new System.Drawing.Size(200, 50);
             this.btnSaveModifyProduto.TabIndex = 39;
-            this.btnSaveModifyProduto.Text = "          SALVAR";
+            this.btnSaveModifyProduto.Text = "          ALTERAR";
             this.btnSaveModifyProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveModifyProduto.UseVisualStyleBackColor = true;
             this.btnSaveModifyProduto.Click += new System.EventHandler(this.btnSaveModifyProduto_Click);
@@ -215,6 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.comboModifyUnidadeDeMedida);
             this.Controls.Add(this.ModifyDateValidade);
@@ -235,7 +237,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ModifyProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifyProduct";
             this.Load += new System.EventHandler(this.ModifyProduct_Load);
             this.ResumeLayout(false);

@@ -151,7 +151,7 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Gerencie o catálogo: adicione, altere e remova produtos. Busque produtos por nome" +
     " ou código de barras.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            
             // 
             // label5
             // 
