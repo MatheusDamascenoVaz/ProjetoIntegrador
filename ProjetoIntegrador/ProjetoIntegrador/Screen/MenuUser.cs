@@ -92,29 +92,6 @@ namespace ProjetoIntegrador.Screen
             addUser.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void btnBuscarUsuario_Click(object sender, EventArgs e)
-        {
-           Usuario usuarioEncontrado = listUsuarios.Find(usuario => usuario.Nome == txtBuscarUsuario.Text);
-            List<Usuario> listaFiltrada = new List<Usuario>();
-
-            MessageBox.Show(usuarioEncontrado.Email);   
-
-            listUsuarios.Clear();
-            listaFiltrada.Add(usuarioEncontrado);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listaFiltrada;
-            dataGridView1.ClearSelection();
-            
-        }
-
-
-
         private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtBuscarUsuario.Text))
@@ -143,11 +120,6 @@ namespace ProjetoIntegrador.Screen
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = listUsuarios;
             }
-        }
-
-        private void btnAttDataGridUsuario_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

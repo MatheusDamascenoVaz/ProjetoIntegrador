@@ -48,16 +48,6 @@ namespace ProjetoIntegrador
             this.Hide();
         }
 
-        private void LoginScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblRedefinirSenha_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Entre em contato com o Administrador do sistema", "Função bloqueada",MessageBoxButtons.OK,MessageBoxIcon.Information);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyUser));
             this.label7 = new System.Windows.Forms.Label();
             this.comboModifyRegras = new System.Windows.Forms.ComboBox();
             this.btnModifyCadastrar = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@
             this.btnModifyCadastrar.Name = "btnModifyCadastrar";
             this.btnModifyCadastrar.Size = new System.Drawing.Size(200, 50);
             this.btnModifyCadastrar.TabIndex = 28;
-            this.btnModifyCadastrar.Text = "          SALVAR";
+            this.btnModifyCadastrar.Text = "          ALTERAR";
             this.btnModifyCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModifyCadastrar.UseMnemonic = false;
             this.btnModifyCadastrar.UseVisualStyleBackColor = true;
@@ -178,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboModifyRegras);
@@ -194,7 +196,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtModifyNomeUsuario);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ModifyUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifyUser";
             this.ResumeLayout(false);
             this.PerformLayout();
