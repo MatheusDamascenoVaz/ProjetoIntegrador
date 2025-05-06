@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Models;
 
@@ -63,13 +64,19 @@ namespace ProjetoIntegrador.Controllers
             }
         }
 
-        public static void ValidarPermissao(Usuario usuario, Funcionalidade funcionalidade)
+        public static bool ValidarPermissao(Usuario usuario, Funcionalidade funcionalidade)
         {
+            
+               
             if (!TemPermissao(usuario, funcionalidade))
             {
-                throw new UnauthorizedAccessException(
-                    $"Usuário não tem permissão para acessar: {funcionalidade}");
+                MessageBox.Show($"Usuário não tem permissão para acessar: {funcionalidade}",
+                    "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+                //throw new UnauthorizedAccessException(
+                //    $"Usuário não tem permissão para acessar: {funcionalidade}");
             }
+            return true;
         }
     }
     }

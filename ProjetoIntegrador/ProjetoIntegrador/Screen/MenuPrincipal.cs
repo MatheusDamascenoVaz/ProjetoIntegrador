@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Controllers;
 using ProjetoIntegrador.Services;
 
 namespace ProjetoIntegrador.Screen
@@ -39,34 +40,51 @@ namespace ProjetoIntegrador.Screen
 
         private void pnlUsuarios_Click(object sender, EventArgs e)
         {
-            this.Hide();
-           MenuUser menuUser = new MenuUser();
-            menuUser.Show();
+            
+
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.GerenciarUsuarios))
+            {
+                this.Hide();
+                MenuUser menuUser = new MenuUser();
+                menuUser.Show();
+            }
+
+           
         }
 
         private void pnlProdutos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MenuProduct addProduct = new MenuProduct();
-            addProduct.Show();
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.AdicionarProduto))
+            {
+                this.Hide();
+                MenuProduct addProduct = new MenuProduct();
+                addProduct.Show();
+            }
         }
         private void pnlVendas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AddVenda addVenda = new AddVenda();
-            addVenda.Show();
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.GerenciarVendas))
+            {
+                this.Hide();
+                AddVenda addVenda = new AddVenda();
+                addVenda.Show();
+            }
+            
         }
         private void pnlRelatorios_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AddRelatorio addRelatorio = new AddRelatorio();
-            addRelatorio.Show();
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.Relatorios))
+            {
+                this.Hide();
+                AddRelatorio addRelatorio = new AddRelatorio();
+                addRelatorio.Show();
+            }
         }
 
         private void imgAjuda_Click(object sender, EventArgs e)
         {
             Ajuda ajuda = new Ajuda();
-            ajuda.ShowDialog();
+            ajuda.Show();
         }
     }
 }
