@@ -44,18 +44,21 @@ namespace ProjetoIntegrador.Screen
         private void ModifyUser_Load(object sender, EventArgs e)
         {
 
-            //    List<dynamic> comboModifyRegras = new List<dynamic>
-            //    {
+            // SetUserData();
+            List<dynamic> comboModifyRegrasItens = new List<dynamic>
+    {
 
-            //        new { NomeRegra = "Administrador", Valor = 1},
-            //        new { NomeRegra = "Gerente", Valor = 2},
-            //        new { NomeRegra = "Estoquista", Valor = 3},
-            //        new { NomeRegra = "Auditor", Valor = 4},
-            //    };
+        new { NomeRegra = "Administrador", Valor = 1},
+        new { NomeRegra = "Gerente", Valor = 2},
+        new { NomeRegra = "Estoquista", Valor = 3},
+        new { NomeRegra = "Auditor", Valor = 4},
+    };
 
-            //    comboModifyRegras.DataSource = comboRegrasItens;
-            //    comboModifyRegras.DisplayMember = "NomeRegra";
-            //    comboModifyRegras.ValueMember = "Valor";
+            comboModifyRegras.DataSource = comboModifyRegrasItens;
+            comboModifyRegras.DisplayMember = "NomeRegra";
+            comboModifyRegras.ValueMember = "Valor";
+          
+
         }
     private void btnSaveModifyUsuario_Click(object sender, EventArgs e)
         {
