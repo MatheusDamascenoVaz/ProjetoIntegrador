@@ -64,6 +64,7 @@
             this.comboModifyRegras.Name = "comboModifyRegras";
             this.comboModifyRegras.Size = new System.Drawing.Size(221, 21);
             this.comboModifyRegras.TabIndex = 27;
+            this.comboModifyRegras.ParentChanged += new System.EventHandler(this.ModifyUser_Load);
             // 
             // btnModifyCadastrar
             // 
@@ -201,6 +202,7 @@
             this.Name = "ModifyUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifyUser";
+            this.Load += new System.EventHandler(this.ModifyUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

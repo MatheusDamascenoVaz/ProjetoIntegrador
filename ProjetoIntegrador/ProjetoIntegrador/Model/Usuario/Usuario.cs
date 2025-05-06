@@ -16,29 +16,21 @@ namespace ProjetoIntegrador.Models
 
 
 
-        public static Usuario UserFromDataReader(MySqlDataReader datareader) {
+        public static Usuario UserFromDataReader(MySqlDataReader datareader)
+        {
 
-            return new Usuario {
+            return new Usuario
+            {
 
                 Id = datareader.GetInt32("idUsuario"),
                 Nome = datareader["nomeUsuario"].ToString(),
                 Matricula = datareader.GetInt32("matricula"),
-                 Telefone = datareader["telefone"].ToString(),
-                 Email = datareader["email"].ToString(),
-                 IdRegra = datareader.GetInt32("idRegra"),
-                 SenhaHash = datareader["senha_hash"].ToString(),
-
-            
-            
+                Telefone = datareader["telefone"].ToString(),
+                Email = datareader["email"].ToString(),
+                IdRegra = datareader.GetInt32("idRegra"),
+                SenhaHash = datareader["senha_hash"].ToString(),
             };
 
         }
-
-
-
-        
-    }
-
-   
-
+    } 
 }
