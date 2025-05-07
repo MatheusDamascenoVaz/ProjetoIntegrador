@@ -92,7 +92,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1384, 100);
             this.panel1.TabIndex = 8;
-            
             // 
             // lblUserLogado
             // 
@@ -172,6 +171,7 @@
             this.pnlUsuarios.Size = new System.Drawing.Size(550, 150);
             this.pnlUsuarios.TabIndex = 10;
             this.pnlUsuarios.Click += new System.EventHandler(this.pnlUsuarios_Click);
+            
             // 
             // lblMainUsuarioDescricao
             // 

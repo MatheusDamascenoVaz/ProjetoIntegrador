@@ -41,6 +41,7 @@ namespace ProjetoIntegrador.Services
                           Usuario usuario =  new Usuario
                             {
                                 Id = Convert.ToInt32(respostaBanco["idUsuario"]),
+                                IdRegra = Convert.ToInt32(respostaBanco["idRegra"]),
                                 Nome = respostaBanco["nomeUsuario"].ToString(),
                                 Email = respostaBanco["email"].ToString(),
                                 SenhaHash = respostaBanco["senha_hash"].ToString(),

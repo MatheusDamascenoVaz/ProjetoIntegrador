@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Controllers;
 using ProjetoIntegrador.Model.Product;
 using ProjetoIntegrador.Services;
 
@@ -143,6 +144,7 @@ namespace ProjetoIntegrador.Screen
 
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
+            
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
         }
@@ -154,22 +156,27 @@ namespace ProjetoIntegrador.Screen
 
         private void btnRemoverProduto_Click(object sender, EventArgs e)
         {
-           bool resultDelete = produtoController.UpdateStatusProduto(listProdutos[dataGridView2.CurrentCell.RowIndex]);
-
-            if (resultDelete)
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.GerenciarProdutos))
             {
-                listProdutos.Remove(listProdutos[dataGridView2.CurrentCell.RowIndex]);
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = listProdutos;
-            }
+                bool resultDelete = produtoController.UpdateStatusProduto(listProdutos[dataGridView2.CurrentCell.RowIndex]);
 
+                if (resultDelete)
+                {
+                    listProdutos.Remove(listProdutos[dataGridView2.CurrentCell.RowIndex]);
+                    dataGridView2.DataSource = null;
+                    dataGridView2.DataSource = listProdutos;
+                }
+
+            }
         }
 
         private void btnAlterarProduto_Click(object sender, EventArgs e)
         {
-
-            ModifyProduct modifyProduct = new ModifyProduct(listProdutos[dataGridView2.CurrentCell.RowIndex]);
-            modifyProduct.ShowDialog();
+            if (GerenciadorPermissoes.ValidarPermissao(SessionUser.userLogado, Funcionalidade.GerenciarProdutos))
+            {
+                ModifyProduct modifyProduct = new ModifyProduct(listProdutos[dataGridView2.CurrentCell.RowIndex]);
+                modifyProduct.ShowDialog();
+            }
         }
 
         private void txtBuscarProduto_TextChanged(object sender, EventArgs e)

@@ -107,6 +107,7 @@
     <Compile Include="Model\Product\ProductRepositorio.cs" />
     <Compile Include="Model\Product\Produto.cs" />
     <Compile Include="Model\Product\ProdutoController.cs" />
+    <Compile Include="Model\Relatorio\RelatorioManager.cs" />
     <Compile Include="Model\Usuario\Usuario.cs" />
     <Compile Include="Model\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Venda\ItemVenda.cs" />
@@ -272,9 +273,7 @@
   <ItemGroup>
     <None Include="Resources\sair.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Relatorio\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\BGLoginScreen.gif" />
   </ItemGroup>

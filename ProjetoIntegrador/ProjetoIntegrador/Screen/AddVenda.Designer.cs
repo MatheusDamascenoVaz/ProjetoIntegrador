@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button1;
+            System.Windows.Forms.Button btnAddProduto;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVenda));
             this.numericQuantidade = new System.Windows.Forms.NumericUpDown();
             this.txtCodigoDeBarras = new System.Windows.Forms.TextBox();
@@ -41,26 +41,26 @@
             this.txtTotalVendas = new System.Windows.Forms.TextBox();
             this.txtValorUnitario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFinalizarVenda = new System.Windows.Forms.Button();
             this.lblX = new System.Windows.Forms.Label();
             this.lblIgual = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
+            btnAddProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAddProduto
             // 
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
-            button1.Location = new System.Drawing.Point(967, 305);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(175, 75);
-            button1.TabIndex = 4;
-            button1.Text = "ADICIONAR ITEM";
-            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += new System.EventHandler(this.button1_Click);
+            btnAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnAddProduto.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
+            btnAddProduto.Location = new System.Drawing.Point(967, 305);
+            btnAddProduto.Name = "btnAddProduto";
+            btnAddProduto.Size = new System.Drawing.Size(175, 75);
+            btnAddProduto.TabIndex = 4;
+            btnAddProduto.Text = "ADICIONAR ITEM";
+            btnAddProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnAddProduto.UseVisualStyleBackColor = true;
+            btnAddProduto.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericQuantidade
             // 
@@ -88,7 +88,6 @@
             this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "QUANTIDADE";
-            
             // 
             // label2
             // 
@@ -162,18 +161,18 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "VALOR UNITARIO";
             // 
-            // button2
+            // btnFinalizarVenda
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ProjetoIntegrador.Properties.Resources.carrinho_de_compras32px;
-            this.button2.Location = new System.Drawing.Point(967, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 75);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "FINALIZAR VENDA";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnFinalizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarVenda.Image = global::ProjetoIntegrador.Properties.Resources.carrinho_de_compras32px;
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(967, 463);
+            this.btnFinalizarVenda.Name = "btnFinalizarVenda";
+            this.btnFinalizarVenda.Size = new System.Drawing.Size(175, 75);
+            this.btnFinalizarVenda.TabIndex = 8;
+            this.btnFinalizarVenda.Text = "FINALIZAR VENDA";
+            this.btnFinalizarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFinalizarVenda.UseVisualStyleBackColor = true;
+            this.btnFinalizarVenda.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblX
             // 
@@ -207,11 +206,11 @@
             this.Controls.Add(this.txtValorUnitario);
             this.Controls.Add(this.txtTotalVendas);
             this.Controls.Add(this.txtPrecoTotal);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnFinalizarVenda);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataGridViewItens);
-            this.Controls.Add(button1);
+            this.Controls.Add(btnAddProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigoDeBarras);
@@ -221,7 +220,6 @@
             this.Name = "AddVenda";
             this.Text = "Adicionar Venda";
             this.Load += new System.EventHandler(this.AddVenda_Load);
-            
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).EndInit();
             this.ResumeLayout(false);
@@ -239,7 +237,7 @@
         private System.Windows.Forms.DataGridView dataGridViewItens;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFinalizarVenda;
         private System.Windows.Forms.TextBox txtPrecoTotal;
         private System.Windows.Forms.TextBox txtTotalVendas;
         private System.Windows.Forms.TextBox txtValorUnitario;
