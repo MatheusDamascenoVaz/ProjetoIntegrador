@@ -85,7 +85,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1300, 600);
             this.dataGridView1.TabIndex = 0;
-            
             // 
             // btnAttDataGridUsuario
             // 
@@ -99,7 +98,7 @@
             this.btnAttDataGridUsuario.Text = "Atualizar Dados";
             this.btnAttDataGridUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttDataGridUsuario.UseVisualStyleBackColor = true;
-            
+            this.btnAttDataGridUsuario.Click += new System.EventHandler(this.btnAttDataGridUsuario_Click);
             // 
             // btnRemoverUsuario
             // 

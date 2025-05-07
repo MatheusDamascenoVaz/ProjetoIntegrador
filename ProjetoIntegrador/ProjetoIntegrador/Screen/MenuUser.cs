@@ -121,6 +121,12 @@ namespace ProjetoIntegrador.Screen
                 dataGridView1.DataSource = listUsuarios;
             }
         }
+
+        private void btnAttDataGridUsuario_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = usuarioRepositorio.GetAllUsers();
+        }
     }
 }
 

@@ -60,7 +60,7 @@
             btnAddProduto.Text = "ADICIONAR ITEM";
             btnAddProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnAddProduto.UseVisualStyleBackColor = true;
-            btnAddProduto.Click += new System.EventHandler(this.button1_Click);
+            btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // numericQuantidade
             // 
@@ -69,7 +69,7 @@
             this.numericQuantidade.Name = "numericQuantidade";
             this.numericQuantidade.Size = new System.Drawing.Size(120, 29);
             this.numericQuantidade.TabIndex = 0;
-            this.numericQuantidade.ValueChanged += new System.EventHandler(this.numericQuantidade_ValueChanged);
+            this.numericQuantidade.ValueChanged += new System.EventHandler(this.NumericQuantidade_ValueChanged);
             // 
             // txtCodigoDeBarras
             // 
@@ -172,7 +172,7 @@
             this.btnFinalizarVenda.Text = "FINALIZAR VENDA";
             this.btnFinalizarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFinalizarVenda.UseVisualStyleBackColor = true;
-            this.btnFinalizarVenda.Click += new System.EventHandler(this.button2_Click);
+            this.btnFinalizarVenda.Click += new System.EventHandler(this.btnFinalizarVenda_Click);
             // 
             // lblX
             // 
