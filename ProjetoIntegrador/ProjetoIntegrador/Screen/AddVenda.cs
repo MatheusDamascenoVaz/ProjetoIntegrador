@@ -204,7 +204,7 @@ namespace ProjetoIntegrador.Screen
                 itensVenda.Clear();
                 dataGridViewItens.DataSource = null;
                 txtTotalVendas.Text = string.Empty;
-                MessageBox.Show("Venda registrada com sucesso!");
+                //MessageBox.Show("Venda registrada com sucesso!");
             }
             else
             {
