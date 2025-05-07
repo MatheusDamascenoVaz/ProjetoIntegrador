@@ -20,6 +20,7 @@ namespace ProjetoIntegrador.Screen
     {
         private DatabaseService databaseService = new DatabaseService();
         private ProdutoController produtoController;
+        private ProductRepositorio productRepositorio;
         private List<Produto> listProdutos;
 
 
@@ -27,7 +28,8 @@ namespace ProjetoIntegrador.Screen
         {
             InitializeComponent();
             this.FormClosing += ApplicationClose;
-            produtoController = new ProdutoController(new ProductRepositorio(databaseService));             
+            produtoController = new ProdutoController(new ProductRepositorio(databaseService));
+            
         }
 
 
@@ -151,7 +153,11 @@ namespace ProjetoIntegrador.Screen
 
         private void btnAttDataGridProduto_Click(object sender, EventArgs e)
         {
+          
+                    dataGridView2.DataSource = null; // Limpa os dados atuais
+                    dataGridView2.DataSource = produtoController.GetAllProduct(); // Define a nova fonte de dados
 
+                
         }
 
         private void btnRemoverProduto_Click(object sender, EventArgs e)

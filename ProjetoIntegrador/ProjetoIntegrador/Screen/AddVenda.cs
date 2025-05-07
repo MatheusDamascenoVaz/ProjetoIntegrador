@@ -117,7 +117,7 @@ namespace ProjetoIntegrador.Screen
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddProduto_Click(object sender, EventArgs e)
         {
             string codigoBarras = txtCodigoDeBarras.Text.Trim();
 
@@ -196,7 +196,7 @@ namespace ProjetoIntegrador.Screen
             numericQuantidade.Value = 1;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
             if (itensVenda.Any())
             {

@@ -84,6 +84,7 @@
             // 
             this.txtModifySenhaConfirmacao.Location = new System.Drawing.Point(170, 370);
             this.txtModifySenhaConfirmacao.Name = "txtModifySenhaConfirmacao";
+            this.txtModifySenhaConfirmacao.PasswordChar = '*';
             this.txtModifySenhaConfirmacao.Size = new System.Drawing.Size(221, 20);
             this.txtModifySenhaConfirmacao.TabIndex = 26;
             // 
@@ -114,6 +115,7 @@
             // 
             this.txtModifySenha.Location = new System.Drawing.Point(170, 310);
             this.txtModifySenha.Name = "txtModifySenha";
+            this.txtModifySenha.PasswordChar = '*';
             this.txtModifySenha.Size = new System.Drawing.Size(221, 20);
             this.txtModifySenha.TabIndex = 24;
             // 
