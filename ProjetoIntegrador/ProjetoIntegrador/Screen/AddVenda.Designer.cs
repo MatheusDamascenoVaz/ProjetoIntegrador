@@ -69,7 +69,7 @@
             this.numericQuantidade.Name = "numericQuantidade";
             this.numericQuantidade.Size = new System.Drawing.Size(120, 29);
             this.numericQuantidade.TabIndex = 0;
-            this.numericQuantidade.ValueChanged += new System.EventHandler(this.numericQuantidade_ValueChanged);
+            this.numericQuantidade.ValueChanged += new System.EventHandler(this.NumericQuantidade_ValueChanged);
             // 
             // txtCodigoDeBarras
             // 
