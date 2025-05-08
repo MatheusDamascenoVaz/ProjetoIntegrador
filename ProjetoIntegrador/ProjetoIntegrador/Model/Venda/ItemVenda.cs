@@ -99,7 +99,7 @@ public class GerenciadorVendas
                 if (produtoBuscado != null)
                 {
 
-                    MessageBox.Show(produtoBuscado["nomeProduto"].ToString());
+                   
 
                     Produto produto = Produto.ProdutoFromDataReader(produtoBuscado);
                     return produto;
