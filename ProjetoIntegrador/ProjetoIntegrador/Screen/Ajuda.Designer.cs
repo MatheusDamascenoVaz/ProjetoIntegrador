@@ -44,6 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +153,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Gerencie o catálogo: adicione, altere e remova produtos. Busque produtos por nome" +
     " ou código de barras.";
-            
             // 
             // label5
             // 
@@ -198,12 +199,32 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 428);
+            this.label9.Location = new System.Drawing.Point(175, 412);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(754, 13);
+            this.label9.Size = new System.Drawing.Size(418, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Este manual visa auxiliar na utilização eficiente de todas as funcionalidades do " +
-    "sistema. Em caso de dúvidas, consulte este guia ou o administrador do sistema.";
+    "sistema.";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(480, 428);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(78, 13);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "documentação";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(135, 428);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(340, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = " Em caso de dúvidas, consulte o administrador do sistema ou acesse a";
             // 
             // pictureBox1
             // 
@@ -221,6 +242,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -265,5 +288,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -17,6 +17,10 @@ namespace ProjetoIntegrador.Screen
             InitializeComponent();
         }
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DocumentacaoScreen documentacaoScreen = new DocumentacaoScreen();
+            documentacaoScreen.ShowDialog();
+        }
     }
 }

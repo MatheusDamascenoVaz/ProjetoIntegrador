@@ -142,6 +142,12 @@
     <Compile Include="Screen\Ajuda.Designer.cs">
       <DependentUpon>Ajuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen\DocumentacaoScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\DocumentacaoScreen.Designer.cs">
+      <DependentUpon>DocumentacaoScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\MenuProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Ajuda.resx">
       <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\DocumentacaoScreen.resx">
+      <DependentUpon>DocumentacaoScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\MenuProduct.resx">
       <DependentUpon>MenuProduct.cs</DependentUpon>
