@@ -201,6 +201,16 @@ namespace ProjetoIntegrador.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] DOCUMENTACAO_ESTOQUE_MASTER {
+            get {
+                object obj = ResourceManager.GetObject("DOCUMENTACAO-ESTOQUE-MASTER", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap EstoqueMasterBG {
