@@ -82,7 +82,7 @@ namespace ProjetoIntegrador.Model
             try
             {
                 string query = @"UPDATE usuarios 
-                                SET nomeUsuario = @nome, matricula = @matricula, telefone = @telefone, email = @email, idRegra = @idRegra 
+                                SET nomeUsuario = @nome, matricula = @matricula, telefone = @telefone, email = @email, idRegra = @idRegra, senha_hash = @senha_hash 
                                 WHERE idUsuario = @id";
                 var parameters = new MySqlParameter[]
                 {
@@ -91,7 +91,8 @@ namespace ProjetoIntegrador.Model
                     new MySqlParameter("@telefone", usuario.Telefone),
                     new MySqlParameter("@email", usuario.Email),
                     new MySqlParameter("@idRegra", usuario.IdRegra),
-                    new MySqlParameter("@id", usuario.Id)
+                    new MySqlParameter("@id", usuario.Id),
+                    new MySqlParameter("@senha_hash", usuario.SenhaHash)
                 };
                 int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
                 return affectedRows > 0;
