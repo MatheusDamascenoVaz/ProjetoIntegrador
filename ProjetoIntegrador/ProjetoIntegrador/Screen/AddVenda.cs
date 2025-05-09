@@ -160,11 +160,17 @@ namespace ProjetoIntegrador.Screen
             ItemVenda itemVenda = new ItemVenda();
             itensVenda.Add(itemVenda.itemFromProduto(produtoEncontrado, quantidade));
 
+            // Modificação: Remova a atribuição dupla do DataSource
             dataGridViewItens.DataSource = null;
             dataGridViewItens.DataSource = itensVenda;
 
+            // Adicione a formatação após cada atualização
+            FormatDataGridView();
+
             CalcularTotal();
             LimparCampos();
+
+
         }
 
         private void txtCodigoDeBarras_KeyPress(object sender, KeyPressEventArgs e)
@@ -294,6 +300,7 @@ namespace ProjetoIntegrador.Screen
                     // Atualiza o DataGridView
                     dataGridViewItens.DataSource = null;
                     dataGridViewItens.DataSource = itensVenda;
+                    FormatDataGridView();
 
                     // Recalcula o total da venda
                     CalcularTotal();
