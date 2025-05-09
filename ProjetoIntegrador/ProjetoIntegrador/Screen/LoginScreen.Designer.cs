@@ -34,7 +34,6 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblLoginEmail = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
-            this.lblRedefinirSenha = new System.Windows.Forms.Label();
             this.pnlLoginMain = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLoginMain = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(224, 13);
             this.txtEmail.TabIndex = 1;
-            
             // 
             // txtSenha
             // 
@@ -102,19 +100,6 @@
             this.lbl.TabIndex = 6;
             this.lbl.Text = "Senha:";
             // 
-            // lblRedefinirSenha
-            // 
-            this.lblRedefinirSenha.AutoSize = true;
-            this.lblRedefinirSenha.BackColor = System.Drawing.Color.Transparent;
-            this.lblRedefinirSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRedefinirSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
-            this.lblRedefinirSenha.Location = new System.Drawing.Point(53, 175);
-            this.lblRedefinirSenha.Name = "lblRedefinirSenha";
-            this.lblRedefinirSenha.Size = new System.Drawing.Size(108, 13);
-            this.lblRedefinirSenha.TabIndex = 7;
-            this.lblRedefinirSenha.Text = "Esqueci minha senha";
-            this.lblRedefinirSenha.Click += new System.EventHandler(this.lblRedefinirSenha_Click);
-            // 
             // pnlLoginMain
             // 
             this.pnlLoginMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(106)))), ((int)(((byte)(160)))));
@@ -122,7 +107,6 @@
             this.pnlLoginMain.Controls.Add(this.lblLoginMain);
             this.pnlLoginMain.Controls.Add(this.pnlLoginSenha);
             this.pnlLoginMain.Controls.Add(this.pnlLoginEmail);
-            this.pnlLoginMain.Controls.Add(this.lblRedefinirSenha);
             this.pnlLoginMain.Controls.Add(this.btnLogin);
             this.pnlLoginMain.Location = new System.Drawing.Point(227, 70);
             this.pnlLoginMain.Name = "pnlLoginMain";
@@ -206,7 +190,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblLoginEmail;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Label lblRedefinirSenha;
         private System.Windows.Forms.Panel pnlLoginMain;
         private System.Windows.Forms.Panel pnlLoginEmail;
         private System.Windows.Forms.Panel pnlLoginSenha;
