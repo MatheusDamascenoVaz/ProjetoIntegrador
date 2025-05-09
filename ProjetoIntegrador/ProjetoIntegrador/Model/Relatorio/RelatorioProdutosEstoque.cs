@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.Model.Relatorio
 {
-    class RelatorioManager
+    class RelatorioProdutosEstoque
     {
     }
 }
