@@ -75,12 +75,13 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button1.Location = new System.Drawing.Point(240, 182);
+            this.button1.Location = new System.Drawing.Point(86, 282);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Gerar Relatório";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -144,7 +145,6 @@
             this.MaximizeBox = false;
             this.Name = "AddRelatorio";
             this.Text = "Extrair Relatório";
-            this.Load += new System.EventHandler(this.AddRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -130,5 +130,10 @@ namespace ProjetoIntegrador.Services
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        internal IDisposable GetConnection()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
