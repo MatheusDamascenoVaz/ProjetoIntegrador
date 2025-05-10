@@ -110,6 +110,7 @@
     <Compile Include="Model\Product\ProductRepositorio.cs" />
     <Compile Include="Model\Product\Produto.cs" />
     <Compile Include="Model\Product\ProdutoController.cs" />
+    <Compile Include="Model\Relatorio\RelatorioEntreDatas.cs" />
     <Compile Include="Model\Relatorio\RelatorioProdutosEstoque.cs" />
     <Compile Include="Model\Relatorio\RelatorioProdutosVencidos.cs" />
     <Compile Include="Model\Relatorio\RelatorioUsuarios.cs" />

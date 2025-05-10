@@ -5,20 +5,23 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Screen;
 using ProjetoIntegrador.Services;
 
-public class RelatorioProdutosEstoqueMySQL
+public class RelatorioEntreDatasMySQL
 
 {
 
     public DatabaseService _databaseService;
-
-    public RelatorioProdutosEstoqueMySQL(DatabaseService databaseService)
+    public AddRelatorio addRelatorio;
+    public DateTime dataInicio;
+    public DateTime dataFim;
+    public RelatorioEntreDatasMySQL(DatabaseService databaseService)
     {
         _databaseService = databaseService;
     }
 
-    public void GerarRelatorioProdutosEstoque()
+    public void GerarRelatorioEntreDatas(DateTime dataInicio, DateTime dataFim)
     {
         // Configuração do documento PDF
         Document doc = new Document(PageSize.A4.Rotate());
@@ -28,8 +31,8 @@ public class RelatorioProdutosEstoqueMySQL
         SaveFileDialog saveFileDialog = new SaveFileDialog
         {
             Filter = "PDF files (*.pdf)|*.pdf",
-            Title = "Salvar Relatório de Produtos em Estoque",
-            FileName = $"RelatorioProdutosEstoque_{DateTime.Now:yyyyMMdd}.pdf"
+            Title = $"Salvar Relatório de Produtos Vencidos entre {dataInicio} e {dataFim}",
+            FileName = $"RelatorioProdutosValidade_{DateTime.Now:yyyyMMdd}.pdf"
         };
 
         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -41,7 +44,7 @@ public class RelatorioProdutosEstoqueMySQL
                 doc.Open();
 
                 // Adicionar título
-                Paragraph titulo = new Paragraph("RELATÓRIO DE PRODUTOS EM ESTOQUE",
+                Paragraph titulo = new Paragraph($"RELATÓRIO DE PRODUTOS VENCIDOS entre {dataInicio.ToString("dd/MM/yyyy")} e {dataFim.ToString("dd/MM/yyyy")}",
                     new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD));
                 titulo.Alignment = Element.ALIGN_CENTER;
                 titulo.SpacingAfter = 20;
@@ -54,12 +57,12 @@ public class RelatorioProdutosEstoqueMySQL
                 doc.Add(dataEmissao);
 
                 // Buscar dados no banco usando o DatabaseService
-                DataTable dt = GetProdutosEstoque();
+                DataTable dt = GetProdutosEntreDatas(dataInicio, dataFim);
 
                 // Verificar se há dados
                 if (dt == null || dt.Rows.Count == 0)
                 {
-                    Paragraph semDados = new Paragraph("Nenhum produto encontrado.",
+                    Paragraph semDados = new Paragraph("Nenhum produto vencido encontrado.",
                         new Font(Font.FontFamily.HELVETICA, 12));
                     semDados.Alignment = Element.ALIGN_CENTER;
                     doc.Add(semDados);
@@ -93,7 +96,7 @@ public class RelatorioProdutosEstoqueMySQL
                     doc.Add(table);
 
                     // Adicionar rodapé com quantidade de itens
-                    Paragraph rodape = new Paragraph($"Total de produtos em estoque: {dt.Rows.Count}",
+                    Paragraph rodape = new Paragraph($"Total de produtos vencidos: {dt.Rows.Count}",
                         new Font(Font.FontFamily.HELVETICA, 10, Font.ITALIC));
                     rodape.SpacingBefore = 20;
                     doc.Add(rodape);
@@ -111,38 +114,37 @@ public class RelatorioProdutosEstoqueMySQL
         }
     }
 
-    private DataTable GetProdutosEstoque()
+    private DataTable GetProdutosEntreDatas(DateTime dataInicio, DateTime dataFim)
     {
         string query = @"
-        SELECT * FROM produtos 
-        ";
+    SELECT * FROM produtos 
+    WHERE validade BETWEEN @dataInicio AND @dataFim";
 
         try
         {
-            // Verificar se o DatabaseService está configurado corretamente
             if (_databaseService == null)
-            {
                 throw new ArgumentNullException(nameof(_databaseService), "O serviço de banco de dados não foi inicializado");
-            }
 
-            // Executar a consulta
-            using (MySqlDataReader dataReader = _databaseService.ExecuteQuery(query))
+            // Criar parâmetros para a consulta
+            var parametros = new MySqlParameter[]
             {
+            new MySqlParameter("@dataInicio", dataInicio.ToString("yyyy-MM-dd")) ,
+            new MySqlParameter("@dataFim", dataFim.ToString("yyyy-MM-dd"))
+            };
 
+            // Executar a consulta com parâmetros
+            using (MySqlDataReader dataReader = _databaseService.ExecuteQuery(query, parametros))
+            {
                 DataTable dt = new DataTable();
-
                 dt.Load(dataReader);
-
                 return dt;
             }
-
-
         }
         catch (Exception ex)
         {
             MessageBox.Show($"Erro ao buscar produtos: {ex.Message}", "Erro",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return new DataTable(); // Retorna tabela vazia em caso de erro
+            return new DataTable();
         }
     }
 }
