@@ -127,6 +127,8 @@ namespace ProjetoIntegrador.Screen
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = usuarioRepositorio.GetAllUsers();
+            FormatDataGridView();
+
         }
     }
 }
