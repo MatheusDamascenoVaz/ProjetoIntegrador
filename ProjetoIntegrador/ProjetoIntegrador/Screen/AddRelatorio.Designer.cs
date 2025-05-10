@@ -31,16 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRelatorio));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dTimeInicio = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblDataInicio = new System.Windows.Forms.Label();
+            this.lblDataFim = new System.Windows.Forms.Label();
+            this.dTimeFinal = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.comboRelatorios = new System.Windows.Forms.ComboBox();
+            this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,22 +58,22 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Relatório de Entradad e Saídas",
-            " Relatório de Ruptura de Estoque",
-            "Relatório de Produtos com Estoque Mínimo ou em Falta",
-            "Relatório de Validade"});
+            "Relatório de Produtos em Estoque",
+            "Relatório de Produtos Vencidos",
+            "Relatório de Produtos Próximos a Data de Validade",
+            "Relatório de Usuários"});
             this.comboBox1.Location = new System.Drawing.Point(126, 77);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Tipo de Relatório";
             // 
-            // dateTimePicker1
+            // dTimeInicio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 143);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dTimeInicio.Location = new System.Drawing.Point(126, 143);
+            this.dTimeInicio.Name = "dTimeInicio";
+            this.dTimeInicio.Size = new System.Drawing.Size(84, 20);
+            this.dTimeInicio.TabIndex = 3;
             // 
             // button1
             // 
@@ -94,39 +96,30 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Data:";
             // 
-            // label3
+            // lblDataInicio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "De:";
+            this.lblDataInicio.AutoSize = true;
+            this.lblDataInicio.Location = new System.Drawing.Point(96, 150);
+            this.lblDataInicio.Name = "lblDataInicio";
+            this.lblDataInicio.Size = new System.Drawing.Size(24, 13);
+            this.lblDataInicio.TabIndex = 6;
+            this.lblDataInicio.Text = "De:";
             // 
-            // label4
+            // lblDataFim
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Até:";
+            this.lblDataFim.AutoSize = true;
+            this.lblDataFim.Location = new System.Drawing.Point(94, 187);
+            this.lblDataFim.Name = "lblDataFim";
+            this.lblDataFim.Size = new System.Drawing.Size(26, 13);
+            this.lblDataFim.TabIndex = 7;
+            this.lblDataFim.Text = "Até:";
             // 
-            // dateTimePicker2
+            // dTimeFinal
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(126, 181);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker2.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(641, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.dTimeFinal.Location = new System.Drawing.Point(126, 181);
+            this.dTimeFinal.Name = "dTimeFinal";
+            this.dTimeFinal.Size = new System.Drawing.Size(84, 20);
+            this.dTimeFinal.TabIndex = 8;
             // 
             // button2
             // 
@@ -148,28 +141,67 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(321, 336);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(216, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Gerar Relatório de Produtos em Estoque";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(68, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(309, 36);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Gerar Relatório em um intervalo de tempo";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // comboRelatorios
+            // 
+            this.comboRelatorios.FormattingEnabled = true;
+            this.comboRelatorios.Location = new System.Drawing.Point(388, 161);
+            this.comboRelatorios.Name = "comboRelatorios";
+            this.comboRelatorios.Size = new System.Drawing.Size(121, 21);
+            this.comboRelatorios.TabIndex = 14;
+            // 
+            // btnGerarRelatorio
+            // 
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(524, 140);
+            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(202, 61);
+            this.btnGerarRelatorio.TabIndex = 15;
+            this.btnGerarRelatorio.Text = "GERAR RELATÓRIO";
+            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            // 
             // AddRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGerarRelatorio);
+            this.Controls.Add(this.comboRelatorios);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dTimeFinal);
+            this.Controls.Add(this.lblDataFim);
+            this.Controls.Add(this.lblDataInicio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dTimeInicio);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddRelatorio";
             this.Text = "Extrair Relatório";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,14 +211,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dTimeInicio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblDataInicio;
+        private System.Windows.Forms.Label lblDataFim;
+        private System.Windows.Forms.DateTimePicker dTimeFinal;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboRelatorios;
+        private System.Windows.Forms.Button btnGerarRelatorio;
     }
 }
