@@ -43,6 +43,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.comboRelatorios = new System.Windows.Forms.ComboBox();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -164,7 +165,7 @@
             // comboRelatorios
             // 
             this.comboRelatorios.FormattingEnabled = true;
-            this.comboRelatorios.Location = new System.Drawing.Point(388, 161);
+            this.comboRelatorios.Location = new System.Drawing.Point(321, 77);
             this.comboRelatorios.Name = "comboRelatorios";
             this.comboRelatorios.Size = new System.Drawing.Size(121, 21);
             this.comboRelatorios.TabIndex = 14;
@@ -178,12 +179,22 @@
             this.btnGerarRelatorio.Text = "GERAR RELATÓRIO";
             this.btnGerarRelatorio.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(355, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "label3";
+            // 
             // AddRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.comboRelatorios);
             this.Controls.Add(this.button5);
@@ -223,5 +234,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboRelatorios;
         private System.Windows.Forms.Button btnGerarRelatorio;
+        private System.Windows.Forms.Label label3;
     }
 }
