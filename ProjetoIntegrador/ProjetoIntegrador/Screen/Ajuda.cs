@@ -19,22 +19,8 @@ namespace ProjetoIntegrador.Screen
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                // Define a URL que será aberta
-                string url = "https://github.com/MatheusDamascenoVaz/ProjetoIntegrador/blob/branchFinaliza%C3%A7%C3%A3o/ProjetoIntegrador/ProjetoIntegrador/Resources/EstoqueMaster_Analise_de_requisitos.pdf";
-
-                // Garante que o link seja tratado como visitado
-                lblManualdeUso.LinkVisited = true;
-
-                // Abre o URL no navegador padrão
-                System.Diagnostics.Process.Start(url);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Não foi possível abrir o link: {ex.Message}", "Erro",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            DocumentacaoScreen documentacaoScreen = new DocumentacaoScreen();
+            documentacaoScreen.ShowDialog();
         }
 
         private void lblManualdeUso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 574);
             this.Name = "DocumentacaoScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DocumentacaoScreen";
             this.Load += new System.EventHandler(this.DocumentacaoScreen_Load);
             this.ResumeLayout(false);
