@@ -156,8 +156,9 @@ namespace ProjetoIntegrador.Screen
           
                     dataGridView2.DataSource = null; // Limpa os dados atuais
                     dataGridView2.DataSource = produtoController.GetAllProduct(); // Define a nova fonte de dados
+                    FormatDataGridView();
 
-                
+
         }
 
         private void btnRemoverProduto_Click(object sender, EventArgs e)
