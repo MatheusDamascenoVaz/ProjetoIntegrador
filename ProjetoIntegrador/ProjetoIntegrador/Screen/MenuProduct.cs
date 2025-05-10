@@ -171,6 +171,7 @@ namespace ProjetoIntegrador.Screen
                     listProdutos.Remove(listProdutos[dataGridView2.CurrentCell.RowIndex]);
                     dataGridView2.DataSource = null;
                     dataGridView2.DataSource = listProdutos;
+                    FormatDataGridView();
                 }
 
             }

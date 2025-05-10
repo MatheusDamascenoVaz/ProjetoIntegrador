@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnResetVenda;
             System.Windows.Forms.Button btnAddProduto;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVenda));
             this.numericQuantidade = new System.Windows.Forms.NumericUpDown();
@@ -41,26 +42,14 @@
             this.txtTotalVendas = new System.Windows.Forms.TextBox();
             this.txtValorUnitario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnFinalizarVenda = new System.Windows.Forms.Button();
             this.lblX = new System.Windows.Forms.Label();
             this.lblIgual = new System.Windows.Forms.Label();
+            this.btnFinalizarVenda = new System.Windows.Forms.Button();
+            btnResetVenda = new System.Windows.Forms.Button();
             btnAddProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAddProduto
-            // 
-            btnAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnAddProduto.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
-            btnAddProduto.Location = new System.Drawing.Point(967, 305);
-            btnAddProduto.Name = "btnAddProduto";
-            btnAddProduto.Size = new System.Drawing.Size(175, 75);
-            btnAddProduto.TabIndex = 4;
-            btnAddProduto.Text = "ADICIONAR ITEM";
-            btnAddProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnAddProduto.UseVisualStyleBackColor = true;
-            btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // numericQuantidade
             // 
@@ -161,19 +150,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "VALOR UNITARIO";
             // 
-            // btnFinalizarVenda
-            // 
-            this.btnFinalizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenda.Image = global::ProjetoIntegrador.Properties.Resources.carrinho_de_compras32px;
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(967, 463);
-            this.btnFinalizarVenda.Name = "btnFinalizarVenda";
-            this.btnFinalizarVenda.Size = new System.Drawing.Size(175, 75);
-            this.btnFinalizarVenda.TabIndex = 8;
-            this.btnFinalizarVenda.Text = "FINALIZAR VENDA";
-            this.btnFinalizarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFinalizarVenda.UseVisualStyleBackColor = true;
-            this.btnFinalizarVenda.Click += new System.EventHandler(this.btnFinalizarVenda_Click);
-            // 
             // lblX
             // 
             this.lblX.AutoSize = true;
@@ -194,12 +170,52 @@
             this.lblIgual.TabIndex = 14;
             this.lblIgual.Text = "=";
             // 
+            // btnResetVenda
+            // 
+            btnResetVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnResetVenda.Image = global::ProjetoIntegrador.Properties.Resources.remover_do_carrinho32px;
+            btnResetVenda.Location = new System.Drawing.Point(967, 393);
+            btnResetVenda.Name = "btnResetVenda";
+            btnResetVenda.Size = new System.Drawing.Size(175, 75);
+            btnResetVenda.TabIndex = 15;
+            btnResetVenda.Text = "EXCLUIR ITEM";
+            btnResetVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnResetVenda.UseVisualStyleBackColor = true;
+            btnResetVenda.Click += new System.EventHandler(this.btnResetVenda_Click);
+            // 
+            // btnFinalizarVenda
+            // 
+            this.btnFinalizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarVenda.Image = global::ProjetoIntegrador.Properties.Resources.carrinho_de_compras32px;
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(967, 515);
+            this.btnFinalizarVenda.Name = "btnFinalizarVenda";
+            this.btnFinalizarVenda.Size = new System.Drawing.Size(175, 75);
+            this.btnFinalizarVenda.TabIndex = 8;
+            this.btnFinalizarVenda.Text = "FINALIZAR VENDA";
+            this.btnFinalizarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFinalizarVenda.UseVisualStyleBackColor = true;
+            this.btnFinalizarVenda.Click += new System.EventHandler(this.btnFinalizarVenda_Click);
+            // 
+            // btnAddProduto
+            // 
+            btnAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnAddProduto.Image = global::ProjetoIntegrador.Properties.Resources.mais32px;
+            btnAddProduto.Location = new System.Drawing.Point(967, 273);
+            btnAddProduto.Name = "btnAddProduto";
+            btnAddProduto.Size = new System.Drawing.Size(175, 75);
+            btnAddProduto.TabIndex = 4;
+            btnAddProduto.Text = "ADICIONAR ITEM";
+            btnAddProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnAddProduto.UseVisualStyleBackColor = true;
+            btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
+            // 
             // AddVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.Controls.Add(btnResetVenda);
             this.Controls.Add(this.lblIgual);
             this.Controls.Add(this.lblX);
             this.Controls.Add(this.label4);

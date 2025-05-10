@@ -283,6 +283,16 @@ namespace ProjetoIntegrador.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap remover_do_carrinho32px {
+            get {
+                object obj = ResourceManager.GetObject("remover-do-carrinho32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sair {
             get {
                 object obj = ResourceManager.GetObject("sair", resourceCulture);

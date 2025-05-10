@@ -160,11 +160,17 @@ namespace ProjetoIntegrador.Screen
             ItemVenda itemVenda = new ItemVenda();
             itensVenda.Add(itemVenda.itemFromProduto(produtoEncontrado, quantidade));
 
+            // Modificação: Remova a atribuição dupla do DataSource
             dataGridViewItens.DataSource = null;
             dataGridViewItens.DataSource = itensVenda;
 
+            // Adicione a formatação após cada atualização
+            FormatDataGridView();
+
             CalcularTotal();
             LimparCampos();
+
+
         }
 
         private void txtCodigoDeBarras_KeyPress(object sender, KeyPressEventArgs e)
@@ -275,6 +281,42 @@ namespace ProjetoIntegrador.Screen
                 textAlign: DataGridViewContentAlignment.MiddleCenter,
                 format: "N2"
             );
+        }
+
+        private void btnResetVenda_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Remover o item selecionado?", "Confirmação",
+     MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                // Verifica se há alguma linha selecionada no DataGridView
+                if (dataGridViewItens.SelectedRows.Count > 0)
+                {
+                    // Obtém o item selecionado (assumindo que o DataGridView está vinculado à lista itensVenda)
+                    ItemVenda itemSelecionado = (ItemVenda)dataGridViewItens.SelectedRows[0].DataBoundItem;
+
+                    // Remove o item da lista
+                    itensVenda.Remove(itemSelecionado);
+
+                    // Atualiza o DataGridView
+                    dataGridViewItens.DataSource = null;
+                    dataGridViewItens.DataSource = itensVenda;
+                    FormatDataGridView();
+
+                    // Recalcula o total da venda
+                    CalcularTotal();
+
+                    // Opcional: Mantém o foco no grid após a remoção
+                    if (dataGridViewItens.Rows.Count > 0)
+                    {
+                        dataGridViewItens.Rows[0].Selected = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um item para remover.", "Aviso",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }
