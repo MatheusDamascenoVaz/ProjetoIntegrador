@@ -47,6 +47,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,13 +125,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-4, 173);
+            this.label2.Location = new System.Drawing.Point(280, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(908, 15);
+            this.label2.Size = new System.Drawing.Size(195, 15);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Acesso a todas as outras páginas: adicionar usuário (restrito a administradores)," +
-    " adicionar vendas, adicionar produtos, gerar relatórios e ajuda. Permite voltar " +
-    "ao login";
+            this.label2.Text = "Acesso  a todas as outras páginas:";
             // 
             // label3
             // 
@@ -236,12 +235,23 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(93, 188);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(618, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = " adicionar usuário (restrito a administradores), adicionar vendas, adicionar prod" +
+    "utos, gerar relatórios e ajuda. Permite voltar ao login";
+            // 
             // Ajuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
@@ -290,5 +300,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
