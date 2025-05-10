@@ -145,10 +145,10 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(354, 68);
+            this.button5.Location = new System.Drawing.Point(398, 68);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 58);
             this.button5.TabIndex = 13;
