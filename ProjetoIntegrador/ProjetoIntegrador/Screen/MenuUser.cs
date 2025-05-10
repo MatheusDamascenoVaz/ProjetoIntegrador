@@ -119,6 +119,7 @@ namespace ProjetoIntegrador.Screen
                 listUsuarios.Remove(listUsuarios[dataGridView1.CurrentCell.RowIndex]);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = listUsuarios;
+                FormatDataGridView();
             }
         }
 

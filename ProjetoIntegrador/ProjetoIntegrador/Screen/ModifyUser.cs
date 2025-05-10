@@ -96,6 +96,7 @@ namespace ProjetoIntegrador.Screen
                     MessageBox.Show("Usuário atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
+                    
                 }
                 else
                 {
