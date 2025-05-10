@@ -41,34 +41,39 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 53);
+            this.label1.Location = new System.Drawing.Point(254, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 24);
+            this.label1.Size = new System.Drawing.Size(165, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Relatório";
+            this.label1.Text = "Relatórios Simples";
             // 
             // dTimeInicio
             // 
             this.dTimeInicio.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.dTimeInicio.Location = new System.Drawing.Point(147, 272);
+            this.dTimeInicio.Location = new System.Drawing.Point(76, 73);
             this.dTimeInicio.Name = "dTimeInicio";
             this.dTimeInicio.Size = new System.Drawing.Size(230, 20);
             this.dTimeInicio.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(147, 196);
+            this.button1.Location = new System.Drawing.Point(398, 98);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 34);
+            this.button1.Size = new System.Drawing.Size(250, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "Gerar Relatório Produtos próximos ao vencimento";
             this.button1.UseVisualStyleBackColor = false;
@@ -77,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(144, 246);
+            this.label2.Location = new System.Drawing.Point(113, 313);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 5;
@@ -86,7 +91,7 @@
             // lblDataInicio
             // 
             this.lblDataInicio.AutoSize = true;
-            this.lblDataInicio.Location = new System.Drawing.Point(117, 279);
+            this.lblDataInicio.Location = new System.Drawing.Point(46, 80);
             this.lblDataInicio.Name = "lblDataInicio";
             this.lblDataInicio.Size = new System.Drawing.Size(24, 13);
             this.lblDataInicio.TabIndex = 6;
@@ -95,7 +100,7 @@
             // lblDataFim
             // 
             this.lblDataFim.AutoSize = true;
-            this.lblDataFim.Location = new System.Drawing.Point(115, 312);
+            this.lblDataFim.Location = new System.Drawing.Point(44, 113);
             this.lblDataFim.Name = "lblDataFim";
             this.lblDataFim.Size = new System.Drawing.Size(26, 13);
             this.lblDataFim.TabIndex = 7;
@@ -103,16 +108,16 @@
             // 
             // dTimeFinal
             // 
-            this.dTimeFinal.Location = new System.Drawing.Point(147, 305);
+            this.dTimeFinal.Location = new System.Drawing.Point(76, 106);
             this.dTimeFinal.Name = "dTimeFinal";
             this.dTimeFinal.Size = new System.Drawing.Size(230, 20);
             this.dTimeFinal.TabIndex = 8;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(147, 126);
+            this.button2.Location = new System.Drawing.Point(398, 46);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(209, 23);
+            this.button2.Size = new System.Drawing.Size(250, 30);
             this.button2.TabIndex = 10;
             this.button2.Text = "Gerar Relatório Produtos Vencidos";
             this.button2.UseVisualStyleBackColor = true;
@@ -120,9 +125,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(147, 155);
+            this.button3.Location = new System.Drawing.Point(56, 98);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 23);
+            this.button3.Size = new System.Drawing.Size(250, 30);
             this.button3.TabIndex = 11;
             this.button3.Text = "Relatório Usuários Ativos";
             this.button3.UseVisualStyleBackColor = true;
@@ -130,9 +135,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(147, 97);
+            this.button4.Location = new System.Drawing.Point(56, 46);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(209, 23);
+            this.button4.Size = new System.Drawing.Size(250, 30);
             this.button4.TabIndex = 12;
             this.button4.Text = "Gerar Relatório de Produtos em Estoque";
             this.button4.UseVisualStyleBackColor = true;
@@ -142,47 +147,82 @@
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(147, 354);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(354, 68);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(262, 36);
+            this.button5.Size = new System.Drawing.Size(250, 58);
             this.button5.TabIndex = 13;
-            this.button5.Text = "Gerar Relatório em um intervalo de tempo";
+            this.button5.Text = "Gerar Relatorio";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjetoIntegrador.Properties.Resources.EstoqueMasterLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(683, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(747, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.dTimeInicio);
+            this.panel1.Controls.Add(this.lblDataInicio);
+            this.panel1.Controls.Add(this.lblDataFim);
+            this.panel1.Controls.Add(this.dTimeFinal);
+            this.panel1.Location = new System.Drawing.Point(62, 262);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(700, 160);
+            this.panel1.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(155, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(378, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Consulta de validade por intervalo de tempo";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(62, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 160);
+            this.panel2.TabIndex = 16;
             // 
             // AddRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dTimeFinal);
-            this.Controls.Add(this.lblDataFim);
-            this.Controls.Add(this.lblDataInicio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dTimeInicio);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddRelatorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Extrair Relatório";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +242,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
