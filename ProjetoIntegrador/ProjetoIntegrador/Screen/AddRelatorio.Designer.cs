@@ -61,7 +61,7 @@
             // 
             // dTimeInicio
             // 
-            this.dTimeInicio.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.dTimeInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dTimeInicio.Location = new System.Drawing.Point(76, 73);
             this.dTimeInicio.Name = "dTimeInicio";
             this.dTimeInicio.Size = new System.Drawing.Size(230, 20);
@@ -108,6 +108,7 @@
             // 
             // dTimeFinal
             // 
+            this.dTimeFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dTimeFinal.Location = new System.Drawing.Point(76, 106);
             this.dTimeFinal.Name = "dTimeFinal";
             this.dTimeFinal.Size = new System.Drawing.Size(230, 20);
@@ -115,6 +116,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(398, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 30);
@@ -125,6 +127,7 @@
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(56, 98);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 30);
@@ -135,6 +138,7 @@
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Location = new System.Drawing.Point(56, 46);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 30);
