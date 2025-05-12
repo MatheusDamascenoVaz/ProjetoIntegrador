@@ -69,10 +69,11 @@ namespace ProjetoIntegrador.Screen
 
             List<dynamic> unidadeDeMedidaOptions = new List<dynamic>
             {
-                new { NomeRegra = "Unidade", Valor = 1 },
-                new { NomeRegra = "Litro", Valor = 2 },
-                new { NomeRegra = "Quilo", Valor = 3 },
-                new { NomeRegra = "Metro", Valor = 4 },
+                new { UnidadeMedida = "Un", Valor = "un" },
+                   new { UnidadeMedida = "L", Valor = "L" },
+                   new { UnidadeMedida = "ml", Valor = "ml" },
+                   new { UnidadeMedida = "Kg", Valor = "kg" },
+                   new { UnidadeMedida = "g", Valor =  "g" },
             };
 
             comboUnidadeDeMedida.DataSource = unidadeDeMedidaOptions;
