@@ -28,7 +28,7 @@ namespace ProjetoIntegrador.Screen
             try
             {
                 // Define a URL que será aberta
-                string url = "https://github.com/MatheusDamascenoVaz/ProjetoIntegrador/blob/branchFinaliza%C3%A7%C3%A3o/ProjetoIntegrador/ProjetoIntegrador/Resources/EstoqueMaster_manual_de_uso.pdf";
+                string url = "https://github.com/MatheusDamascenoVaz/ProjetoIntegrador/blob/master/ProjetoIntegrador/ProjetoIntegrador/Resources/EstoqueMaster_manual_de_uso.pdf";
 
                 // Garante que o link seja tratado como visitado
                 lblManualdeUso.LinkVisited = true;
