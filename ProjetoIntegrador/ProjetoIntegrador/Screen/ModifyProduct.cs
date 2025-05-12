@@ -118,7 +118,7 @@ namespace ProjetoIntegrador.Screen
                               validade : _produto.Validade
                 };
 
-                MessageBox.Show(produtoAtualizado.ToString());
+                
 
                 // Chamar o controller para atualizar
                 bool sucesso = _produtoController.AtualizarProduto(produtoAtualizado);
